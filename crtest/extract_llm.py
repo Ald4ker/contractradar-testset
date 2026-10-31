@@ -72,8 +72,10 @@ def page_images_b64(path: str, dpi: int = 110, max_pages: int = 6) -> list[str]:
     return out
 
 
-def call_llm(messages: list, model: str, base_url: str, api_key: str, temperature: float = 0.0, retries: int = 3) -> str:
-    body = {"model": model, "messages": messages, "temperature": temperature, "max_tokens": 4000}
+def call_llm(messages: list, model: str, base_url: str, api_key: str, temperature: float = 0.0, retries: int = 5) -> str:
+    # Reasoning models (GLM-5.x, DeepSeek-R1 style) spend tokens thinking before the JSON; LLM_MAX_TOKENS raises the cap.
+    body = {"model": model, "messages": messages, "temperature": temperature,
+            "max_tokens": int(os.environ.get("LLM_MAX_TOKENS", "4000"))}
     req = urllib.request.Request(base_url.rstrip("/") + "/chat/completions", data=json.dumps(body).encode(),
                                  headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"})
     last = None
@@ -81,14 +83,35 @@ def call_llm(messages: list, model: str, base_url: str, api_key: str, temperatur
         try:
             with urllib.request.urlopen(req, timeout=180) as resp:
                 data = json.load(resp)
-            return data["choices"][0]["message"]["content"]
+            msg = data["choices"][0]["message"]
+            content = msg.get("content")
+            if not content:
+                # Some reasoning models return content=null and leave the answer (or a truncated think) in reasoning_content.
+                content = msg.get("reasoning_content") or msg.get("reasoning") or ""
+            return content if isinstance(content, str) else json.dumps(content)
         except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as e:  # pragma: no cover
             last = e
-            time.sleep(2 * (attempt + 1))
+            # Free tiers rate-limit per minute: back off hard on 429/5xx and honour Retry-After.
+            code = getattr(e, "code", None)
+            retry_after = None
+            if hasattr(e, "headers") and e.headers is not None:
+                try:
+                    retry_after = float(e.headers.get("Retry-After") or 0) or None
+                except ValueError:
+                    retry_after = None
+            if code == 429 or (code is not None and code >= 500):
+                wait = retry_after or min(120.0, 15.0 * (2 ** attempt))
+            elif code is not None and 400 <= code < 500:
+                break  # auth/quota/model errors do not heal by waiting
+            else:
+                wait = 2 * (attempt + 1)
+            time.sleep(wait)
     raise RuntimeError(f"LLM call failed: {last}")
 
 
 def parse_json(s: str) -> dict:
+    if not s or not isinstance(s, str):
+        raise ValueError("empty response")
     s = s.strip()
     m = re.search(r"```(?:json)?\s*(\{.*\})\s*```", s, re.S)
     if m:
