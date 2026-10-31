@@ -1,0 +1,82 @@
+{
+  "case_id": "CR-004",
+  "slug": "ccn-wrong-ground-value-and-term",
+  "title": "Contract change notice relying on the wrong ground",
+  "document": "document.pdf",
+  "pages": 1,
+  "sha256": "87ba5f0513421a76a83f2e716772b24d08c6a154df021813a2b194b7106c4929",
+  "hazards": [
+    "wrong_legal_ground",
+    "percent_not_printed",
+    "date_uk_format"
+  ],
+  "notes": "The notice cites section 74(1)(c) (below-threshold) for a +14.4% value change and a +33% term extension. The percentage is not printed. A rule engine should raise PA23-s74-exceeds-below-threshold and PA23-s74-substantial-term.",
+  "fields": {
+    "notice_type": "contract_change_notice",
+    "notice_reference": "006540-2026",
+    "contracting_authority": "Stonebridge Metropolitan Borough Council",
+    "contracting_authority_type": "sub_central",
+    "supplier_name": "Alderman Facilities Group Ltd",
+    "supplier_registration_number": "09418832",
+    "contract_title": "Facilities Management for Corporate Buildings",
+    "contract_reference": "SMBC/FM/2025/003",
+    "procurement_type": "services",
+    "light_touch": false,
+    "procedure": "competitive_flexible",
+    "cpv_codes": [
+      "79993100",
+      "50700000",
+      "90911200"
+    ],
+    "notice_published_date": "2026-05-04",
+    "award_date": "2025-11-14",
+    "contract_signed_date": "2026-03-20",
+    "contract_start_date": "2026-04-01",
+    "contract_end_date": null,
+    "extension_options_months": 0,
+    "maximum_term_months": 36,
+    "contract_value_gbp": null,
+    "value_includes_vat": false,
+    "number_of_tenders_received": null,
+    "kpis": null,
+    "payment_terms_days": null,
+    "standstill_end_date": null,
+    "lots": [],
+    "modification_number": 1,
+    "modification_date": "2026-05-11",
+    "modification_description": "Addition of three annexe buildings to the cleaning and M&E maintenance scope following the transfer of the Riverside offices to the Council, and a 12-month extension of the term to align with the corporate accommodation strategy.",
+    "modification_ground": "s74_below_threshold",
+    "original_contract_value_gbp": 1800000,
+    "revised_contract_value_gbp": 2060000,
+    "value_change_gbp": 260000,
+    "value_change_percent": 14.4,
+    "original_end_date": "2029-03-31",
+    "revised_end_date": "2030-03-31",
+    "term_change_months": 12,
+    "contract_change_notice_published": true,
+    "voluntary_standstill": true
+  },
+  "expected_flags": [
+    {
+      "id": "PA23-threshold-in-scope",
+      "severity": "info",
+      "detail": "Value £1,800,000 is at or above the services threshold £207,720 (inc VAT) applicable on 2026-05-04."
+    },
+    {
+      "id": "PA23-s74-exceeds-below-threshold",
+      "severity": "high",
+      "detail": "Value change +14.4% exceeds the 10% below-threshold limit for services in s.74(4)."
+    },
+    {
+      "id": "PA23-s74-substantial-term",
+      "severity": "high",
+      "detail": "Term change +12 months is +33.3% of the 36-month maximum term: a substantial modification under s.74(3)(a) with no Schedule 8 ground."
+    }
+  ],
+  "provenance": {
+    "source": "synthetic",
+    "generator": "crtest.gen 0.1.0",
+    "licence": "CC0-1.0",
+    "statement": "Fictional authority, supplier and figures. Generated for extraction testing; not a real notice."
+  }
+}

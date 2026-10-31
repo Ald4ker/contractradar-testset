@@ -1,0 +1,89 @@
+{
+  "case_id": "CR-009",
+  "slug": "deed-of-variation-retrospective",
+  "title": "Deed of variation extending an expired contract with no change notice",
+  "document": "document.pdf",
+  "pages": 2,
+  "sha256": "e72d2b38d05c89d60a743568242c23975f673c3aa295cbd0e17b62e8ad14b0cf",
+  "hazards": [
+    "retrospective_extension",
+    "no_ccn_published",
+    "wrong_legal_ground",
+    "values_in_prose",
+    "date_ordinal"
+  ],
+  "notes": "A deed of variation dated 15 May 2026 extends a contract that expired on 31 March 2026, adds 20% to the value, and the decision record states no contract change notice was published. Key values are in prose recitals. Expect three high flags.",
+  "fields": {
+    "notice_type": "contract_document",
+    "notice_reference": null,
+    "contracting_authority": "Harrowdale District Council",
+    "contracting_authority_type": "sub_central",
+    "supplier_name": "Fenwick Grounds Maintenance Ltd",
+    "supplier_registration_number": "06645928",
+    "contract_title": "Provision of Grounds Maintenance Services for Parks and Open Spaces",
+    "contract_reference": "HDC-PKS-2021-07",
+    "procurement_type": "services",
+    "light_touch": false,
+    "procedure": "open",
+    "cpv_codes": [
+      "77310000",
+      "77311000",
+      "77314000"
+    ],
+    "notice_published_date": null,
+    "award_date": "2021-02-11",
+    "contract_signed_date": "2021-03-12",
+    "contract_start_date": "2021-04-01",
+    "contract_end_date": "2026-03-31",
+    "extension_options_months": 0,
+    "maximum_term_months": 60,
+    "contract_value_gbp": null,
+    "value_includes_vat": false,
+    "number_of_tenders_received": null,
+    "kpis": null,
+    "payment_terms_days": null,
+    "standstill_end_date": null,
+    "lots": [],
+    "modification_number": 1,
+    "modification_date": "2026-05-15",
+    "modification_description": "Extension of the contract term by 12 months and an increase in the annual contract sum to cover the additional 14 hectares of open space transferred from the Parish Council.",
+    "modification_ground": "s74_non_substantial",
+    "original_contract_value_gbp": 1550000,
+    "revised_contract_value_gbp": 1860000,
+    "value_change_gbp": 310000,
+    "value_change_percent": 20.0,
+    "original_end_date": "2026-03-31",
+    "revised_end_date": "2027-03-31",
+    "term_change_months": 12,
+    "contract_change_notice_published": false,
+    "voluntary_standstill": false
+  },
+  "expected_flags": [
+    {
+      "id": "PA23-threshold-in-scope",
+      "severity": "info",
+      "detail": "Value £1,550,000 is at or above the services threshold £214,904 (inc VAT) applicable on 2021-02-11."
+    },
+    {
+      "id": "PA23-s74-substantial-term",
+      "severity": "high",
+      "detail": "Term change +12 months is +20.0% of the 60-month maximum term: a substantial modification under s.74(3)(a) with no Schedule 8 ground."
+    },
+    {
+      "id": "PA23-s75-ccn-required-not-published",
+      "severity": "high",
+      "detail": "Value change +20.0% / term change +20.0% exceeds the s.75(2) exemption but no contract change notice was published."
+    },
+    {
+      "id": "AUDIT-retrospective-extension",
+      "severity": "high",
+      "detail": "Modification dated 2026-05-15 but the contract expired on 2026-03-31: a retrospective extension of an expired contract."
+    }
+  ],
+  "provenance": {
+    "source": "synthetic",
+    "generator": "crtest.gen 0.1.0",
+    "licence": "CC0-1.0",
+    "statement": "Fictional authority, supplier and figures. Generated for extraction testing; not a real notice."
+  }
+}

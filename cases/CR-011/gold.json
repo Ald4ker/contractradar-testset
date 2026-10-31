@@ -1,0 +1,82 @@
+{
+  "case_id": "CR-011",
+  "slug": "ccn-works-over-50pc-cap",
+  "title": "Works change notice exceeding the 50% unforeseeable-circumstances cap",
+  "document": "document.pdf",
+  "pages": 1,
+  "sha256": "31d3c1e48dc71a2488bb4905828115f6583f293e3eef18b2ff7397ef04f35d57",
+  "hazards": [
+    "percent_not_printed",
+    "money_gbp_suffix",
+    "date_iso_format"
+  ],
+  "notes": "A +60% increase under Schedule 8 paragraph 3, which caps increases at 50%. The contract is over £5m, so section 77 publication of the modified contract applies. Money as 6,100,000.00 GBP; dates ISO.",
+  "fields": {
+    "notice_type": "contract_change_notice",
+    "notice_reference": "009877-2026",
+    "contracting_authority": "Kingsholt City Council",
+    "contracting_authority_type": "sub_central",
+    "supplier_name": "Cresswell Highways Ltd",
+    "supplier_registration_number": "05583107",
+    "contract_title": "Highways Reactive Maintenance and Winter Service",
+    "contract_reference": "KCC-HWY-2025-0033",
+    "procurement_type": "works",
+    "light_touch": false,
+    "procedure": "open",
+    "cpv_codes": [
+      "45233141",
+      "45233139",
+      "90620000"
+    ],
+    "notice_published_date": "2026-06-18",
+    "award_date": "2025-12-05",
+    "contract_signed_date": "2026-01-16",
+    "contract_start_date": "2026-02-01",
+    "contract_end_date": null,
+    "extension_options_months": 12,
+    "maximum_term_months": 48,
+    "contract_value_gbp": null,
+    "value_includes_vat": false,
+    "number_of_tenders_received": null,
+    "kpis": null,
+    "payment_terms_days": null,
+    "standstill_end_date": null,
+    "lots": [],
+    "modification_number": 1,
+    "modification_date": "2026-06-29",
+    "modification_description": "Additional carriageway reconstruction on the A-road network following the February 2026 flood damage, delivered under the existing schedule of rates.",
+    "modification_ground": "sch8_para3_unforeseeable",
+    "original_contract_value_gbp": 6100000,
+    "revised_contract_value_gbp": 9760000,
+    "value_change_gbp": 3660000,
+    "value_change_percent": 60.0,
+    "original_end_date": "2029-01-31",
+    "revised_end_date": "2029-01-31",
+    "term_change_months": 0,
+    "contract_change_notice_published": true,
+    "voluntary_standstill": true
+  },
+  "expected_flags": [
+    {
+      "id": "PA23-threshold-in-scope",
+      "severity": "info",
+      "detail": "Value £6,100,000 is at or above the works threshold £5,193,000 (inc VAT) applicable on 2026-06-18."
+    },
+    {
+      "id": "PA23-sch8-para3-cap-50pc",
+      "severity": "high",
+      "detail": "Increase of 60.0% exceeds the 50% cap in Schedule 8 para 3."
+    },
+    {
+      "id": "PA23-s77-publish-modified-contract",
+      "severity": "info",
+      "detail": "Qualifying modification to a contract over £5m: publish a copy of the contract as modified within 90 days (s.77)."
+    }
+  ],
+  "provenance": {
+    "source": "synthetic",
+    "generator": "crtest.gen 0.1.0",
+    "licence": "CC0-1.0",
+    "statement": "Fictional authority, supplier and figures. Generated for extraction testing; not a real notice."
+  }
+}

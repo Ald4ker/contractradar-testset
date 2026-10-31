@@ -1,0 +1,39 @@
+field,value
+notice_type,contract_details_notice
+notice_reference,002907-2026
+contracting_authority,Northam Vale County Council
+contracting_authority_type,sub_central
+supplier_name,Cresswell Highways Ltd
+supplier_registration_number,05583107
+contract_title,Highways Reactive Maintenance and Winter Service
+contract_reference,NVCC/HW/0442
+procurement_type,works
+light_touch,False
+procedure,open
+cpv_codes,"[""45233141"", ""45233139"", ""90620000""]"
+notice_published_date,2026-02-05
+award_date,2026-01-09
+contract_signed_date,2026-01-20
+contract_start_date,2026-03-01
+contract_end_date,2029-02-28
+extension_options_months,12
+maximum_term_months,48
+contract_value_gbp,6400000
+value_includes_vat,False
+number_of_tenders_received,5
+kpis,"[""Emergency call-outs attended within 2 hours"", ""Pothole repairs completed within 5 working days"", ""Winter gritting routes completed to schedule""]"
+payment_terms_days,30
+standstill_end_date,
+modification_number,
+modification_date,
+modification_description,
+modification_ground,
+original_contract_value_gbp,
+revised_contract_value_gbp,
+value_change_gbp,
+value_change_percent,
+original_end_date,
+revised_end_date,
+term_change_months,
+contract_change_notice_published,
+voluntary_standstill,

@@ -1,0 +1,39 @@
+field,value
+notice_type,contract_document
+notice_reference,
+contracting_authority,Eastmere and Calder District Council
+contracting_authority_type,sub_central
+supplier_name,Halbrook Leisure Operations Ltd
+supplier_registration_number,10931562
+contract_title,Leisure Centre Operating Contract
+contract_reference,ECDC/LEI/2026/01
+procurement_type,services
+light_touch,False
+procedure,competitive_flexible
+cpv_codes,"[""92610000"", ""92600000""]"
+notice_published_date,
+award_date,2026-03-27
+contract_signed_date,2026-04-14
+contract_start_date,2026-06-01
+contract_end_date,2031-05-31
+extension_options_months,0
+maximum_term_months,60
+contract_value_gbp,9750000
+value_includes_vat,False
+number_of_tenders_received,2
+kpis,"[""Facility availability (opening hours delivered)"", ""Quarterly customer satisfaction score""]"
+payment_terms_days,30
+standstill_end_date,
+modification_number,
+modification_date,
+modification_description,
+modification_ground,
+original_contract_value_gbp,
+revised_contract_value_gbp,
+value_change_gbp,
+value_change_percent,
+original_end_date,
+revised_end_date,
+term_change_months,
+contract_change_notice_published,
+voluntary_standstill,

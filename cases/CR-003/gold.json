@@ -1,0 +1,78 @@
+{
+  "case_id": "CR-003",
+  "slug": "cdn-borderless-grouped-particulars",
+  "title": "Contract details notice with borderless, grouped particulars",
+  "document": "document.pdf",
+  "pages": 1,
+  "sha256": "e28d53fee4001d6a96becf8497cb7e42a21cf11da64254f24a854bce834d74c8",
+  "hazards": [
+    "borderless_table",
+    "grouped_rows",
+    "label_synonyms",
+    "annual_vs_total_value",
+    "date_abbr"
+  ],
+  "notes": "Contract particulars are a borderless three-column table whose first column is a section label spanning several rows. Labels are non-standard ('Initial expiry', 'Estimated total (ex VAT)'), an annual figure sits next to the total, and dates are 01-Mar-2026 style.",
+  "fields": {
+    "notice_type": "contract_details_notice",
+    "notice_reference": "002907-2026",
+    "contracting_authority": "Northam Vale County Council",
+    "contracting_authority_type": "sub_central",
+    "supplier_name": "Cresswell Highways Ltd",
+    "supplier_registration_number": "05583107",
+    "contract_title": "Highways Reactive Maintenance and Winter Service",
+    "contract_reference": "NVCC/HW/0442",
+    "procurement_type": "works",
+    "light_touch": false,
+    "procedure": "open",
+    "cpv_codes": [
+      "45233141",
+      "45233139",
+      "90620000"
+    ],
+    "notice_published_date": "2026-02-05",
+    "award_date": "2026-01-09",
+    "contract_signed_date": "2026-01-20",
+    "contract_start_date": "2026-03-01",
+    "contract_end_date": "2029-02-28",
+    "extension_options_months": 12,
+    "maximum_term_months": 48,
+    "contract_value_gbp": 6400000,
+    "value_includes_vat": false,
+    "number_of_tenders_received": 5,
+    "kpis": [
+      "Emergency call-outs attended within 2 hours",
+      "Pothole repairs completed within 5 working days",
+      "Winter gritting routes completed to schedule"
+    ],
+    "payment_terms_days": 30,
+    "standstill_end_date": null,
+    "lots": [],
+    "modification_number": null,
+    "modification_date": null,
+    "modification_description": null,
+    "modification_ground": null,
+    "original_contract_value_gbp": null,
+    "revised_contract_value_gbp": null,
+    "value_change_gbp": null,
+    "value_change_percent": null,
+    "original_end_date": null,
+    "revised_end_date": null,
+    "term_change_months": null,
+    "contract_change_notice_published": null,
+    "voluntary_standstill": null
+  },
+  "expected_flags": [
+    {
+      "id": "PA23-threshold-in-scope",
+      "severity": "info",
+      "detail": "Value £6,400,000 is at or above the works threshold £5,193,000 (inc VAT) applicable on 2026-02-05."
+    }
+  ],
+  "provenance": {
+    "source": "synthetic",
+    "generator": "crtest.gen 0.1.0",
+    "licence": "CC0-1.0",
+    "statement": "Fictional authority, supplier and figures. Generated for extraction testing; not a real notice."
+  }
+}

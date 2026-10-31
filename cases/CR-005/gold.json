@@ -1,0 +1,79 @@
+{
+  "case_id": "CR-005",
+  "slug": "contract-scanned-particulars",
+  "title": "Scanned contract particulars (image-only PDF)",
+  "document": "document.pdf",
+  "pages": 1,
+  "sha256": "3d0653086c5c9ecaf7a9a88b60ea45c40f2dd48295c73b10a6ff515e6e2ddc00",
+  "hazards": [
+    "scanned_no_text_layer",
+    "trading_as_name",
+    "kpi_shortfall"
+  ],
+  "notes": "The contract front matter is an image-only PDF with slight skew and speckle, as if photocopied. pdftotext returns nothing. Supplier is printed as 'Halbrook Leisure Operations Ltd (trading as Halbrook Active)'. Only two KPIs are set on a £9.75m contract.",
+  "fields": {
+    "notice_type": "contract_document",
+    "notice_reference": null,
+    "contracting_authority": "Eastmere and Calder District Council",
+    "contracting_authority_type": "sub_central",
+    "supplier_name": "Halbrook Leisure Operations Ltd",
+    "supplier_registration_number": "10931562",
+    "contract_title": "Leisure Centre Operating Contract",
+    "contract_reference": "ECDC/LEI/2026/01",
+    "procurement_type": "services",
+    "light_touch": false,
+    "procedure": "competitive_flexible",
+    "cpv_codes": [
+      "92610000",
+      "92600000"
+    ],
+    "notice_published_date": null,
+    "award_date": "2026-03-27",
+    "contract_signed_date": "2026-04-14",
+    "contract_start_date": "2026-06-01",
+    "contract_end_date": "2031-05-31",
+    "extension_options_months": 0,
+    "maximum_term_months": 60,
+    "contract_value_gbp": 9750000,
+    "value_includes_vat": false,
+    "number_of_tenders_received": 2,
+    "kpis": [
+      "Facility availability (opening hours delivered)",
+      "Quarterly customer satisfaction score"
+    ],
+    "payment_terms_days": 30,
+    "standstill_end_date": null,
+    "lots": [],
+    "modification_number": null,
+    "modification_date": null,
+    "modification_description": null,
+    "modification_ground": null,
+    "original_contract_value_gbp": null,
+    "revised_contract_value_gbp": null,
+    "value_change_gbp": null,
+    "value_change_percent": null,
+    "original_end_date": null,
+    "revised_end_date": null,
+    "term_change_months": null,
+    "contract_change_notice_published": null,
+    "voluntary_standstill": null
+  },
+  "expected_flags": [
+    {
+      "id": "PA23-threshold-in-scope",
+      "severity": "info",
+      "detail": "Value £9,750,000 is at or above the services threshold £207,720 (inc VAT) applicable on 2026-03-27."
+    },
+    {
+      "id": "PA23-s52-kpi-min3",
+      "severity": "high",
+      "detail": "Value £9,750,000 exceeds £5m but only 2 KPI(s) set; s.52 requires at least three unless inappropriate."
+    }
+  ],
+  "provenance": {
+    "source": "synthetic",
+    "generator": "crtest.gen 0.1.0",
+    "licence": "CC0-1.0",
+    "statement": "Fictional authority, supplier and figures. Generated for extraction testing; not a real notice."
+  }
+}

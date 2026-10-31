@@ -1,0 +1,39 @@
+field,value
+notice_type,contract_document
+notice_reference,
+contracting_authority,Harrowdale District Council
+contracting_authority_type,sub_central
+supplier_name,Fenwick Grounds Maintenance Ltd
+supplier_registration_number,06645928
+contract_title,Provision of Grounds Maintenance Services for Parks and Open Spaces
+contract_reference,HDC-PKS-2021-07
+procurement_type,services
+light_touch,False
+procedure,open
+cpv_codes,"[""77310000"", ""77311000"", ""77314000""]"
+notice_published_date,
+award_date,2021-02-11
+contract_signed_date,2021-03-12
+contract_start_date,2021-04-01
+contract_end_date,2026-03-31
+extension_options_months,0
+maximum_term_months,60
+contract_value_gbp,
+value_includes_vat,False
+number_of_tenders_received,
+kpis,
+payment_terms_days,
+standstill_end_date,
+modification_number,1
+modification_date,2026-05-15
+modification_description,Extension of the contract term by 12 months and an increase in the annual contract sum to cover the additional 14 hectares of open space transferred from the Parish Council.
+modification_ground,s74_non_substantial
+original_contract_value_gbp,1550000
+revised_contract_value_gbp,1860000
+value_change_gbp,310000
+value_change_percent,20.0
+original_end_date,2026-03-31
+revised_end_date,2027-03-31
+term_change_months,12
+contract_change_notice_published,False
+voluntary_standstill,False

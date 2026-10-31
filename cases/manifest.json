@@ -1,0 +1,246 @@
+{
+  "schema_version": "0.1.0",
+  "generator_version": "0.1.0",
+  "generated_at": "2026-10-31T22:08:58Z",
+  "cases": [
+    {
+      "case_id": "CR-001",
+      "slug": "award-notice-clean",
+      "title": "Contract award notice, clean layout",
+      "notice_type": "contract_award_notice",
+      "pages": 1,
+      "hazards": [
+        "baseline"
+      ],
+      "expected_flags": [
+        "PA23-threshold-in-scope"
+      ],
+      "sha256": "72be93e02222eb0e622591bc9a08b482d982922a459b66f1e0805d899ac575ef",
+      "document": "CR-001/document.pdf",
+      "gold": "CR-001/gold.json"
+    },
+    {
+      "case_id": "CR-002",
+      "slug": "cdn-table-crosses-page",
+      "title": "Contract details notice with a priced schedule crossing a page",
+      "notice_type": "contract_details_notice",
+      "pages": 2,
+      "hazards": [
+        "table_crosses_page",
+        "repeated_header",
+        "footer_interleaves",
+        "annual_vs_total_value",
+        "totals_row"
+      ],
+      "expected_flags": [
+        "PA23-threshold-in-scope"
+      ],
+      "sha256": "13242b23813b69cb8543ae96bddbb6d504b5bcc40c29d1b5f9b5e67575ec60ef",
+      "document": "CR-002/document.pdf",
+      "gold": "CR-002/gold.json"
+    },
+    {
+      "case_id": "CR-003",
+      "slug": "cdn-borderless-grouped-particulars",
+      "title": "Contract details notice with borderless, grouped particulars",
+      "notice_type": "contract_details_notice",
+      "pages": 1,
+      "hazards": [
+        "borderless_table",
+        "grouped_rows",
+        "label_synonyms",
+        "annual_vs_total_value",
+        "date_abbr"
+      ],
+      "expected_flags": [
+        "PA23-threshold-in-scope"
+      ],
+      "sha256": "e28d53fee4001d6a96becf8497cb7e42a21cf11da64254f24a854bce834d74c8",
+      "document": "CR-003/document.pdf",
+      "gold": "CR-003/gold.json"
+    },
+    {
+      "case_id": "CR-004",
+      "slug": "ccn-wrong-ground-value-and-term",
+      "title": "Contract change notice relying on the wrong ground",
+      "notice_type": "contract_change_notice",
+      "pages": 1,
+      "hazards": [
+        "wrong_legal_ground",
+        "percent_not_printed",
+        "date_uk_format"
+      ],
+      "expected_flags": [
+        "PA23-threshold-in-scope",
+        "PA23-s74-exceeds-below-threshold",
+        "PA23-s74-substantial-term"
+      ],
+      "sha256": "87ba5f0513421a76a83f2e716772b24d08c6a154df021813a2b194b7106c4929",
+      "document": "CR-004/document.pdf",
+      "gold": "CR-004/gold.json"
+    },
+    {
+      "case_id": "CR-005",
+      "slug": "contract-scanned-particulars",
+      "title": "Scanned contract particulars (image-only PDF)",
+      "notice_type": "contract_document",
+      "pages": 1,
+      "hazards": [
+        "scanned_no_text_layer",
+        "trading_as_name",
+        "kpi_shortfall"
+      ],
+      "expected_flags": [
+        "PA23-threshold-in-scope",
+        "PA23-s52-kpi-min3"
+      ],
+      "sha256": "3d0653086c5c9ecaf7a9a88b60ea45c40f2dd48295c73b10a6ff515e6e2ddc00",
+      "document": "CR-005/document.pdf",
+      "gold": "CR-005/gold.json"
+    },
+    {
+      "case_id": "CR-006",
+      "slug": "cdn-two-column-stacked",
+      "title": "Contract details notice in a two-column stacked layout",
+      "notice_type": "contract_details_notice",
+      "pages": 1,
+      "hazards": [
+        "two_column_layout",
+        "stacked_label_value",
+        "money_short_format",
+        "trading_as_name",
+        "late_contract_details_notice",
+        "payment_terms_over_30"
+      ],
+      "expected_flags": [
+        "PA23-threshold-in-scope",
+        "PA23-s68-payment-over-30d",
+        "PA23-s53-cdn-late"
+      ],
+      "sha256": "0b12b002b1524468c417d88ff76c103c791390969ff145c3d2381b8ae12e6324",
+      "document": "CR-006/document.pdf",
+      "gold": "CR-006/gold.json"
+    },
+    {
+      "case_id": "CR-007",
+      "slug": "award-multi-lot-unawarded-lot",
+      "title": "Multi-lot award notice with an unawarded lot and a short standstill",
+      "notice_type": "contract_award_notice",
+      "pages": 2,
+      "hazards": [
+        "multi_lot",
+        "unawarded_lot",
+        "totals_row",
+        "evaluation_scores_table",
+        "table_crosses_page",
+        "standstill_too_short"
+      ],
+      "expected_flags": [
+        "PA23-threshold-in-scope",
+        "PA23-s51-standstill-short"
+      ],
+      "sha256": "8805cdfb430d2dbc037a4b8610ff0a97274674a4ddb290a42ec82dd07cde6827",
+      "document": "CR-007/document.pdf",
+      "gold": "CR-007/gold.json"
+    },
+    {
+      "case_id": "CR-008",
+      "slug": "ccn-below-threshold-negative-control",
+      "title": "Contract change notice correctly below threshold (negative control)",
+      "notice_type": "contract_change_notice",
+      "pages": 1,
+      "hazards": [
+        "negative_control",
+        "money_spaced_format",
+        "date_uk_format",
+        "percent_not_printed"
+      ],
+      "expected_flags": [
+        "PA23-threshold-in-scope"
+      ],
+      "sha256": "9cd26ea32fd907bd64a859d84c82c97a18f14c4077d9812b5dad6c44c0518784",
+      "document": "CR-008/document.pdf",
+      "gold": "CR-008/gold.json"
+    },
+    {
+      "case_id": "CR-009",
+      "slug": "deed-of-variation-retrospective",
+      "title": "Deed of variation extending an expired contract with no change notice",
+      "notice_type": "contract_document",
+      "pages": 2,
+      "hazards": [
+        "retrospective_extension",
+        "no_ccn_published",
+        "wrong_legal_ground",
+        "values_in_prose",
+        "date_ordinal"
+      ],
+      "expected_flags": [
+        "PA23-threshold-in-scope",
+        "PA23-s74-substantial-term",
+        "PA23-s75-ccn-required-not-published",
+        "AUDIT-retrospective-extension"
+      ],
+      "sha256": "e72d2b38d05c89d60a743568242c23975f673c3aa295cbd0e17b62e8ad14b0cf",
+      "document": "CR-009/document.pdf",
+      "gold": "CR-009/gold.json"
+    },
+    {
+      "case_id": "CR-010",
+      "slug": "cdn-works-wrapped-name-words-figures",
+      "title": "Works contract details notice with wrapped supplier name and value in words",
+      "notice_type": "contract_details_notice",
+      "pages": 1,
+      "hazards": [
+        "supplier_name_wrapped",
+        "money_words_and_figures",
+        "date_ordinal"
+      ],
+      "expected_flags": [
+        "PA23-threshold-in-scope"
+      ],
+      "sha256": "c36c531d2d9a452dc4c4eaa54de2dfdace291096836a8b55a3df958395f4a46f",
+      "document": "CR-010/document.pdf",
+      "gold": "CR-010/gold.json"
+    },
+    {
+      "case_id": "CR-011",
+      "slug": "ccn-works-over-50pc-cap",
+      "title": "Works change notice exceeding the 50% unforeseeable-circumstances cap",
+      "notice_type": "contract_change_notice",
+      "pages": 1,
+      "hazards": [
+        "percent_not_printed",
+        "money_gbp_suffix",
+        "date_iso_format"
+      ],
+      "expected_flags": [
+        "PA23-threshold-in-scope",
+        "PA23-sch8-para3-cap-50pc",
+        "PA23-s77-publish-modified-contract"
+      ],
+      "sha256": "31d3c1e48dc71a2488bb4905828115f6583f293e3eef18b2ff7397ef04f35d57",
+      "document": "CR-011/document.pdf",
+      "gold": "CR-011/gold.json"
+    },
+    {
+      "case_id": "CR-012",
+      "slug": "award-direct-award-prose",
+      "title": "Direct award notice with values embedded in prose",
+      "notice_type": "contract_award_notice",
+      "pages": 1,
+      "hazards": [
+        "direct_award",
+        "values_in_prose",
+        "date_iso_format"
+      ],
+      "expected_flags": [
+        "PA23-threshold-in-scope",
+        "AUDIT-direct-award-above-threshold"
+      ],
+      "sha256": "fd926bb7e1a4e58a05f5f8754dab434bb3e8edb339c618799ccbd663477a5539",
+      "document": "CR-012/document.pdf",
+      "gold": "CR-012/gold.json"
+    }
+  ]
+}

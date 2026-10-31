@@ -1,0 +1,4 @@
+lot_number,lot_title,supplier_name,value_gbp,awarded
+1,Domiciliary care - North locality,Juniper Social Care Services Ltd,1980000,True
+2,Domiciliary care - South locality,Dunmore Care Partnership CIC,1450000,True
+3,Reablement and rapid response,,,False

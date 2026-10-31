@@ -1,0 +1,39 @@
+field,value
+notice_type,contract_award_notice
+notice_reference,003118-2026
+contracting_authority,Wexcombe Borough Council
+contracting_authority_type,sub_central
+supplier_name,Fenwick Grounds Maintenance Ltd
+supplier_registration_number,06645928
+contract_title,Provision of Grounds Maintenance Services for Parks and Open Spaces
+contract_reference,WBC/2026/0071
+procurement_type,services
+light_touch,False
+procedure,open
+cpv_codes,"[""77310000"", ""77311000"", ""77314000""]"
+notice_published_date,2026-02-16
+award_date,2026-02-12
+contract_signed_date,
+contract_start_date,2026-04-01
+contract_end_date,2030-03-31
+extension_options_months,24
+maximum_term_months,72
+contract_value_gbp,1240000
+value_includes_vat,False
+number_of_tenders_received,4
+kpis,
+payment_terms_days,30
+standstill_end_date,2026-02-26
+modification_number,
+modification_date,
+modification_description,
+modification_ground,
+original_contract_value_gbp,
+revised_contract_value_gbp,
+value_change_gbp,
+value_change_percent,
+original_end_date,
+revised_end_date,
+term_change_months,
+contract_change_notice_published,
+voluntary_standstill,

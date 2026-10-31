@@ -1,0 +1,39 @@
+field,value
+notice_type,contract_change_notice
+notice_reference,006540-2026
+contracting_authority,Stonebridge Metropolitan Borough Council
+contracting_authority_type,sub_central
+supplier_name,Alderman Facilities Group Ltd
+supplier_registration_number,09418832
+contract_title,Facilities Management for Corporate Buildings
+contract_reference,SMBC/FM/2025/003
+procurement_type,services
+light_touch,False
+procedure,competitive_flexible
+cpv_codes,"[""79993100"", ""50700000"", ""90911200""]"
+notice_published_date,2026-05-04
+award_date,2025-11-14
+contract_signed_date,2026-03-20
+contract_start_date,2026-04-01
+contract_end_date,
+extension_options_months,0
+maximum_term_months,36
+contract_value_gbp,
+value_includes_vat,False
+number_of_tenders_received,
+kpis,
+payment_terms_days,
+standstill_end_date,
+modification_number,1
+modification_date,2026-05-11
+modification_description,"Addition of three annexe buildings to the cleaning and M&E maintenance scope following the transfer of the Riverside offices to the Council, and a 12-month extension of the term to align with the corporate accommodation strategy."
+modification_ground,s74_below_threshold
+original_contract_value_gbp,1800000
+revised_contract_value_gbp,2060000
+value_change_gbp,260000
+value_change_percent,14.4
+original_end_date,2029-03-31
+revised_end_date,2030-03-31
+term_change_months,12
+contract_change_notice_published,True
+voluntary_standstill,True

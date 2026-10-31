@@ -1,0 +1,102 @@
+{
+  "case_id": "CR-007",
+  "slug": "award-multi-lot-unawarded-lot",
+  "title": "Multi-lot award notice with an unawarded lot and a short standstill",
+  "document": "document.pdf",
+  "pages": 2,
+  "sha256": "8805cdfb430d2dbc037a4b8610ff0a97274674a4ddb290a42ec82dd07cde6827",
+  "hazards": [
+    "multi_lot",
+    "unawarded_lot",
+    "totals_row",
+    "evaluation_scores_table",
+    "table_crosses_page",
+    "standstill_too_short"
+  ],
+  "notes": "Three lots, two awarded to different suppliers, lot 3 not awarded. The evaluation scores table crosses the page. Standstill ends 6 working days after publication (8 required). Light touch contract.",
+  "fields": {
+    "notice_type": "contract_award_notice",
+    "notice_reference": "005077-2026",
+    "contracting_authority": "Northam Vale County Council",
+    "contracting_authority_type": "sub_central",
+    "supplier_name": "Juniper Social Care Services Ltd",
+    "supplier_registration_number": "09980154",
+    "contract_title": "Domiciliary Care Services (Lots 1-3)",
+    "contract_reference": "NVCC/ASC/2025/0210",
+    "procurement_type": "services",
+    "light_touch": true,
+    "procedure": "competitive_flexible",
+    "cpv_codes": [
+      "85312000",
+      "85311100",
+      "85000000"
+    ],
+    "notice_published_date": "2026-03-09",
+    "award_date": "2026-03-06",
+    "contract_signed_date": null,
+    "contract_start_date": "2026-05-01",
+    "contract_end_date": "2029-04-30",
+    "extension_options_months": 24,
+    "maximum_term_months": 60,
+    "contract_value_gbp": 3430000,
+    "value_includes_vat": false,
+    "number_of_tenders_received": 7,
+    "kpis": null,
+    "payment_terms_days": 30,
+    "standstill_end_date": "2026-03-17",
+    "lots": [
+      {
+        "lot_number": 1,
+        "lot_title": "Domiciliary care - North locality",
+        "supplier_name": "Juniper Social Care Services Ltd",
+        "value_gbp": 1980000,
+        "awarded": true
+      },
+      {
+        "lot_number": 2,
+        "lot_title": "Domiciliary care - South locality",
+        "supplier_name": "Dunmore Care Partnership CIC",
+        "value_gbp": 1450000,
+        "awarded": true
+      },
+      {
+        "lot_number": 3,
+        "lot_title": "Reablement and rapid response",
+        "supplier_name": null,
+        "value_gbp": null,
+        "awarded": false
+      }
+    ],
+    "modification_number": null,
+    "modification_date": null,
+    "modification_description": null,
+    "modification_ground": null,
+    "original_contract_value_gbp": null,
+    "revised_contract_value_gbp": null,
+    "value_change_gbp": null,
+    "value_change_percent": null,
+    "original_end_date": null,
+    "revised_end_date": null,
+    "term_change_months": null,
+    "contract_change_notice_published": null,
+    "voluntary_standstill": null
+  },
+  "expected_flags": [
+    {
+      "id": "PA23-threshold-in-scope",
+      "severity": "info",
+      "detail": "Value £3,430,000 is at or above the light touch threshold £663,540 (inc VAT) applicable on 2026-03-09."
+    },
+    {
+      "id": "PA23-s51-standstill-short",
+      "severity": "high",
+      "detail": "Standstill ends 2026-03-17 which is only 6 working days after publication on 2026-03-09; s.51 requires 8."
+    }
+  ],
+  "provenance": {
+    "source": "synthetic",
+    "generator": "crtest.gen 0.1.0",
+    "licence": "CC0-1.0",
+    "statement": "Fictional authority, supplier and figures. Generated for extraction testing; not a real notice."
+  }
+}

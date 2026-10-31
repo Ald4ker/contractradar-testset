@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+collected/
+*.env
+.env*
+site/dist/
