@@ -81,7 +81,7 @@ def call_llm(messages: list, model: str, base_url: str, api_key: str, temperatur
     last = None
     for attempt in range(retries):
         try:
-            with urllib.request.urlopen(req, timeout=180) as resp:
+            with urllib.request.urlopen(req, timeout=int(os.environ.get("LLM_TIMEOUT", "180"))) as resp:   # reasoning models can take minutes
                 data = json.load(resp)
             msg = data["choices"][0]["message"]
             content = msg.get("content")

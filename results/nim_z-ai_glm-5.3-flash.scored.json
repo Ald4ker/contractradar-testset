@@ -1,0 +1,3607 @@
+{
+  "summary": {
+    "extractor": "llm:nim/z-ai/glm-5.3-flash:text",
+    "version": "0.1.0",
+    "description": "z-ai/glm-5.3-flash via https://integrate.api.nvidia.com/v1 (text+ocr)",
+    "run_at": "2026-11-01T01:08:47Z",
+    "cases": 12,
+    "field_accuracy": 0.957,
+    "fields_correct": 308,
+    "fields_counted": 322,
+    "critical_pass_rate": 0.583,
+    "cases_passed": 7,
+    "per_field": {
+      "award_date": {
+        "correct": 12,
+        "counted": 12,
+        "accuracy": 1.0
+      },
+      "contract_change_notice_published": {
+        "correct": 4,
+        "counted": 4,
+        "accuracy": 1.0
+      },
+      "contract_end_date": {
+        "correct": 9,
+        "counted": 12,
+        "accuracy": 0.75
+      },
+      "contract_reference": {
+        "correct": 12,
+        "counted": 12,
+        "accuracy": 1.0
+      },
+      "contract_signed_date": {
+        "correct": 9,
+        "counted": 9,
+        "accuracy": 1.0
+      },
+      "contract_start_date": {
+        "correct": 12,
+        "counted": 12,
+        "accuracy": 1.0
+      },
+      "contract_title": {
+        "correct": 11,
+        "counted": 12,
+        "accuracy": 0.917
+      },
+      "contract_value_gbp": {
+        "correct": 7,
+        "counted": 12,
+        "accuracy": 0.583
+      },
+      "contracting_authority": {
+        "correct": 12,
+        "counted": 12,
+        "accuracy": 1.0
+      },
+      "contracting_authority_type": {
+        "correct": 12,
+        "counted": 12,
+        "accuracy": 1.0
+      },
+      "cpv_codes": {
+        "correct": 11,
+        "counted": 12,
+        "accuracy": 0.917
+      },
+      "extension_options_months": {
+        "correct": 12,
+        "counted": 12,
+        "accuracy": 1.0
+      },
+      "kpis": {
+        "correct": 4,
+        "counted": 5,
+        "accuracy": 0.8
+      },
+      "light_touch": {
+        "correct": 12,
+        "counted": 12,
+        "accuracy": 1.0
+      },
+      "lots": {
+        "correct": 1,
+        "counted": 1,
+        "accuracy": 1.0
+      },
+      "maximum_term_months": {
+        "correct": 12,
+        "counted": 12,
+        "accuracy": 1.0
+      },
+      "modification_date": {
+        "correct": 4,
+        "counted": 4,
+        "accuracy": 1.0
+      },
+      "modification_description": {
+        "correct": 3,
+        "counted": 4,
+        "accuracy": 0.75
+      },
+      "modification_ground": {
+        "correct": 4,
+        "counted": 4,
+        "accuracy": 1.0
+      },
+      "modification_number": {
+        "correct": 4,
+        "counted": 4,
+        "accuracy": 1.0
+      },
+      "notice_published_date": {
+        "correct": 10,
+        "counted": 11,
+        "accuracy": 0.909
+      },
+      "notice_reference": {
+        "correct": 10,
+        "counted": 10,
+        "accuracy": 1.0
+      },
+      "notice_type": {
+        "correct": 12,
+        "counted": 12,
+        "accuracy": 1.0
+      },
+      "number_of_tenders_received": {
+        "correct": 8,
+        "counted": 8,
+        "accuracy": 1.0
+      },
+      "original_contract_value_gbp": {
+        "correct": 4,
+        "counted": 4,
+        "accuracy": 1.0
+      },
+      "original_end_date": {
+        "correct": 4,
+        "counted": 4,
+        "accuracy": 1.0
+      },
+      "payment_terms_days": {
+        "correct": 8,
+        "counted": 8,
+        "accuracy": 1.0
+      },
+      "procedure": {
+        "correct": 12,
+        "counted": 12,
+        "accuracy": 1.0
+      },
+      "procurement_type": {
+        "correct": 12,
+        "counted": 12,
+        "accuracy": 1.0
+      },
+      "revised_contract_value_gbp": {
+        "correct": 4,
+        "counted": 4,
+        "accuracy": 1.0
+      },
+      "revised_end_date": {
+        "correct": 4,
+        "counted": 4,
+        "accuracy": 1.0
+      },
+      "standstill_end_date": {
+        "correct": 2,
+        "counted": 2,
+        "accuracy": 1.0
+      },
+      "supplier_name": {
+        "correct": 12,
+        "counted": 12,
+        "accuracy": 1.0
+      },
+      "supplier_registration_number": {
+        "correct": 11,
+        "counted": 12,
+        "accuracy": 0.917
+      },
+      "term_change_months": {
+        "correct": 4,
+        "counted": 4,
+        "accuracy": 1.0
+      },
+      "value_change_gbp": {
+        "correct": 4,
+        "counted": 4,
+        "accuracy": 1.0
+      },
+      "value_change_percent": {
+        "correct": 4,
+        "counted": 4,
+        "accuracy": 1.0
+      },
+      "value_includes_vat": {
+        "correct": 12,
+        "counted": 12,
+        "accuracy": 1.0
+      },
+      "voluntary_standstill": {
+        "correct": 4,
+        "counted": 4,
+        "accuracy": 1.0
+      }
+    },
+    "per_hazard": {
+      "annual_vs_total_value": {
+        "correct": 48,
+        "counted": 48,
+        "accuracy": 1.0
+      },
+      "baseline": {
+        "correct": 23,
+        "counted": 23,
+        "accuracy": 1.0
+      },
+      "borderless_table": {
+        "correct": 24,
+        "counted": 24,
+        "accuracy": 1.0
+      },
+      "date_abbr": {
+        "correct": 24,
+        "counted": 24,
+        "accuracy": 1.0
+      },
+      "date_iso_format": {
+        "correct": 54,
+        "counted": 56,
+        "accuracy": 0.964
+      },
+      "date_ordinal": {
+        "correct": 53,
+        "counted": 57,
+        "accuracy": 0.93
+      },
+      "date_uk_format": {
+        "correct": 64,
+        "counted": 68,
+        "accuracy": 0.941
+      },
+      "direct_award": {
+        "correct": 22,
+        "counted": 22,
+        "accuracy": 1.0
+      },
+      "evaluation_scores_table": {
+        "correct": 23,
+        "counted": 24,
+        "accuracy": 0.958
+      },
+      "footer_interleaves": {
+        "correct": 24,
+        "counted": 24,
+        "accuracy": 1.0
+      },
+      "grouped_rows": {
+        "correct": 24,
+        "counted": 24,
+        "accuracy": 1.0
+      },
+      "kpi_shortfall": {
+        "correct": 19,
+        "counted": 22,
+        "accuracy": 0.864
+      },
+      "label_synonyms": {
+        "correct": 24,
+        "counted": 24,
+        "accuracy": 1.0
+      },
+      "late_contract_details_notice": {
+        "correct": 24,
+        "counted": 24,
+        "accuracy": 1.0
+      },
+      "money_gbp_suffix": {
+        "correct": 32,
+        "counted": 34,
+        "accuracy": 0.941
+      },
+      "money_short_format": {
+        "correct": 24,
+        "counted": 24,
+        "accuracy": 1.0
+      },
+      "money_spaced_format": {
+        "correct": 32,
+        "counted": 34,
+        "accuracy": 0.941
+      },
+      "money_words_and_figures": {
+        "correct": 24,
+        "counted": 24,
+        "accuracy": 1.0
+      },
+      "multi_lot": {
+        "correct": 23,
+        "counted": 24,
+        "accuracy": 0.958
+      },
+      "negative_control": {
+        "correct": 32,
+        "counted": 34,
+        "accuracy": 0.941
+      },
+      "no_ccn_published": {
+        "correct": 29,
+        "counted": 33,
+        "accuracy": 0.879
+      },
+      "payment_terms_over_30": {
+        "correct": 24,
+        "counted": 24,
+        "accuracy": 1.0
+      },
+      "percent_not_printed": {
+        "correct": 96,
+        "counted": 102,
+        "accuracy": 0.941
+      },
+      "repeated_header": {
+        "correct": 24,
+        "counted": 24,
+        "accuracy": 1.0
+      },
+      "retrospective_extension": {
+        "correct": 29,
+        "counted": 33,
+        "accuracy": 0.879
+      },
+      "scanned_no_text_layer": {
+        "correct": 19,
+        "counted": 22,
+        "accuracy": 0.864
+      },
+      "stacked_label_value": {
+        "correct": 24,
+        "counted": 24,
+        "accuracy": 1.0
+      },
+      "standstill_too_short": {
+        "correct": 23,
+        "counted": 24,
+        "accuracy": 0.958
+      },
+      "supplier_name_wrapped": {
+        "correct": 24,
+        "counted": 24,
+        "accuracy": 1.0
+      },
+      "table_crosses_page": {
+        "correct": 47,
+        "counted": 48,
+        "accuracy": 0.979
+      },
+      "totals_row": {
+        "correct": 47,
+        "counted": 48,
+        "accuracy": 0.979
+      },
+      "trading_as_name": {
+        "correct": 43,
+        "counted": 46,
+        "accuracy": 0.935
+      },
+      "two_column_layout": {
+        "correct": 24,
+        "counted": 24,
+        "accuracy": 1.0
+      },
+      "unawarded_lot": {
+        "correct": 23,
+        "counted": 24,
+        "accuracy": 0.958
+      },
+      "values_in_prose": {
+        "correct": 51,
+        "counted": 55,
+        "accuracy": 0.927
+      },
+      "wrong_legal_ground": {
+        "correct": 61,
+        "counted": 67,
+        "accuracy": 0.91
+      }
+    },
+    "flags": {
+      "cases_with_flag_output": 12,
+      "tp": 7,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.875,
+      "recall": 0.875
+    }
+  },
+  "per_case": {
+    "CR-001": {
+      "title": "Contract award notice, clean layout",
+      "hazards": [
+        "baseline"
+      ],
+      "fields_correct": 23,
+      "fields_counted": 23,
+      "field_accuracy": 1.0,
+      "critical_pass": true,
+      "expected_high_flags": [],
+      "predicted_high_flags": [],
+      "verdicts": {
+        "notice_type": {
+          "verdict": "correct",
+          "note": "'contract_award_notice' vs 'contract_award_notice'",
+          "gold": "contract_award_notice",
+          "pred": "contract_award_notice"
+        },
+        "notice_reference": {
+          "verdict": "correct",
+          "note": "'003118-2026' vs '003118-2026' (sim 1.00)",
+          "gold": "003118-2026",
+          "pred": "003118-2026"
+        },
+        "contracting_authority": {
+          "verdict": "correct",
+          "note": "'Wexcombe Borough Council' vs 'Wexcombe Borough Council' (sim 1.00)",
+          "gold": "Wexcombe Borough Council",
+          "pred": "Wexcombe Borough Council"
+        },
+        "contracting_authority_type": {
+          "verdict": "correct",
+          "note": "'sub_central' vs 'sub_central'",
+          "gold": "sub_central",
+          "pred": "sub_central"
+        },
+        "supplier_name": {
+          "verdict": "correct",
+          "note": "'Fenwick Grounds Maintenance Ltd' vs 'Fenwick Grounds Maintenance Ltd' (sim 1.00)",
+          "gold": "Fenwick Grounds Maintenance Ltd",
+          "pred": "Fenwick Grounds Maintenance Ltd"
+        },
+        "supplier_registration_number": {
+          "verdict": "correct",
+          "note": "'06645928' vs '06645928' (sim 1.00)",
+          "gold": "06645928",
+          "pred": "06645928"
+        },
+        "contract_title": {
+          "verdict": "correct",
+          "note": "'Provision of Grounds Maintenance Services for Parks and Open Spaces' vs 'Provision of Grounds Maintenance Services for Parks and Open Spaces' (sim 1.00)",
+          "gold": "Provision of Grounds Maintenance Services for Parks and Open Spaces",
+          "pred": "Provision of Grounds Maintenance Services for Parks and Open Spaces"
+        },
+        "contract_reference": {
+          "verdict": "correct",
+          "note": "'WBC/2026/0071' vs 'WBC/2026/0071' (sim 1.00)",
+          "gold": "WBC/2026/0071",
+          "pred": "WBC/2026/0071"
+        },
+        "procurement_type": {
+          "verdict": "correct",
+          "note": "'services' vs 'services'",
+          "gold": "services",
+          "pred": "services"
+        },
+        "light_touch": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "procedure": {
+          "verdict": "correct",
+          "note": "'open' vs 'open'",
+          "gold": "open",
+          "pred": "open"
+        },
+        "cpv_codes": {
+          "verdict": "correct",
+          "note": "['77310000', '77311000', '77314000'] vs ['77310000', '77311000', '77314000']",
+          "gold": [
+            "77310000",
+            "77311000",
+            "77314000"
+          ],
+          "pred": [
+            "77310000",
+            "77311000",
+            "77314000"
+          ]
+        },
+        "notice_published_date": {
+          "verdict": "correct",
+          "note": "'2026-02-16' vs '2026-02-16'",
+          "gold": "2026-02-16",
+          "pred": "2026-02-16"
+        },
+        "award_date": {
+          "verdict": "correct",
+          "note": "'2026-02-12' vs '2026-02-12'",
+          "gold": "2026-02-12",
+          "pred": "2026-02-12"
+        },
+        "contract_signed_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "contract_start_date": {
+          "verdict": "correct",
+          "note": "'2026-04-01' vs '2026-04-01'",
+          "gold": "2026-04-01",
+          "pred": "2026-04-01"
+        },
+        "contract_end_date": {
+          "verdict": "correct",
+          "note": "'2030-03-31' vs '2030-03-31'",
+          "gold": "2030-03-31",
+          "pred": "2030-03-31"
+        },
+        "extension_options_months": {
+          "verdict": "correct",
+          "note": "24 vs 24",
+          "gold": 24,
+          "pred": 24
+        },
+        "maximum_term_months": {
+          "verdict": "correct",
+          "note": "72 vs 72",
+          "gold": 72,
+          "pred": 72
+        },
+        "contract_value_gbp": {
+          "verdict": "correct",
+          "note": "1,240,000.00 vs 1,240,000.00",
+          "gold": 1240000,
+          "pred": 1240000
+        },
+        "value_includes_vat": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "number_of_tenders_received": {
+          "verdict": "correct",
+          "note": "4 vs 4",
+          "gold": 4,
+          "pred": 4
+        },
+        "kpis": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": []
+        },
+        "payment_terms_days": {
+          "verdict": "correct",
+          "note": "30 vs 30",
+          "gold": 30,
+          "pred": 30
+        },
+        "standstill_end_date": {
+          "verdict": "correct",
+          "note": "'2026-02-26' vs '2026-02-26'",
+          "gold": "2026-02-26",
+          "pred": "2026-02-26"
+        },
+        "lots": {
+          "verdict": "skip",
+          "note": "",
+          "gold": [],
+          "pred": []
+        },
+        "modification_number": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_description": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_ground": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_percent": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "term_change_months": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "contract_change_notice_published": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "voluntary_standstill": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        }
+      }
+    },
+    "CR-002": {
+      "title": "Contract details notice with a priced schedule crossing a page",
+      "hazards": [
+        "table_crosses_page",
+        "repeated_header",
+        "footer_interleaves",
+        "annual_vs_total_value",
+        "totals_row"
+      ],
+      "fields_correct": 24,
+      "fields_counted": 24,
+      "field_accuracy": 1.0,
+      "critical_pass": true,
+      "expected_high_flags": [],
+      "predicted_high_flags": [],
+      "verdicts": {
+        "notice_type": {
+          "verdict": "correct",
+          "note": "'contract_details_notice' vs 'contract_details_notice'",
+          "gold": "contract_details_notice",
+          "pred": "contract_details_notice"
+        },
+        "notice_reference": {
+          "verdict": "correct",
+          "note": "'004213-2026' vs '004213-2026' (sim 1.00)",
+          "gold": "004213-2026",
+          "pred": "004213-2026"
+        },
+        "contracting_authority": {
+          "verdict": "correct",
+          "note": "'Harrowdale District Council' vs 'Harrowdale District Council' (sim 1.00)",
+          "gold": "Harrowdale District Council",
+          "pred": "Harrowdale District Council"
+        },
+        "contracting_authority_type": {
+          "verdict": "correct",
+          "note": "'sub_central' vs 'sub_central'",
+          "gold": "sub_central",
+          "pred": "sub_central"
+        },
+        "supplier_name": {
+          "verdict": "correct",
+          "note": "'Ironside Waste Management Ltd' vs 'Ironside Waste Management Ltd' (sim 1.00)",
+          "gold": "Ironside Waste Management Ltd",
+          "pred": "Ironside Waste Management Ltd"
+        },
+        "supplier_registration_number": {
+          "verdict": "correct",
+          "note": "'07114290' vs '07114290' (sim 1.00)",
+          "gold": "07114290",
+          "pred": "07114290"
+        },
+        "contract_title": {
+          "verdict": "correct",
+          "note": "'Household Waste and Recycling Collection Service' vs 'Household Waste and Recycling Collection Service' (sim 1.00)",
+          "gold": "Household Waste and Recycling Collection Service",
+          "pred": "Household Waste and Recycling Collection Service"
+        },
+        "contract_reference": {
+          "verdict": "correct",
+          "note": "'HDC-ENV-2025-014' vs 'HDC-ENV-2025-014' (sim 1.00)",
+          "gold": "HDC-ENV-2025-014",
+          "pred": "HDC-ENV-2025-014"
+        },
+        "procurement_type": {
+          "verdict": "correct",
+          "note": "'services' vs 'services'",
+          "gold": "services",
+          "pred": "services"
+        },
+        "light_touch": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "procedure": {
+          "verdict": "correct",
+          "note": "'competitive_flexible' vs 'competitive_flexible'",
+          "gold": "competitive_flexible",
+          "pred": "competitive_flexible"
+        },
+        "cpv_codes": {
+          "verdict": "correct",
+          "note": "['90511000', '90511200', '90512000'] vs ['90511000', '90511200', '90512000']",
+          "gold": [
+            "90511000",
+            "90512000",
+            "90511200"
+          ],
+          "pred": [
+            "90511000",
+            "90512000",
+            "90511200"
+          ]
+        },
+        "notice_published_date": {
+          "verdict": "correct",
+          "note": "'2026-03-20' vs '2026-03-20'",
+          "gold": "2026-03-20",
+          "pred": "2026-03-20"
+        },
+        "award_date": {
+          "verdict": "correct",
+          "note": "'2026-02-24' vs '2026-02-24'",
+          "gold": "2026-02-24",
+          "pred": "2026-02-24"
+        },
+        "contract_signed_date": {
+          "verdict": "correct",
+          "note": "'2026-03-03' vs '2026-03-03'",
+          "gold": "2026-03-03",
+          "pred": "2026-03-03"
+        },
+        "contract_start_date": {
+          "verdict": "correct",
+          "note": "'2026-04-06' vs '2026-04-06'",
+          "gold": "2026-04-06",
+          "pred": "2026-04-06"
+        },
+        "contract_end_date": {
+          "verdict": "correct",
+          "note": "'2033-04-05' vs '2033-04-05'",
+          "gold": "2033-04-05",
+          "pred": "2033-04-05"
+        },
+        "extension_options_months": {
+          "verdict": "correct",
+          "note": "24 vs 24",
+          "gold": 24,
+          "pred": 24
+        },
+        "maximum_term_months": {
+          "verdict": "correct",
+          "note": "108 vs 108",
+          "gold": 108,
+          "pred": 108
+        },
+        "contract_value_gbp": {
+          "verdict": "correct",
+          "note": "27,650,000.00 vs 27,650,000.00",
+          "gold": 27650000,
+          "pred": 27650000
+        },
+        "value_includes_vat": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "number_of_tenders_received": {
+          "verdict": "correct",
+          "note": "3 vs 3",
+          "gold": 3,
+          "pred": 3
+        },
+        "kpis": {
+          "verdict": "correct",
+          "note": "['customer satisfaction score quarterly survey', 'missed collections per 100 000', 'recycling rate'] vs ['customer satisfaction score quarterly survey', 'missed collections per 100 000', 'recycling rate']",
+          "gold": [
+            "Missed collections per 100,000",
+            "Recycling rate (%)",
+            "Customer satisfaction score (quarterly survey)"
+          ],
+          "pred": [
+            "Missed collections per 100,000",
+            "Recycling rate (%)",
+            "Customer satisfaction score (quarterly survey)"
+          ]
+        },
+        "payment_terms_days": {
+          "verdict": "correct",
+          "note": "30 vs 30",
+          "gold": 30,
+          "pred": 30
+        },
+        "standstill_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "lots": {
+          "verdict": "skip",
+          "note": "",
+          "gold": [],
+          "pred": []
+        },
+        "modification_number": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_description": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_ground": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_percent": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "term_change_months": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "contract_change_notice_published": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "voluntary_standstill": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        }
+      }
+    },
+    "CR-003": {
+      "title": "Contract details notice with borderless, grouped particulars",
+      "hazards": [
+        "borderless_table",
+        "grouped_rows",
+        "label_synonyms",
+        "annual_vs_total_value",
+        "date_abbr"
+      ],
+      "fields_correct": 24,
+      "fields_counted": 24,
+      "field_accuracy": 1.0,
+      "critical_pass": true,
+      "expected_high_flags": [],
+      "predicted_high_flags": [],
+      "verdicts": {
+        "notice_type": {
+          "verdict": "correct",
+          "note": "'contract_details_notice' vs 'contract_details_notice'",
+          "gold": "contract_details_notice",
+          "pred": "contract_details_notice"
+        },
+        "notice_reference": {
+          "verdict": "correct",
+          "note": "'002907-2026' vs '002907-2026' (sim 1.00)",
+          "gold": "002907-2026",
+          "pred": "002907-2026"
+        },
+        "contracting_authority": {
+          "verdict": "correct",
+          "note": "'Northam Vale County Council' vs 'Northam Vale County Council' (sim 1.00)",
+          "gold": "Northam Vale County Council",
+          "pred": "Northam Vale County Council"
+        },
+        "contracting_authority_type": {
+          "verdict": "correct",
+          "note": "'sub_central' vs 'sub_central'",
+          "gold": "sub_central",
+          "pred": "sub_central"
+        },
+        "supplier_name": {
+          "verdict": "correct",
+          "note": "'Cresswell Highways Ltd' vs 'Cresswell Highways Ltd' (sim 1.00)",
+          "gold": "Cresswell Highways Ltd",
+          "pred": "Cresswell Highways Ltd"
+        },
+        "supplier_registration_number": {
+          "verdict": "correct",
+          "note": "'05583107' vs '05583107' (sim 1.00)",
+          "gold": "05583107",
+          "pred": "05583107"
+        },
+        "contract_title": {
+          "verdict": "correct",
+          "note": "'Highways Reactive Maintenance and Winter Service' vs 'Highways Reactive Maintenance and Winter Service' (sim 1.00)",
+          "gold": "Highways Reactive Maintenance and Winter Service",
+          "pred": "Highways Reactive Maintenance and Winter Service"
+        },
+        "contract_reference": {
+          "verdict": "correct",
+          "note": "'NVCC/HW/0442' vs 'NVCC/HW/0442' (sim 1.00)",
+          "gold": "NVCC/HW/0442",
+          "pred": "NVCC/HW/0442"
+        },
+        "procurement_type": {
+          "verdict": "correct",
+          "note": "'works' vs 'works'",
+          "gold": "works",
+          "pred": "works"
+        },
+        "light_touch": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "procedure": {
+          "verdict": "correct",
+          "note": "'open' vs 'open'",
+          "gold": "open",
+          "pred": "open"
+        },
+        "cpv_codes": {
+          "verdict": "correct",
+          "note": "['45233139', '45233141', '90620000'] vs ['45233139', '45233141', '90620000']",
+          "gold": [
+            "45233141",
+            "45233139",
+            "90620000"
+          ],
+          "pred": [
+            "45233141",
+            "45233139",
+            "90620000"
+          ]
+        },
+        "notice_published_date": {
+          "verdict": "correct",
+          "note": "'2026-02-05' vs '2026-02-05'",
+          "gold": "2026-02-05",
+          "pred": "2026-02-05"
+        },
+        "award_date": {
+          "verdict": "correct",
+          "note": "'2026-01-09' vs '2026-01-09'",
+          "gold": "2026-01-09",
+          "pred": "2026-01-09"
+        },
+        "contract_signed_date": {
+          "verdict": "correct",
+          "note": "'2026-01-20' vs '2026-01-20'",
+          "gold": "2026-01-20",
+          "pred": "2026-01-20"
+        },
+        "contract_start_date": {
+          "verdict": "correct",
+          "note": "'2026-03-01' vs '2026-03-01'",
+          "gold": "2026-03-01",
+          "pred": "2026-03-01"
+        },
+        "contract_end_date": {
+          "verdict": "correct",
+          "note": "'2029-02-28' vs '2029-02-28'",
+          "gold": "2029-02-28",
+          "pred": "2029-02-28"
+        },
+        "extension_options_months": {
+          "verdict": "correct",
+          "note": "12 vs 12",
+          "gold": 12,
+          "pred": 12
+        },
+        "maximum_term_months": {
+          "verdict": "correct",
+          "note": "48 vs 48",
+          "gold": 48,
+          "pred": 48
+        },
+        "contract_value_gbp": {
+          "verdict": "correct",
+          "note": "6,400,000.00 vs 6,400,000.00",
+          "gold": 6400000,
+          "pred": 6400000.0
+        },
+        "value_includes_vat": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "number_of_tenders_received": {
+          "verdict": "correct",
+          "note": "5 vs 5",
+          "gold": 5,
+          "pred": 5
+        },
+        "kpis": {
+          "verdict": "correct",
+          "note": "['emergency call outs attended within 2 hours', 'pothole repairs completed within 5 working days', 'winter gritting routes completed to schedule'] vs ['emergency call outs attended within 2 hours', 'pothole repairs completed within 5 working days', 'winter gritting routes completed to schedule']",
+          "gold": [
+            "Emergency call-outs attended within 2 hours",
+            "Pothole repairs completed within 5 working days",
+            "Winter gritting routes completed to schedule"
+          ],
+          "pred": [
+            "Emergency call-outs attended within 2 hours",
+            "Pothole repairs completed within 5 working days",
+            "Winter gritting routes completed to schedule"
+          ]
+        },
+        "payment_terms_days": {
+          "verdict": "correct",
+          "note": "30 vs 30",
+          "gold": 30,
+          "pred": 30
+        },
+        "standstill_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "lots": {
+          "verdict": "skip",
+          "note": "",
+          "gold": [],
+          "pred": []
+        },
+        "modification_number": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_description": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_ground": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_percent": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "term_change_months": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "contract_change_notice_published": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "voluntary_standstill": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        }
+      }
+    },
+    "CR-004": {
+      "title": "Contract change notice relying on the wrong ground",
+      "hazards": [
+        "wrong_legal_ground",
+        "percent_not_printed",
+        "date_uk_format"
+      ],
+      "fields_correct": 32,
+      "fields_counted": 34,
+      "field_accuracy": 0.941,
+      "critical_pass": false,
+      "expected_high_flags": [
+        "PA23-s74-exceeds-below-threshold",
+        "PA23-s74-substantial-term"
+      ],
+      "predicted_high_flags": [
+        "PA23-s74-exceeds-below-threshold",
+        "PA23-s74-substantial-term"
+      ],
+      "verdicts": {
+        "notice_type": {
+          "verdict": "correct",
+          "note": "'contract_change_notice' vs 'contract_change_notice'",
+          "gold": "contract_change_notice",
+          "pred": "contract_change_notice"
+        },
+        "notice_reference": {
+          "verdict": "correct",
+          "note": "'006540-2026' vs '006540-2026' (sim 1.00)",
+          "gold": "006540-2026",
+          "pred": "006540-2026"
+        },
+        "contracting_authority": {
+          "verdict": "correct",
+          "note": "'Stonebridge Metropolitan Borough Council' vs 'Stonebridge Metropolitan Borough Council' (sim 1.00)",
+          "gold": "Stonebridge Metropolitan Borough Council",
+          "pred": "Stonebridge Metropolitan Borough Council"
+        },
+        "contracting_authority_type": {
+          "verdict": "correct",
+          "note": "'sub_central' vs 'sub_central'",
+          "gold": "sub_central",
+          "pred": "sub_central"
+        },
+        "supplier_name": {
+          "verdict": "correct",
+          "note": "'Alderman Facilities Group Ltd' vs 'Alderman Facilities Group Ltd' (sim 1.00)",
+          "gold": "Alderman Facilities Group Ltd",
+          "pred": "Alderman Facilities Group Ltd"
+        },
+        "supplier_registration_number": {
+          "verdict": "correct",
+          "note": "'09418832' vs '09418832' (sim 1.00)",
+          "gold": "09418832",
+          "pred": "09418832"
+        },
+        "contract_title": {
+          "verdict": "correct",
+          "note": "'Facilities Management for Corporate Buildings' vs 'Facilities Management for Corporate Buildings' (sim 1.00)",
+          "gold": "Facilities Management for Corporate Buildings",
+          "pred": "Facilities Management for Corporate Buildings"
+        },
+        "contract_reference": {
+          "verdict": "correct",
+          "note": "'SMBC/FM/2025/003' vs 'SMBC/FM/2025/003' (sim 1.00)",
+          "gold": "SMBC/FM/2025/003",
+          "pred": "SMBC/FM/2025/003"
+        },
+        "procurement_type": {
+          "verdict": "correct",
+          "note": "'services' vs 'services'",
+          "gold": "services",
+          "pred": "services"
+        },
+        "light_touch": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "procedure": {
+          "verdict": "correct",
+          "note": "'competitive_flexible' vs 'competitive_flexible'",
+          "gold": "competitive_flexible",
+          "pred": "competitive_flexible"
+        },
+        "cpv_codes": {
+          "verdict": "correct",
+          "note": "['50700000', '79993100', '90911200'] vs ['50700000', '79993100', '90911200']",
+          "gold": [
+            "79993100",
+            "50700000",
+            "90911200"
+          ],
+          "pred": [
+            "79993100",
+            "50700000",
+            "90911200"
+          ]
+        },
+        "notice_published_date": {
+          "verdict": "correct",
+          "note": "'2026-05-04' vs '2026-05-04'",
+          "gold": "2026-05-04",
+          "pred": "2026-05-04"
+        },
+        "award_date": {
+          "verdict": "correct",
+          "note": "'2025-11-14' vs '2025-11-14'",
+          "gold": "2025-11-14",
+          "pred": "2025-11-14"
+        },
+        "contract_signed_date": {
+          "verdict": "correct",
+          "note": "'2026-03-20' vs '2026-03-20'",
+          "gold": "2026-03-20",
+          "pred": "2026-03-20"
+        },
+        "contract_start_date": {
+          "verdict": "correct",
+          "note": "'2026-04-01' vs '2026-04-01'",
+          "gold": "2026-04-01",
+          "pred": "2026-04-01"
+        },
+        "contract_end_date": {
+          "verdict": "wrong",
+          "note": "value where gold is null",
+          "gold": null,
+          "pred": "2029-03-31"
+        },
+        "extension_options_months": {
+          "verdict": "correct",
+          "note": "0 vs 0",
+          "gold": 0,
+          "pred": 0
+        },
+        "maximum_term_months": {
+          "verdict": "correct",
+          "note": "36 vs 36",
+          "gold": 36,
+          "pred": 36
+        },
+        "contract_value_gbp": {
+          "verdict": "wrong",
+          "note": "value where gold is null",
+          "gold": null,
+          "pred": 1800000
+        },
+        "value_includes_vat": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "number_of_tenders_received": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "kpis": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": []
+        },
+        "payment_terms_days": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "standstill_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "lots": {
+          "verdict": "skip",
+          "note": "",
+          "gold": [],
+          "pred": []
+        },
+        "modification_number": {
+          "verdict": "correct",
+          "note": "1 vs 1",
+          "gold": 1,
+          "pred": 1
+        },
+        "modification_date": {
+          "verdict": "correct",
+          "note": "'2026-05-11' vs '2026-05-11'",
+          "gold": "2026-05-11",
+          "pred": "2026-05-11"
+        },
+        "modification_description": {
+          "verdict": "correct",
+          "note": "'Addition of three annexe buildings to the cleaning and M&E maintenance scope following the transfer of the Riverside offices to the Council, and a 12-month extension of the term to align with the corporate accommodation strategy.' vs 'Addition of three annexe buildings to the cleaning and M&E maintenance scope following the transfer of the Riverside offices to the Council, and a 12-month extension of the term to align with the corporate accommodation strategy.' (sim 1.00)",
+          "gold": "Addition of three annexe buildings to the cleaning and M&E maintenance scope following the transfer of the Riverside offices to the Council, and a 12-month extension of the term to align with the corporate accommodation strategy.",
+          "pred": "Addition of three annexe buildings to the cleaning and M&E maintenance scope following the transfer of the Riverside offices to the Council, and a 12-month extension of the term to align with the corporate accommodation strategy."
+        },
+        "modification_ground": {
+          "verdict": "correct",
+          "note": "'s74_below_threshold' vs 's74_below_threshold'",
+          "gold": "s74_below_threshold",
+          "pred": "s74_below_threshold"
+        },
+        "original_contract_value_gbp": {
+          "verdict": "correct",
+          "note": "1,800,000.00 vs 1,800,000.00",
+          "gold": 1800000,
+          "pred": 1800000
+        },
+        "revised_contract_value_gbp": {
+          "verdict": "correct",
+          "note": "2,060,000.00 vs 2,060,000.00",
+          "gold": 2060000,
+          "pred": 2060000
+        },
+        "value_change_gbp": {
+          "verdict": "correct",
+          "note": "260,000.00 vs 260,000.00",
+          "gold": 260000,
+          "pred": 260000
+        },
+        "value_change_percent": {
+          "verdict": "correct",
+          "note": "14.4 vs 14.4",
+          "gold": 14.4,
+          "pred": 14.4
+        },
+        "original_end_date": {
+          "verdict": "correct",
+          "note": "'2029-03-31' vs '2029-03-31'",
+          "gold": "2029-03-31",
+          "pred": "2029-03-31"
+        },
+        "revised_end_date": {
+          "verdict": "correct",
+          "note": "'2030-03-31' vs '2030-03-31'",
+          "gold": "2030-03-31",
+          "pred": "2030-03-31"
+        },
+        "term_change_months": {
+          "verdict": "correct",
+          "note": "12 vs 12",
+          "gold": 12,
+          "pred": 12
+        },
+        "contract_change_notice_published": {
+          "verdict": "correct",
+          "note": "True vs True",
+          "gold": true,
+          "pred": true
+        },
+        "voluntary_standstill": {
+          "verdict": "correct",
+          "note": "True vs True",
+          "gold": true,
+          "pred": true
+        }
+      }
+    },
+    "CR-005": {
+      "title": "Scanned contract particulars (image-only PDF)",
+      "hazards": [
+        "scanned_no_text_layer",
+        "trading_as_name",
+        "kpi_shortfall"
+      ],
+      "fields_correct": 19,
+      "fields_counted": 22,
+      "field_accuracy": 0.864,
+      "critical_pass": false,
+      "expected_high_flags": [
+        "PA23-s52-kpi-min3"
+      ],
+      "predicted_high_flags": [],
+      "verdicts": {
+        "notice_type": {
+          "verdict": "correct",
+          "note": "'contract_document' vs 'contract_document'",
+          "gold": "contract_document",
+          "pred": "contract_document"
+        },
+        "notice_reference": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "contracting_authority": {
+          "verdict": "correct",
+          "note": "'Eastmere and Calder District Council' vs 'Eastmere and Calder District Council' (sim 1.00)",
+          "gold": "Eastmere and Calder District Council",
+          "pred": "Eastmere and Calder District Council"
+        },
+        "contracting_authority_type": {
+          "verdict": "correct",
+          "note": "'sub_central' vs 'sub_central'",
+          "gold": "sub_central",
+          "pred": "sub_central"
+        },
+        "supplier_name": {
+          "verdict": "correct",
+          "note": "'Halbrook Leisure Operations Ltd' vs 'Halbrook Leisure Operations Ltd' (sim 1.00)",
+          "gold": "Halbrook Leisure Operations Ltd",
+          "pred": "Halbrook Leisure Operations Ltd"
+        },
+        "supplier_registration_number": {
+          "verdict": "correct",
+          "note": "'10931562' vs '10931562' (sim 1.00)",
+          "gold": "10931562",
+          "pred": "10931562"
+        },
+        "contract_title": {
+          "verdict": "wrong",
+          "note": "'Contract for the provision of leisure centre operating services' vs 'Leisure Centre Operating Contract' (sim 0.54)",
+          "gold": "Leisure Centre Operating Contract",
+          "pred": "Contract for the provision of leisure centre operating services"
+        },
+        "contract_reference": {
+          "verdict": "correct",
+          "note": "'ECDC/LE1/2026/01' vs 'ECDC/LEI/2026/01' (sim 0.94)",
+          "gold": "ECDC/LEI/2026/01",
+          "pred": "ECDC/LE1/2026/01"
+        },
+        "procurement_type": {
+          "verdict": "correct",
+          "note": "'services' vs 'services'",
+          "gold": "services",
+          "pred": "services"
+        },
+        "light_touch": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "procedure": {
+          "verdict": "correct",
+          "note": "'competitive_flexible' vs 'competitive_flexible'",
+          "gold": "competitive_flexible",
+          "pred": "competitive_flexible"
+        },
+        "cpv_codes": {
+          "verdict": "correct",
+          "note": "['92600000', '92610000'] vs ['92600000', '92610000']",
+          "gold": [
+            "92610000",
+            "92600000"
+          ],
+          "pred": [
+            "92610000",
+            "92600000"
+          ]
+        },
+        "notice_published_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "award_date": {
+          "verdict": "correct",
+          "note": "'2026-03-27' vs '2026-03-27'",
+          "gold": "2026-03-27",
+          "pred": "2026-03-27"
+        },
+        "contract_signed_date": {
+          "verdict": "correct",
+          "note": "'2026-04-14' vs '2026-04-14'",
+          "gold": "2026-04-14",
+          "pred": "2026-04-14"
+        },
+        "contract_start_date": {
+          "verdict": "correct",
+          "note": "'2026-06-01' vs '2026-06-01'",
+          "gold": "2026-06-01",
+          "pred": "2026-06-01"
+        },
+        "contract_end_date": {
+          "verdict": "correct",
+          "note": "'2031-05-31' vs '2031-05-31'",
+          "gold": "2031-05-31",
+          "pred": "2031-05-31"
+        },
+        "extension_options_months": {
+          "verdict": "correct",
+          "note": "0 vs 0",
+          "gold": 0,
+          "pred": 0
+        },
+        "maximum_term_months": {
+          "verdict": "correct",
+          "note": "60 vs 60",
+          "gold": 60,
+          "pred": 60
+        },
+        "contract_value_gbp": {
+          "verdict": "wrong",
+          "note": "750,000.00 vs 9,750,000.00",
+          "gold": 9750000,
+          "pred": 750000
+        },
+        "value_includes_vat": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "number_of_tenders_received": {
+          "verdict": "correct",
+          "note": "2 vs 2",
+          "gold": 2,
+          "pred": 2
+        },
+        "kpis": {
+          "verdict": "wrong",
+          "note": "['facility availability operating hours delivered', 'quarterly customer satisfaction score'] vs ['facility availability opening hours delivered', 'quarterly customer satisfaction score']",
+          "gold": [
+            "Facility availability (opening hours delivered)",
+            "Quarterly customer satisfaction score"
+          ],
+          "pred": [
+            "Facility availability (operating hours delivered)",
+            "Quarterly customer satisfaction score"
+          ]
+        },
+        "payment_terms_days": {
+          "verdict": "correct",
+          "note": "30 vs 30",
+          "gold": 30,
+          "pred": 30
+        },
+        "standstill_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "lots": {
+          "verdict": "skip",
+          "note": "",
+          "gold": [],
+          "pred": []
+        },
+        "modification_number": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_description": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_ground": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_percent": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "term_change_months": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "contract_change_notice_published": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "voluntary_standstill": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        }
+      }
+    },
+    "CR-006": {
+      "title": "Contract details notice in a two-column stacked layout",
+      "hazards": [
+        "two_column_layout",
+        "stacked_label_value",
+        "money_short_format",
+        "trading_as_name",
+        "late_contract_details_notice",
+        "payment_terms_over_30"
+      ],
+      "fields_correct": 24,
+      "fields_counted": 24,
+      "field_accuracy": 1.0,
+      "critical_pass": true,
+      "expected_high_flags": [],
+      "predicted_high_flags": [],
+      "verdicts": {
+        "notice_type": {
+          "verdict": "correct",
+          "note": "'contract_details_notice' vs 'contract_details_notice'",
+          "gold": "contract_details_notice",
+          "pred": "contract_details_notice"
+        },
+        "notice_reference": {
+          "verdict": "correct",
+          "note": "'008862-2026' vs '008862-2026' (sim 1.00)",
+          "gold": "008862-2026",
+          "pred": "008862-2026"
+        },
+        "contracting_authority": {
+          "verdict": "correct",
+          "note": "'Kingsholt City Council' vs 'Kingsholt City Council' (sim 1.00)",
+          "gold": "Kingsholt City Council",
+          "pred": "Kingsholt City Council"
+        },
+        "contracting_authority_type": {
+          "verdict": "correct",
+          "note": "'sub_central' vs 'sub_central'",
+          "gold": "sub_central",
+          "pred": "sub_central"
+        },
+        "supplier_name": {
+          "verdict": "correct",
+          "note": "'Elmstead ICT Solutions Ltd' vs 'Elmstead ICT Solutions Ltd' (sim 1.00)",
+          "gold": "Elmstead ICT Solutions Ltd",
+          "pred": "Elmstead ICT Solutions Ltd"
+        },
+        "supplier_registration_number": {
+          "verdict": "correct",
+          "note": "'08867310' vs '08867310' (sim 1.00)",
+          "gold": "08867310",
+          "pred": "08867310"
+        },
+        "contract_title": {
+          "verdict": "correct",
+          "note": "'Managed ICT service desk and end-user device support service' vs 'Managed ICT Service Desk and End User Device Support' (sim 0.93)",
+          "gold": "Managed ICT Service Desk and End User Device Support",
+          "pred": "Managed ICT service desk and end-user device support service"
+        },
+        "contract_reference": {
+          "verdict": "correct",
+          "note": "'KCC-ICT-24-0917' vs 'KCC-ICT-24-0917' (sim 1.00)",
+          "gold": "KCC-ICT-24-0917",
+          "pred": "KCC-ICT-24-0917"
+        },
+        "procurement_type": {
+          "verdict": "correct",
+          "note": "'services' vs 'services'",
+          "gold": "services",
+          "pred": "services"
+        },
+        "light_touch": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "procedure": {
+          "verdict": "correct",
+          "note": "'framework_call_off' vs 'framework_call_off'",
+          "gold": "framework_call_off",
+          "pred": "framework_call_off"
+        },
+        "cpv_codes": {
+          "verdict": "correct",
+          "note": "['50320000', '72253000', '72500000'] vs ['50320000', '72253000', '72500000']",
+          "gold": [
+            "72253000",
+            "72500000",
+            "50320000"
+          ],
+          "pred": [
+            "72253000",
+            "72500000",
+            "50320000"
+          ]
+        },
+        "notice_published_date": {
+          "verdict": "correct",
+          "note": "'2026-04-29' vs '2026-04-29'",
+          "gold": "2026-04-29",
+          "pred": "2026-04-29"
+        },
+        "award_date": {
+          "verdict": "correct",
+          "note": "'2026-02-20' vs '2026-02-20'",
+          "gold": "2026-02-20",
+          "pred": "2026-02-20"
+        },
+        "contract_signed_date": {
+          "verdict": "correct",
+          "note": "'2026-02-27' vs '2026-02-27'",
+          "gold": "2026-02-27",
+          "pred": "2026-02-27"
+        },
+        "contract_start_date": {
+          "verdict": "correct",
+          "note": "'2026-04-01' vs '2026-04-01'",
+          "gold": "2026-04-01",
+          "pred": "2026-04-01"
+        },
+        "contract_end_date": {
+          "verdict": "correct",
+          "note": "'2029-03-31' vs '2029-03-31'",
+          "gold": "2029-03-31",
+          "pred": "2029-03-31"
+        },
+        "extension_options_months": {
+          "verdict": "correct",
+          "note": "24 vs 24",
+          "gold": 24,
+          "pred": 24
+        },
+        "maximum_term_months": {
+          "verdict": "correct",
+          "note": "60 vs 60",
+          "gold": 60,
+          "pred": 60
+        },
+        "contract_value_gbp": {
+          "verdict": "correct",
+          "note": "2,310,000.00 vs 2,310,000.00",
+          "gold": 2310000,
+          "pred": 2310000
+        },
+        "value_includes_vat": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "number_of_tenders_received": {
+          "verdict": "correct",
+          "note": "3 vs 3",
+          "gold": 3,
+          "pred": 3
+        },
+        "kpis": {
+          "verdict": "correct",
+          "note": "['customer satisfaction score quarterly survey', 'first time fix rate', 'service availability monthly'] vs ['customer satisfaction score quarterly survey', 'first time fix rate', 'service availability monthly']",
+          "gold": [
+            "First-time fix rate",
+            "Service availability (monthly)",
+            "Customer satisfaction score (quarterly survey)"
+          ],
+          "pred": [
+            "First-time fix rate",
+            "Service availability (monthly)",
+            "Customer satisfaction score (quarterly survey)"
+          ]
+        },
+        "payment_terms_days": {
+          "verdict": "correct",
+          "note": "45 vs 45",
+          "gold": 45,
+          "pred": 45
+        },
+        "standstill_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "lots": {
+          "verdict": "skip",
+          "note": "",
+          "gold": [],
+          "pred": []
+        },
+        "modification_number": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_description": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_ground": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_percent": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "term_change_months": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "contract_change_notice_published": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "voluntary_standstill": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        }
+      }
+    },
+    "CR-007": {
+      "title": "Multi-lot award notice with an unawarded lot and a short standstill",
+      "hazards": [
+        "multi_lot",
+        "unawarded_lot",
+        "totals_row",
+        "evaluation_scores_table",
+        "table_crosses_page",
+        "standstill_too_short"
+      ],
+      "fields_correct": 23,
+      "fields_counted": 24,
+      "field_accuracy": 0.958,
+      "critical_pass": true,
+      "expected_high_flags": [
+        "PA23-s51-standstill-short"
+      ],
+      "predicted_high_flags": [
+        "PA23-s51-standstill-short"
+      ],
+      "verdicts": {
+        "notice_type": {
+          "verdict": "correct",
+          "note": "'contract_award_notice' vs 'contract_award_notice'",
+          "gold": "contract_award_notice",
+          "pred": "contract_award_notice"
+        },
+        "notice_reference": {
+          "verdict": "correct",
+          "note": "'005077-2026' vs '005077-2026' (sim 1.00)",
+          "gold": "005077-2026",
+          "pred": "005077-2026"
+        },
+        "contracting_authority": {
+          "verdict": "correct",
+          "note": "'Northam Vale County Council' vs 'Northam Vale County Council' (sim 1.00)",
+          "gold": "Northam Vale County Council",
+          "pred": "Northam Vale County Council"
+        },
+        "contracting_authority_type": {
+          "verdict": "correct",
+          "note": "'sub_central' vs 'sub_central'",
+          "gold": "sub_central",
+          "pred": "sub_central"
+        },
+        "supplier_name": {
+          "verdict": "correct",
+          "note": "'Juniper Social Care Services Ltd' vs 'Juniper Social Care Services Ltd' (sim 1.00)",
+          "gold": "Juniper Social Care Services Ltd",
+          "pred": "Juniper Social Care Services Ltd"
+        },
+        "supplier_registration_number": {
+          "verdict": "missing",
+          "note": "",
+          "gold": "09980154",
+          "pred": null
+        },
+        "contract_title": {
+          "verdict": "correct",
+          "note": "'Domiciliary Care Services (Lots 1-3)' vs 'Domiciliary Care Services (Lots 1-3)' (sim 1.00)",
+          "gold": "Domiciliary Care Services (Lots 1-3)",
+          "pred": "Domiciliary Care Services (Lots 1-3)"
+        },
+        "contract_reference": {
+          "verdict": "correct",
+          "note": "'NVCC/ASC/2025/0210' vs 'NVCC/ASC/2025/0210' (sim 1.00)",
+          "gold": "NVCC/ASC/2025/0210",
+          "pred": "NVCC/ASC/2025/0210"
+        },
+        "procurement_type": {
+          "verdict": "correct",
+          "note": "'services' vs 'services'",
+          "gold": "services",
+          "pred": "services"
+        },
+        "light_touch": {
+          "verdict": "correct",
+          "note": "True vs True",
+          "gold": true,
+          "pred": true
+        },
+        "procedure": {
+          "verdict": "correct",
+          "note": "'competitive_flexible' vs 'competitive_flexible'",
+          "gold": "competitive_flexible",
+          "pred": "competitive_flexible"
+        },
+        "cpv_codes": {
+          "verdict": "correct",
+          "note": "['85000000', '85311100', '85312000'] vs ['85000000', '85311100', '85312000']",
+          "gold": [
+            "85312000",
+            "85311100",
+            "85000000"
+          ],
+          "pred": [
+            "85312000",
+            "85311100",
+            "85000000"
+          ]
+        },
+        "notice_published_date": {
+          "verdict": "correct",
+          "note": "'2026-03-09' vs '2026-03-09'",
+          "gold": "2026-03-09",
+          "pred": "2026-03-09"
+        },
+        "award_date": {
+          "verdict": "correct",
+          "note": "'2026-03-06' vs '2026-03-06'",
+          "gold": "2026-03-06",
+          "pred": "2026-03-06"
+        },
+        "contract_signed_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "contract_start_date": {
+          "verdict": "correct",
+          "note": "'2026-05-01' vs '2026-05-01'",
+          "gold": "2026-05-01",
+          "pred": "2026-05-01"
+        },
+        "contract_end_date": {
+          "verdict": "correct",
+          "note": "'2029-04-30' vs '2029-04-30'",
+          "gold": "2029-04-30",
+          "pred": "2029-04-30"
+        },
+        "extension_options_months": {
+          "verdict": "correct",
+          "note": "24 vs 24",
+          "gold": 24,
+          "pred": 24
+        },
+        "maximum_term_months": {
+          "verdict": "correct",
+          "note": "60 vs 60",
+          "gold": 60,
+          "pred": 60
+        },
+        "contract_value_gbp": {
+          "verdict": "correct",
+          "note": "3,430,000.00 vs 3,430,000.00",
+          "gold": 3430000,
+          "pred": 3430000
+        },
+        "value_includes_vat": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "number_of_tenders_received": {
+          "verdict": "correct",
+          "note": "7 vs 7",
+          "gold": 7,
+          "pred": 7
+        },
+        "kpis": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": []
+        },
+        "payment_terms_days": {
+          "verdict": "correct",
+          "note": "30 vs 30",
+          "gold": 30,
+          "pred": 30
+        },
+        "standstill_end_date": {
+          "verdict": "correct",
+          "note": "'2026-03-17' vs '2026-03-17'",
+          "gold": "2026-03-17",
+          "pred": "2026-03-17"
+        },
+        "lots": {
+          "verdict": "correct",
+          "note": "3 lots",
+          "gold": [
+            {
+              "lot_number": 1,
+              "lot_title": "Domiciliary care - North locality",
+              "supplier_name": "Juniper Social Care Services Ltd",
+              "value_gbp": 1980000,
+              "awarded": true
+            },
+            {
+              "lot_number": 2,
+              "lot_title": "Domiciliary care - South locality",
+              "supplier_name": "Dunmore Care Partnership CIC",
+              "value_gbp": 1450000,
+              "awarded": true
+            },
+            {
+              "lot_number": 3,
+              "lot_title": "Reablement and rapid response",
+              "supplier_name": null,
+              "value_gbp": null,
+              "awarded": false
+            }
+          ],
+          "pred": [
+            {
+              "lot_number": 1,
+              "lot_title": "Domiciliary care - North locality",
+              "supplier_name": "Juniper Social Care Services Ltd",
+              "value_gbp": 1980000,
+              "awarded": true
+            },
+            {
+              "lot_number": 2,
+              "lot_title": "Domiciliary care - South locality",
+              "supplier_name": "Dunmore Care Partnership CIC",
+              "value_gbp": 1450000,
+              "awarded": true
+            },
+            {
+              "lot_number": 3,
+              "lot_title": "Reablement and rapid response",
+              "supplier_name": null,
+              "value_gbp": null,
+              "awarded": false
+            }
+          ]
+        },
+        "modification_number": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_description": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_ground": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_percent": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "term_change_months": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "contract_change_notice_published": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "voluntary_standstill": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        }
+      }
+    },
+    "CR-008": {
+      "title": "Contract change notice correctly below threshold (negative control)",
+      "hazards": [
+        "negative_control",
+        "money_spaced_format",
+        "date_uk_format",
+        "percent_not_printed"
+      ],
+      "fields_correct": 32,
+      "fields_counted": 34,
+      "field_accuracy": 0.941,
+      "critical_pass": false,
+      "expected_high_flags": [],
+      "predicted_high_flags": [],
+      "verdicts": {
+        "notice_type": {
+          "verdict": "correct",
+          "note": "'contract_change_notice' vs 'contract_change_notice'",
+          "gold": "contract_change_notice",
+          "pred": "contract_change_notice"
+        },
+        "notice_reference": {
+          "verdict": "correct",
+          "note": "'007311-2026' vs '007311-2026' (sim 1.00)",
+          "gold": "007311-2026",
+          "pred": "007311-2026"
+        },
+        "contracting_authority": {
+          "verdict": "correct",
+          "note": "'Wexcombe Borough Council' vs 'Wexcombe Borough Council' (sim 1.00)",
+          "gold": "Wexcombe Borough Council",
+          "pred": "Wexcombe Borough Council"
+        },
+        "contracting_authority_type": {
+          "verdict": "correct",
+          "note": "'sub_central' vs 'sub_central'",
+          "gold": "sub_central",
+          "pred": "sub_central"
+        },
+        "supplier_name": {
+          "verdict": "correct",
+          "note": "'Brightwater Environmental Services Limited' vs 'Brightwater Environmental Services Limited' (sim 1.00)",
+          "gold": "Brightwater Environmental Services Limited",
+          "pred": "Brightwater Environmental Services Limited"
+        },
+        "supplier_registration_number": {
+          "verdict": "correct",
+          "note": "'07720941' vs '07720941' (sim 1.00)",
+          "gold": "07720941",
+          "pred": "07720941"
+        },
+        "contract_title": {
+          "verdict": "correct",
+          "note": "'Environmental Services Partnership (Street Cleansing)' vs 'Environmental Services Partnership (Street Cleansing)' (sim 1.00)",
+          "gold": "Environmental Services Partnership (Street Cleansing)",
+          "pred": "Environmental Services Partnership (Street Cleansing)"
+        },
+        "contract_reference": {
+          "verdict": "correct",
+          "note": "'WBC/2025/0119' vs 'WBC/2025/0119' (sim 1.00)",
+          "gold": "WBC/2025/0119",
+          "pred": "WBC/2025/0119"
+        },
+        "procurement_type": {
+          "verdict": "correct",
+          "note": "'services' vs 'services'",
+          "gold": "services",
+          "pred": "services"
+        },
+        "light_touch": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "procedure": {
+          "verdict": "correct",
+          "note": "'open' vs 'open'",
+          "gold": "open",
+          "pred": "open"
+        },
+        "cpv_codes": {
+          "verdict": "correct",
+          "note": "['90610000', '90611000'] vs ['90610000', '90611000']",
+          "gold": [
+            "90610000",
+            "90611000"
+          ],
+          "pred": [
+            "90610000",
+            "90611000"
+          ]
+        },
+        "notice_published_date": {
+          "verdict": "correct",
+          "note": "'2026-06-02' vs '2026-06-02'",
+          "gold": "2026-06-02",
+          "pred": "2026-06-02"
+        },
+        "award_date": {
+          "verdict": "correct",
+          "note": "'2025-09-30' vs '2025-09-30'",
+          "gold": "2025-09-30",
+          "pred": "2025-09-30"
+        },
+        "contract_signed_date": {
+          "verdict": "correct",
+          "note": "'2025-10-28' vs '2025-10-28'",
+          "gold": "2025-10-28",
+          "pred": "2025-10-28"
+        },
+        "contract_start_date": {
+          "verdict": "correct",
+          "note": "'2025-12-01' vs '2025-12-01'",
+          "gold": "2025-12-01",
+          "pred": "2025-12-01"
+        },
+        "contract_end_date": {
+          "verdict": "wrong",
+          "note": "value where gold is null",
+          "gold": null,
+          "pred": "2030-11-30"
+        },
+        "extension_options_months": {
+          "verdict": "correct",
+          "note": "24 vs 24",
+          "gold": 24,
+          "pred": 24
+        },
+        "maximum_term_months": {
+          "verdict": "correct",
+          "note": "84 vs 84",
+          "gold": 84,
+          "pred": 84
+        },
+        "contract_value_gbp": {
+          "verdict": "wrong",
+          "note": "value where gold is null",
+          "gold": null,
+          "pred": 4200000
+        },
+        "value_includes_vat": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "number_of_tenders_received": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "kpis": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": []
+        },
+        "payment_terms_days": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "standstill_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "lots": {
+          "verdict": "skip",
+          "note": "",
+          "gold": [],
+          "pred": []
+        },
+        "modification_number": {
+          "verdict": "correct",
+          "note": "2 vs 2",
+          "gold": 2,
+          "pred": 2
+        },
+        "modification_date": {
+          "verdict": "correct",
+          "note": "'2026-06-15' vs '2026-06-15'",
+          "gold": "2026-06-15",
+          "pred": "2026-06-15"
+        },
+        "modification_description": {
+          "verdict": "correct",
+          "note": "\"Uplift to the schedule of rates to reflect the 2026/27 National Living Wage increase, applied to the cleansing operatives' labour element only.\" vs \"Uplift to the schedule of rates to reflect the 2026/27 National Living Wage increase, applied to the cleansing operatives' labour element only.\" (sim 1.00)",
+          "gold": "Uplift to the schedule of rates to reflect the 2026/27 National Living Wage increase, applied to the cleansing operatives' labour element only.",
+          "pred": "Uplift to the schedule of rates to reflect the 2026/27 National Living Wage increase, applied to the cleansing operatives' labour element only."
+        },
+        "modification_ground": {
+          "verdict": "correct",
+          "note": "'s74_below_threshold' vs 's74_below_threshold'",
+          "gold": "s74_below_threshold",
+          "pred": "s74_below_threshold"
+        },
+        "original_contract_value_gbp": {
+          "verdict": "correct",
+          "note": "4,200,000.00 vs 4,200,000.00",
+          "gold": 4200000,
+          "pred": 4200000
+        },
+        "revised_contract_value_gbp": {
+          "verdict": "correct",
+          "note": "4,452,000.00 vs 4,452,000.00",
+          "gold": 4452000,
+          "pred": 4452000
+        },
+        "value_change_gbp": {
+          "verdict": "correct",
+          "note": "252,000.00 vs 252,000.00",
+          "gold": 252000,
+          "pred": 252000
+        },
+        "value_change_percent": {
+          "verdict": "correct",
+          "note": "6.0 vs 6.0",
+          "gold": 6.0,
+          "pred": 6.0
+        },
+        "original_end_date": {
+          "verdict": "correct",
+          "note": "'2030-11-30' vs '2030-11-30'",
+          "gold": "2030-11-30",
+          "pred": "2030-11-30"
+        },
+        "revised_end_date": {
+          "verdict": "correct",
+          "note": "'2030-11-30' vs '2030-11-30'",
+          "gold": "2030-11-30",
+          "pred": "2030-11-30"
+        },
+        "term_change_months": {
+          "verdict": "correct",
+          "note": "0 vs 0",
+          "gold": 0,
+          "pred": 0
+        },
+        "contract_change_notice_published": {
+          "verdict": "correct",
+          "note": "True vs True",
+          "gold": true,
+          "pred": true
+        },
+        "voluntary_standstill": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        }
+      }
+    },
+    "CR-009": {
+      "title": "Deed of variation extending an expired contract with no change notice",
+      "hazards": [
+        "retrospective_extension",
+        "no_ccn_published",
+        "wrong_legal_ground",
+        "values_in_prose",
+        "date_ordinal"
+      ],
+      "fields_correct": 29,
+      "fields_counted": 33,
+      "field_accuracy": 0.879,
+      "critical_pass": false,
+      "expected_high_flags": [
+        "AUDIT-retrospective-extension",
+        "PA23-s74-substantial-term",
+        "PA23-s75-ccn-required-not-published"
+      ],
+      "predicted_high_flags": [
+        "AUDIT-retrospective-extension",
+        "PA23-s74-substantial-term",
+        "PA23-s75-ccn-required-not-published"
+      ],
+      "verdicts": {
+        "notice_type": {
+          "verdict": "correct",
+          "note": "'contract_document' vs 'contract_document'",
+          "gold": "contract_document",
+          "pred": "contract_document"
+        },
+        "notice_reference": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "contracting_authority": {
+          "verdict": "correct",
+          "note": "'Harrowdale District Council' vs 'Harrowdale District Council' (sim 1.00)",
+          "gold": "Harrowdale District Council",
+          "pred": "Harrowdale District Council"
+        },
+        "contracting_authority_type": {
+          "verdict": "correct",
+          "note": "'sub_central' vs 'sub_central'",
+          "gold": "sub_central",
+          "pred": "sub_central"
+        },
+        "supplier_name": {
+          "verdict": "correct",
+          "note": "'Fenwick Grounds Maintenance Ltd' vs 'Fenwick Grounds Maintenance Ltd' (sim 1.00)",
+          "gold": "Fenwick Grounds Maintenance Ltd",
+          "pred": "Fenwick Grounds Maintenance Ltd"
+        },
+        "supplier_registration_number": {
+          "verdict": "correct",
+          "note": "'06645928' vs '06645928' (sim 1.00)",
+          "gold": "06645928",
+          "pred": "06645928"
+        },
+        "contract_title": {
+          "verdict": "correct",
+          "note": "'Provision of Grounds Maintenance Services for Parks and Open Spaces' vs 'Provision of Grounds Maintenance Services for Parks and Open Spaces' (sim 1.00)",
+          "gold": "Provision of Grounds Maintenance Services for Parks and Open Spaces",
+          "pred": "Provision of Grounds Maintenance Services for Parks and Open Spaces"
+        },
+        "contract_reference": {
+          "verdict": "correct",
+          "note": "'HDC-PKS-2021-07' vs 'HDC-PKS-2021-07' (sim 1.00)",
+          "gold": "HDC-PKS-2021-07",
+          "pred": "HDC-PKS-2021-07"
+        },
+        "procurement_type": {
+          "verdict": "correct",
+          "note": "'services' vs 'services'",
+          "gold": "services",
+          "pred": "services"
+        },
+        "light_touch": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "procedure": {
+          "verdict": "correct",
+          "note": "'open' vs 'open'",
+          "gold": "open",
+          "pred": "open"
+        },
+        "cpv_codes": {
+          "verdict": "missing",
+          "note": "",
+          "gold": [
+            "77310000",
+            "77311000",
+            "77314000"
+          ],
+          "pred": []
+        },
+        "notice_published_date": {
+          "verdict": "wrong",
+          "note": "value where gold is null",
+          "gold": null,
+          "pred": "2026-05-15"
+        },
+        "award_date": {
+          "verdict": "correct",
+          "note": "'2021-02-11' vs '2021-02-11'",
+          "gold": "2021-02-11",
+          "pred": "2021-02-11"
+        },
+        "contract_signed_date": {
+          "verdict": "correct",
+          "note": "'2021-03-12' vs '2021-03-12'",
+          "gold": "2021-03-12",
+          "pred": "2021-03-12"
+        },
+        "contract_start_date": {
+          "verdict": "correct",
+          "note": "'2021-04-01' vs '2021-04-01'",
+          "gold": "2021-04-01",
+          "pred": "2021-04-01"
+        },
+        "contract_end_date": {
+          "verdict": "correct",
+          "note": "'2026-03-31' vs '2026-03-31'",
+          "gold": "2026-03-31",
+          "pred": "2026-03-31"
+        },
+        "extension_options_months": {
+          "verdict": "correct",
+          "note": "0 vs 0",
+          "gold": 0,
+          "pred": 0
+        },
+        "maximum_term_months": {
+          "verdict": "correct",
+          "note": "60 vs 60",
+          "gold": 60,
+          "pred": 60
+        },
+        "contract_value_gbp": {
+          "verdict": "wrong",
+          "note": "value where gold is null",
+          "gold": null,
+          "pred": 1860000
+        },
+        "value_includes_vat": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "number_of_tenders_received": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "kpis": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": []
+        },
+        "payment_terms_days": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "standstill_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "lots": {
+          "verdict": "skip",
+          "note": "",
+          "gold": [],
+          "pred": []
+        },
+        "modification_number": {
+          "verdict": "correct",
+          "note": "1 vs 1",
+          "gold": 1,
+          "pred": 1
+        },
+        "modification_date": {
+          "verdict": "correct",
+          "note": "'2026-05-15' vs '2026-05-15'",
+          "gold": "2026-05-15",
+          "pred": "2026-05-15"
+        },
+        "modification_description": {
+          "verdict": "wrong",
+          "note": "'Extension of the term by 12 months to 31st March 2027 and increase of the contract sum from £1,550,000.00 to £1,860,000.00 (an increase of £310,000.00) to reflect the additional 14 hectares of open space transferred from Harrowdale Parish Council.' vs 'Extension of the contract term by 12 months and an increase in the annual contract sum to cover the additional 14 hectares of open space transferred from the Parish Council.' (sim 0.18)",
+          "gold": "Extension of the contract term by 12 months and an increase in the annual contract sum to cover the additional 14 hectares of open space transferred from the Parish Council.",
+          "pred": "Extension of the term by 12 months to 31st March 2027 and increase of the contract sum from £1,550,000.00 to £1,860,000.00 (an increase of £310,000.00) to reflect the additional 14 hectares of open space transferred from Harrowdale Parish Council."
+        },
+        "modification_ground": {
+          "verdict": "correct",
+          "note": "'s74_non_substantial' vs 's74_non_substantial'",
+          "gold": "s74_non_substantial",
+          "pred": "s74_non_substantial"
+        },
+        "original_contract_value_gbp": {
+          "verdict": "correct",
+          "note": "1,550,000.00 vs 1,550,000.00",
+          "gold": 1550000,
+          "pred": 1550000
+        },
+        "revised_contract_value_gbp": {
+          "verdict": "correct",
+          "note": "1,860,000.00 vs 1,860,000.00",
+          "gold": 1860000,
+          "pred": 1860000
+        },
+        "value_change_gbp": {
+          "verdict": "correct",
+          "note": "310,000.00 vs 310,000.00",
+          "gold": 310000,
+          "pred": 310000
+        },
+        "value_change_percent": {
+          "verdict": "correct",
+          "note": "20.0 vs 20.0",
+          "gold": 20.0,
+          "pred": 20.0
+        },
+        "original_end_date": {
+          "verdict": "correct",
+          "note": "'2026-03-31' vs '2026-03-31'",
+          "gold": "2026-03-31",
+          "pred": "2026-03-31"
+        },
+        "revised_end_date": {
+          "verdict": "correct",
+          "note": "'2027-03-31' vs '2027-03-31'",
+          "gold": "2027-03-31",
+          "pred": "2027-03-31"
+        },
+        "term_change_months": {
+          "verdict": "correct",
+          "note": "12 vs 12",
+          "gold": 12,
+          "pred": 12
+        },
+        "contract_change_notice_published": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "voluntary_standstill": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        }
+      }
+    },
+    "CR-010": {
+      "title": "Works contract details notice with wrapped supplier name and value in words",
+      "hazards": [
+        "supplier_name_wrapped",
+        "money_words_and_figures",
+        "date_ordinal"
+      ],
+      "fields_correct": 24,
+      "fields_counted": 24,
+      "field_accuracy": 1.0,
+      "critical_pass": true,
+      "expected_high_flags": [],
+      "predicted_high_flags": [],
+      "verdicts": {
+        "notice_type": {
+          "verdict": "correct",
+          "note": "'contract_details_notice' vs 'contract_details_notice'",
+          "gold": "contract_details_notice",
+          "pred": "contract_details_notice"
+        },
+        "notice_reference": {
+          "verdict": "correct",
+          "note": "'009104-2026' vs '009104-2026' (sim 1.00)",
+          "gold": "009104-2026",
+          "pred": "009104-2026"
+        },
+        "contracting_authority": {
+          "verdict": "correct",
+          "note": "'Stonebridge Metropolitan Borough Council' vs 'Stonebridge Metropolitan Borough Council' (sim 1.00)",
+          "gold": "Stonebridge Metropolitan Borough Council",
+          "pred": "Stonebridge Metropolitan Borough Council"
+        },
+        "contracting_authority_type": {
+          "verdict": "correct",
+          "note": "'sub_central' vs 'sub_central'",
+          "gold": "sub_central",
+          "pred": "sub_central"
+        },
+        "supplier_name": {
+          "verdict": "correct",
+          "note": "'Greystoke Construction (Midlands) Limited' vs 'Greystoke Construction (Midlands) Limited' (sim 1.00)",
+          "gold": "Greystoke Construction (Midlands) Limited",
+          "pred": "Greystoke Construction (Midlands) Limited"
+        },
+        "supplier_registration_number": {
+          "verdict": "correct",
+          "note": "'04392218' vs '04392218' (sim 1.00)",
+          "gold": "04392218",
+          "pred": "04392218"
+        },
+        "contract_title": {
+          "verdict": "correct",
+          "note": "'Construction of Extra Care Housing Scheme, Mill Road' vs 'Construction of Extra Care Housing Scheme, Mill Road' (sim 1.00)",
+          "gold": "Construction of Extra Care Housing Scheme, Mill Road",
+          "pred": "Construction of Extra Care Housing Scheme, Mill Road"
+        },
+        "contract_reference": {
+          "verdict": "correct",
+          "note": "'SMBC/CAP/2025/EC-MILL' vs 'SMBC/CAP/2025/EC-MILL' (sim 1.00)",
+          "gold": "SMBC/CAP/2025/EC-MILL",
+          "pred": "SMBC/CAP/2025/EC-MILL"
+        },
+        "procurement_type": {
+          "verdict": "correct",
+          "note": "'works' vs 'works'",
+          "gold": "works",
+          "pred": "works"
+        },
+        "light_touch": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "procedure": {
+          "verdict": "correct",
+          "note": "'open' vs 'open'",
+          "gold": "open",
+          "pred": "open"
+        },
+        "cpv_codes": {
+          "verdict": "correct",
+          "note": "['45211000', '45215210'] vs ['45211000', '45215210']",
+          "gold": [
+            "45215210",
+            "45211000"
+          ],
+          "pred": [
+            "45215210",
+            "45211000"
+          ]
+        },
+        "notice_published_date": {
+          "verdict": "correct",
+          "note": "'2026-05-22' vs '2026-05-22'",
+          "gold": "2026-05-22",
+          "pred": "2026-05-22"
+        },
+        "award_date": {
+          "verdict": "correct",
+          "note": "'2026-04-17' vs '2026-04-17'",
+          "gold": "2026-04-17",
+          "pred": "2026-04-17"
+        },
+        "contract_signed_date": {
+          "verdict": "correct",
+          "note": "'2026-05-05' vs '2026-05-05'",
+          "gold": "2026-05-05",
+          "pred": "2026-05-05"
+        },
+        "contract_start_date": {
+          "verdict": "correct",
+          "note": "'2026-06-15' vs '2026-06-15'",
+          "gold": "2026-06-15",
+          "pred": "2026-06-15"
+        },
+        "contract_end_date": {
+          "verdict": "correct",
+          "note": "'2028-06-14' vs '2028-06-14'",
+          "gold": "2028-06-14",
+          "pred": "2028-06-14"
+        },
+        "extension_options_months": {
+          "verdict": "correct",
+          "note": "0 vs 0",
+          "gold": 0,
+          "pred": 0
+        },
+        "maximum_term_months": {
+          "verdict": "correct",
+          "note": "24 vs 24",
+          "gold": 24,
+          "pred": 24
+        },
+        "contract_value_gbp": {
+          "verdict": "correct",
+          "note": "7,980,000.00 vs 7,980,000.00",
+          "gold": 7980000,
+          "pred": 7980000
+        },
+        "value_includes_vat": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "number_of_tenders_received": {
+          "verdict": "correct",
+          "note": "6 vs 6",
+          "gold": 6,
+          "pred": 6
+        },
+        "kpis": {
+          "verdict": "correct",
+          "note": "['accident frequency rate', 'defects at practical completion', 'local labour and apprenticeships delivered', 'programme milestones achieved on time'] vs ['accident frequency rate', 'defects at practical completion', 'local labour and apprenticeships delivered', 'programme milestones achieved on time']",
+          "gold": [
+            "Programme milestones achieved on time",
+            "Defects at practical completion",
+            "Accident frequency rate",
+            "Local labour and apprenticeships delivered"
+          ],
+          "pred": [
+            "Programme milestones achieved on time",
+            "Defects at practical completion",
+            "Accident frequency rate",
+            "Local labour and apprenticeships delivered"
+          ]
+        },
+        "payment_terms_days": {
+          "verdict": "correct",
+          "note": "30 vs 30",
+          "gold": 30,
+          "pred": 30
+        },
+        "standstill_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "lots": {
+          "verdict": "skip",
+          "note": "",
+          "gold": [],
+          "pred": []
+        },
+        "modification_number": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_description": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_ground": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_percent": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "term_change_months": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "contract_change_notice_published": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "voluntary_standstill": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        }
+      }
+    },
+    "CR-011": {
+      "title": "Works change notice exceeding the 50% unforeseeable-circumstances cap",
+      "hazards": [
+        "percent_not_printed",
+        "money_gbp_suffix",
+        "date_iso_format"
+      ],
+      "fields_correct": 32,
+      "fields_counted": 34,
+      "field_accuracy": 0.941,
+      "critical_pass": false,
+      "expected_high_flags": [
+        "PA23-sch8-para3-cap-50pc"
+      ],
+      "predicted_high_flags": [
+        "PA23-s52-kpi-min3",
+        "PA23-sch8-para3-cap-50pc"
+      ],
+      "verdicts": {
+        "notice_type": {
+          "verdict": "correct",
+          "note": "'contract_change_notice' vs 'contract_change_notice'",
+          "gold": "contract_change_notice",
+          "pred": "contract_change_notice"
+        },
+        "notice_reference": {
+          "verdict": "correct",
+          "note": "'009877-2026' vs '009877-2026' (sim 1.00)",
+          "gold": "009877-2026",
+          "pred": "009877-2026"
+        },
+        "contracting_authority": {
+          "verdict": "correct",
+          "note": "'Kingsholt City Council' vs 'Kingsholt City Council' (sim 1.00)",
+          "gold": "Kingsholt City Council",
+          "pred": "Kingsholt City Council"
+        },
+        "contracting_authority_type": {
+          "verdict": "correct",
+          "note": "'sub_central' vs 'sub_central'",
+          "gold": "sub_central",
+          "pred": "sub_central"
+        },
+        "supplier_name": {
+          "verdict": "correct",
+          "note": "'Cresswell Highways Ltd' vs 'Cresswell Highways Ltd' (sim 1.00)",
+          "gold": "Cresswell Highways Ltd",
+          "pred": "Cresswell Highways Ltd"
+        },
+        "supplier_registration_number": {
+          "verdict": "correct",
+          "note": "'05583107' vs '05583107' (sim 1.00)",
+          "gold": "05583107",
+          "pred": "05583107"
+        },
+        "contract_title": {
+          "verdict": "correct",
+          "note": "'Highways Reactive Maintenance and Winter Service' vs 'Highways Reactive Maintenance and Winter Service' (sim 1.00)",
+          "gold": "Highways Reactive Maintenance and Winter Service",
+          "pred": "Highways Reactive Maintenance and Winter Service"
+        },
+        "contract_reference": {
+          "verdict": "correct",
+          "note": "'KCC-HWY-2025-0033' vs 'KCC-HWY-2025-0033' (sim 1.00)",
+          "gold": "KCC-HWY-2025-0033",
+          "pred": "KCC-HWY-2025-0033"
+        },
+        "procurement_type": {
+          "verdict": "correct",
+          "note": "'works' vs 'works'",
+          "gold": "works",
+          "pred": "works"
+        },
+        "light_touch": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "procedure": {
+          "verdict": "correct",
+          "note": "'open' vs 'open'",
+          "gold": "open",
+          "pred": "open"
+        },
+        "cpv_codes": {
+          "verdict": "correct",
+          "note": "['45233139', '45233141', '90620000'] vs ['45233139', '45233141', '90620000']",
+          "gold": [
+            "45233141",
+            "45233139",
+            "90620000"
+          ],
+          "pred": [
+            "45233141",
+            "45233139",
+            "90620000"
+          ]
+        },
+        "notice_published_date": {
+          "verdict": "correct",
+          "note": "'2026-06-18' vs '2026-06-18'",
+          "gold": "2026-06-18",
+          "pred": "2026-06-18"
+        },
+        "award_date": {
+          "verdict": "correct",
+          "note": "'2025-12-05' vs '2025-12-05'",
+          "gold": "2025-12-05",
+          "pred": "2025-12-05"
+        },
+        "contract_signed_date": {
+          "verdict": "correct",
+          "note": "'2026-01-16' vs '2026-01-16'",
+          "gold": "2026-01-16",
+          "pred": "2026-01-16"
+        },
+        "contract_start_date": {
+          "verdict": "correct",
+          "note": "'2026-02-01' vs '2026-02-01'",
+          "gold": "2026-02-01",
+          "pred": "2026-02-01"
+        },
+        "contract_end_date": {
+          "verdict": "wrong",
+          "note": "value where gold is null",
+          "gold": null,
+          "pred": "2029-01-31"
+        },
+        "extension_options_months": {
+          "verdict": "correct",
+          "note": "12 vs 12",
+          "gold": 12,
+          "pred": 12
+        },
+        "maximum_term_months": {
+          "verdict": "correct",
+          "note": "48 vs 48",
+          "gold": 48,
+          "pred": 48
+        },
+        "contract_value_gbp": {
+          "verdict": "wrong",
+          "note": "value where gold is null",
+          "gold": null,
+          "pred": 6100000
+        },
+        "value_includes_vat": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "number_of_tenders_received": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "kpis": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": []
+        },
+        "payment_terms_days": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "standstill_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "lots": {
+          "verdict": "skip",
+          "note": "",
+          "gold": [],
+          "pred": []
+        },
+        "modification_number": {
+          "verdict": "correct",
+          "note": "1 vs 1",
+          "gold": 1,
+          "pred": 1
+        },
+        "modification_date": {
+          "verdict": "correct",
+          "note": "'2026-06-29' vs '2026-06-29'",
+          "gold": "2026-06-29",
+          "pred": "2026-06-29"
+        },
+        "modification_description": {
+          "verdict": "correct",
+          "note": "'Additional carriageway reconstruction on the A-road network following the February 2026 flood damage, delivered under the existing schedule of rates.' vs 'Additional carriageway reconstruction on the A-road network following the February 2026 flood damage, delivered under the existing schedule of rates.' (sim 1.00)",
+          "gold": "Additional carriageway reconstruction on the A-road network following the February 2026 flood damage, delivered under the existing schedule of rates.",
+          "pred": "Additional carriageway reconstruction on the A-road network following the February 2026 flood damage, delivered under the existing schedule of rates."
+        },
+        "modification_ground": {
+          "verdict": "correct",
+          "note": "'sch8_para3_unforeseeable' vs 'sch8_para3_unforeseeable'",
+          "gold": "sch8_para3_unforeseeable",
+          "pred": "sch8_para3_unforeseeable"
+        },
+        "original_contract_value_gbp": {
+          "verdict": "correct",
+          "note": "6,100,000.00 vs 6,100,000.00",
+          "gold": 6100000,
+          "pred": 6100000
+        },
+        "revised_contract_value_gbp": {
+          "verdict": "correct",
+          "note": "9,760,000.00 vs 9,760,000.00",
+          "gold": 9760000,
+          "pred": 9760000
+        },
+        "value_change_gbp": {
+          "verdict": "correct",
+          "note": "3,660,000.00 vs 3,660,000.00",
+          "gold": 3660000,
+          "pred": 3660000
+        },
+        "value_change_percent": {
+          "verdict": "correct",
+          "note": "60.0 vs 60.0",
+          "gold": 60.0,
+          "pred": 60.0
+        },
+        "original_end_date": {
+          "verdict": "correct",
+          "note": "'2029-01-31' vs '2029-01-31'",
+          "gold": "2029-01-31",
+          "pred": "2029-01-31"
+        },
+        "revised_end_date": {
+          "verdict": "correct",
+          "note": "'2029-01-31' vs '2029-01-31'",
+          "gold": "2029-01-31",
+          "pred": "2029-01-31"
+        },
+        "term_change_months": {
+          "verdict": "correct",
+          "note": "0 vs 0",
+          "gold": 0,
+          "pred": 0
+        },
+        "contract_change_notice_published": {
+          "verdict": "correct",
+          "note": "True vs True",
+          "gold": true,
+          "pred": true
+        },
+        "voluntary_standstill": {
+          "verdict": "correct",
+          "note": "True vs True",
+          "gold": true,
+          "pred": true
+        }
+      }
+    },
+    "CR-012": {
+      "title": "Direct award notice with values embedded in prose",
+      "hazards": [
+        "direct_award",
+        "values_in_prose",
+        "date_iso_format"
+      ],
+      "fields_correct": 22,
+      "fields_counted": 22,
+      "field_accuracy": 1.0,
+      "critical_pass": true,
+      "expected_high_flags": [],
+      "predicted_high_flags": [],
+      "verdicts": {
+        "notice_type": {
+          "verdict": "correct",
+          "note": "'contract_award_notice' vs 'contract_award_notice'",
+          "gold": "contract_award_notice",
+          "pred": "contract_award_notice"
+        },
+        "notice_reference": {
+          "verdict": "correct",
+          "note": "'001206-2026' vs '001206-2026' (sim 1.00)",
+          "gold": "001206-2026",
+          "pred": "001206-2026"
+        },
+        "contracting_authority": {
+          "verdict": "correct",
+          "note": "'Eastmere and Calder District Council' vs 'Eastmere and Calder District Council' (sim 1.00)",
+          "gold": "Eastmere and Calder District Council",
+          "pred": "Eastmere and Calder District Council"
+        },
+        "contracting_authority_type": {
+          "verdict": "correct",
+          "note": "'sub_central' vs 'sub_central'",
+          "gold": "sub_central",
+          "pred": "sub_central"
+        },
+        "supplier_name": {
+          "verdict": "correct",
+          "note": "'Ironside Waste Management Ltd' vs 'Ironside Waste Management Ltd' (sim 1.00)",
+          "gold": "Ironside Waste Management Ltd",
+          "pred": "Ironside Waste Management Ltd"
+        },
+        "supplier_registration_number": {
+          "verdict": "correct",
+          "note": "'07114290' vs '07114290' (sim 1.00)",
+          "gold": "07114290",
+          "pred": "07114290"
+        },
+        "contract_title": {
+          "verdict": "correct",
+          "note": "'Emergency Flood Response and Debris Clearance' vs 'Emergency Flood Response and Debris Clearance' (sim 1.00)",
+          "gold": "Emergency Flood Response and Debris Clearance",
+          "pred": "Emergency Flood Response and Debris Clearance"
+        },
+        "contract_reference": {
+          "verdict": "correct",
+          "note": "'ECDC/EMG/2026/02' vs 'ECDC/EMG/2026/02' (sim 1.00)",
+          "gold": "ECDC/EMG/2026/02",
+          "pred": "ECDC/EMG/2026/02"
+        },
+        "procurement_type": {
+          "verdict": "correct",
+          "note": "'services' vs 'services'",
+          "gold": "services",
+          "pred": "services"
+        },
+        "light_touch": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "procedure": {
+          "verdict": "correct",
+          "note": "'direct_award' vs 'direct_award'",
+          "gold": "direct_award",
+          "pred": "direct_award"
+        },
+        "cpv_codes": {
+          "verdict": "correct",
+          "note": "['90470000', '90700000'] vs ['90470000', '90700000']",
+          "gold": [
+            "90470000",
+            "90700000"
+          ],
+          "pred": [
+            "90470000",
+            "90700000"
+          ]
+        },
+        "notice_published_date": {
+          "verdict": "correct",
+          "note": "'2026-01-22' vs '2026-01-22'",
+          "gold": "2026-01-22",
+          "pred": "2026-01-22"
+        },
+        "award_date": {
+          "verdict": "correct",
+          "note": "'2026-01-19' vs '2026-01-19'",
+          "gold": "2026-01-19",
+          "pred": "2026-01-19"
+        },
+        "contract_signed_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "contract_start_date": {
+          "verdict": "correct",
+          "note": "'2026-01-20' vs '2026-01-20'",
+          "gold": "2026-01-20",
+          "pred": "2026-01-20"
+        },
+        "contract_end_date": {
+          "verdict": "correct",
+          "note": "'2026-07-19' vs '2026-07-19'",
+          "gold": "2026-07-19",
+          "pred": "2026-07-19"
+        },
+        "extension_options_months": {
+          "verdict": "correct",
+          "note": "0 vs 0",
+          "gold": 0,
+          "pred": 0
+        },
+        "maximum_term_months": {
+          "verdict": "correct",
+          "note": "6 vs 6",
+          "gold": 6,
+          "pred": 6
+        },
+        "contract_value_gbp": {
+          "verdict": "correct",
+          "note": "420,000.00 vs 420,000.00",
+          "gold": 420000,
+          "pred": 420000
+        },
+        "value_includes_vat": {
+          "verdict": "correct",
+          "note": "False vs False",
+          "gold": false,
+          "pred": false
+        },
+        "number_of_tenders_received": {
+          "verdict": "correct",
+          "note": "1 vs 1",
+          "gold": 1,
+          "pred": 1
+        },
+        "kpis": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": []
+        },
+        "payment_terms_days": {
+          "verdict": "correct",
+          "note": "30 vs 30",
+          "gold": 30,
+          "pred": 30
+        },
+        "standstill_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "lots": {
+          "verdict": "skip",
+          "note": "",
+          "gold": [],
+          "pred": []
+        },
+        "modification_number": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_description": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "modification_ground": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_contract_value_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_gbp": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "value_change_percent": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "original_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "revised_end_date": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "term_change_months": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "contract_change_notice_published": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        },
+        "voluntary_standstill": {
+          "verdict": "skip",
+          "note": "",
+          "gold": null,
+          "pred": null
+        }
+      }
+    }
+  }
+}
