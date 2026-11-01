@@ -21,11 +21,15 @@ from .extract_llm import call_llm, page_images_b64, parse_json, pdf_text
 from .score_tables import load_spec
 
 
+# v2 (2026-11-01): v1 said every brought-forward line is not a row, which contradicts a statement's opening balance line
+# (a row in TB-001's gold); the rule now covers only the carried/brought-forward lines a page break produces.
+TABLE_RULES_VERSION = 2
 TABLE_RULES = ("Return every data row of the table and nothing else. Header rows (including a header repeated on a new "
-               "page), running page headers and footers, and totals, subtotals, carried-forward and brought-forward lines are "
-               "not data rows. A cell's text can wrap over several lines or continue onto the next page: it is still one "
-               "cell. When a value such as a date or a name is printed once for a group of rows, or as a heading above the "
-               "group, it applies to every row of the group, including rows on the next page.")
+               "page), running page headers and footers, totals and subtotals, and the carried-forward and brought-forward "
+               "lines printed at a page break are not data rows; the opening balance line at the start of a statement is a "
+               "row. A cell's text can wrap over several lines or continue onto the next page: it is still one cell. When a "
+               "value such as a date or a name is printed once for a group of rows, or as a heading above the group, it "
+               "applies to every row of the group, including rows on the next page.")
 
 
 def build_prompt(spec: dict, mode: str = "guided") -> str:
@@ -57,6 +61,7 @@ def main(argv=None) -> None:
         manifest = json.load(fh)
     mode = ("vision+text" if args.vision else "text") + f", {args.prompt} prompt"
     out = {"extractor": args.name or f"llm:{model}:{mode}", "version": "0.1.0", "track": "tables", "prompt": args.prompt,
+           "rules_version": TABLE_RULES_VERSION if args.prompt == "guided" else None,
            "run_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
            "description": f"{model} via {base_url} ({mode})", "model": model, "cases": {}}
     if os.path.exists(args.out):
