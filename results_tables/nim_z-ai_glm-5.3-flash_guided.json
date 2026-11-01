@@ -1,0 +1,466 @@
+{
+  "extractor": "llm:nim/z-ai/glm-5.3-flash:text:guided-prompt",
+  "version": "0.1.0",
+  "track": "tables",
+  "prompt": "guided",
+  "run_at": "2026-11-01T03:42:20Z",
+  "description": "z-ai/glm-5.3-flash via https://integrate.api.nvidia.com/v1 (text, guided prompt)",
+  "model": "z-ai/glm-5.3-flash",
+  "cases": {
+    "TB-001": {
+      "rows": [
+        {
+          "date": "2026-10-02",
+          "reference": "INV-40871",
+          "details": "Planned preventative maintenance, Civic Centre passenger lifts: quarterly service visit and LOLER thorough examination certificate",
+          "debit_gbp": 3240.0,
+          "credit_gbp": null,
+          "balance_gbp": 15720.0
+        },
+        {
+          "date": "2026-10-06",
+          "reference": "PAY-77812",
+          "details": "BACS payment received, thank you",
+          "debit_gbp": null,
+          "credit_gbp": 12480.0,
+          "balance_gbp": 3240.0
+        },
+        {
+          "date": "2026-10-09",
+          "reference": "INV-40902",
+          "details": "Reactive repair: replacement circulating pump on boiler 2, Market Walk depot",
+          "debit_gbp": 1186.5,
+          "credit_gbp": null,
+          "balance_gbp": 4426.5
+        },
+        {
+          "date": "2026-10-12",
+          "reference": "CN-2207",
+          "details": "Credit note against INV-40755 (duplicate out-of-hours call-out charge)",
+          "debit_gbp": null,
+          "credit_gbp": 245.0,
+          "balance_gbp": 4181.5
+        },
+        {
+          "date": "2026-10-15",
+          "reference": "INV-40933",
+          "details": "Car park lighting: replace 6 failed LED lanterns, columns 4 to 9",
+          "debit_gbp": 812.4,
+          "credit_gbp": null,
+          "balance_gbp": 4993.9
+        },
+        {
+          "date": "2026-10-19",
+          "reference": "INV-40951",
+          "details": "Planned preventative maintenance, Riverside offices: fire alarm and emergency lighting tests",
+          "debit_gbp": 2460.0,
+          "credit_gbp": null,
+          "balance_gbp": 7453.9
+        },
+        {
+          "date": "2026-10-21",
+          "reference": "ADJ-118",
+          "details": "Service credit: KPI 3 (emergency response within 2 hours) missed in Q2",
+          "debit_gbp": null,
+          "credit_gbp": 1600.0,
+          "balance_gbp": 5853.9
+        },
+        {
+          "date": "2026-10-23",
+          "reference": "PAY-78044",
+          "details": "BACS payment received",
+          "debit_gbp": null,
+          "credit_gbp": 6000.0,
+          "balance_gbp": -146.1
+        },
+        {
+          "date": "2026-10-27",
+          "reference": "INV-40988",
+          "details": "Emergency drainage works, Riverside car park: out of hours, 2 operatives for 6 hours, jetting and CCTV survey",
+          "debit_gbp": 2915.25,
+          "credit_gbp": null,
+          "balance_gbp": 2769.15
+        },
+        {
+          "date": "2026-10-30",
+          "reference": "INV-41002",
+          "details": "Consumables and parts as per attached schedule",
+          "debit_gbp": 96.8,
+          "credit_gbp": null,
+          "balance_gbp": 2865.95
+        }
+      ],
+      "seconds": 159.7,
+      "error": null,
+      "raw": "```json\n{\n  \"rows\": [\n    {\n      \"date\": \"2026-10-02\",\n      \"reference\": \"INV-40871\",\n      \"details\": \"Planned preventative maintenance, Civic Centre passenger lifts: quarterly service visit and LOLER thorough examination certificate\",\n      \"debit_gbp\": 3240.00,\n      \"credit_gbp\": null,\n      \"balance_gbp\": 15720.00\n    },\n    {\n      \"date\": \"2026-10-06\",\n      \"reference\": \"PAY-77812\",\n      \"details\": \"BACS payment received, thank you\",\n      \"debit_gbp\": null,\n      \"credit_gbp\": 12480.00,\n      \"balance_gbp\": 3240.00\n    },\n    {\n      \"date\": \"2026-10-09\",\n      \"reference\": \"INV-40902\",\n      \"details\": \"Reactive repair: replacement circulating pump on boiler 2, Market Walk depot\",\n      \"debit_gbp\": 1186.50,\n      \"credit_gbp\": null,\n      \"balance_gbp\": 4426.50\n    },\n    {\n      \"date\": \"2026-10-12\",\n      \"reference\": \"CN-2207\",\n      \"details\": \"Credit note against INV-40755 (duplicate out-of-hours call-out charge)\",\n      \"debit_gbp\": null,\n      \"credit_gbp\": 245.00,\n      \"balance_gbp\": 4181.50\n    },\n    {\n      \"date\": \"2026-10-15\",\n      \"reference\": \"INV-40933\",\n      \"details\": \"Car park lighting: replace 6 failed LED lanterns, columns 4 to 9\",\n      \"debit_gbp\": 812.40,\n      \"credit_gbp\": null,\n      \"balance_gbp\": 4993.90\n    },\n    {\n      \"date\": \"2026-10-19\",\n      \"reference\": \"INV-40951\",\n      \"details\": \"Planned preventative maintenance, Riverside offices: fire alarm and emergency lighting tests\",\n      \"debit_gbp\": 2460.00,\n      \"credit_gbp\": null,\n      \"balance_gbp\": 7453.90\n    },\n    {\n      \"date\": \"2026-10-21\",\n      \"reference\": \"ADJ-118\",\n      \"details\": \"Service credit: KPI 3 (emergency response within 2 hours) missed in Q2\",\n      \"debit_gbp\": null,\n      \"credit_gbp\": 1600.00,\n      \"balance_gbp\": 5853.90\n    },\n    {\n      \"date\": \"2026-10-23\",\n      \"reference\": \"PAY-78044\",\n      \"details\": \"BACS payment received\",\n      \"debit_gbp\": null,\n      \"credit_gbp\": 6000.00,\n      \"balance_gbp\": -146.10\n    },\n    {\n      \"date\": \"2026-10-27\",\n      \"reference\": \"INV-40988\",\n      \"details\": \"Emergency drainage works, Riverside car park: out of hours, 2 operatives for 6 hours, jetting and CCTV survey\",\n      \"debit_gbp\": 2915.25,\n      \"credit_gbp\": null,\n      \"balance_gbp\": 2769.15\n    },\n    {\n      \"date\": \"2026-10-30\",\n      \"reference\": \"INV-41002\",\n      \"details\": \"Consumables and parts as per attached schedule\",\n      \"debit_gbp\": 96.80,\n      \"credit_gbp\": null,\n      \"balance_gbp\": 2865.95\n    }\n  ]\n}\n```"
+    },
+    "TB-002": {
+      "rows": [
+        {
+          "payment_date": "2026-10-06",
+          "directorate": "Environment",
+          "supplier": "Brightwater Environmental Services Limited",
+          "expense_type": "Waste collection contract",
+          "transaction_no": "5100231",
+          "amount_gbp": 84612.0
+        },
+        {
+          "payment_date": "2026-10-06",
+          "directorate": "Environment",
+          "supplier": "Fenwick Grounds Maintenance Ltd",
+          "expense_type": "Grounds maintenance",
+          "transaction_no": "5100232",
+          "amount_gbp": 6240.5
+        },
+        {
+          "payment_date": "2026-10-06",
+          "directorate": "Environment",
+          "supplier": "Fenwick Grounds Maintenance Ltd",
+          "expense_type": "Tree works",
+          "transaction_no": "5100233",
+          "amount_gbp": 1180.0
+        },
+        {
+          "payment_date": "2026-10-06",
+          "directorate": "Resources",
+          "supplier": "Elmstead ICT Solutions Ltd",
+          "expense_type": "Software licences",
+          "transaction_no": "5100234",
+          "amount_gbp": 12950.0
+        },
+        {
+          "payment_date": "2026-10-06",
+          "directorate": "Resources",
+          "supplier": "Elmstead ICT Solutions Ltd",
+          "expense_type": "Hardware maintenance",
+          "transaction_no": "5100235",
+          "amount_gbp": 2310.75
+        },
+        {
+          "payment_date": "2026-10-13",
+          "directorate": "Housing",
+          "supplier": "Dunmore Care Partnership CIC",
+          "expense_type": "Temporary accommodation",
+          "transaction_no": "5100298",
+          "amount_gbp": 3465.0
+        },
+        {
+          "payment_date": "2026-10-13",
+          "directorate": "Housing",
+          "supplier": "Dunmore Care Partnership CIC",
+          "expense_type": "Temporary accommodation",
+          "transaction_no": "5100299",
+          "amount_gbp": 3465.0
+        },
+        {
+          "payment_date": "2026-10-13",
+          "directorate": "Housing",
+          "supplier": "Alderman Facilities Group Ltd",
+          "expense_type": "Void property repairs",
+          "transaction_no": "5100300",
+          "amount_gbp": 2775.2
+        },
+        {
+          "payment_date": "2026-10-13",
+          "directorate": "Leisure",
+          "supplier": "Halbrook Leisure Operations Ltd",
+          "expense_type": "Management fee",
+          "transaction_no": "5100301",
+          "amount_gbp": 41666.67
+        },
+        {
+          "payment_date": "2026-10-20",
+          "directorate": "Environment",
+          "supplier": "Cresswell Highways Ltd",
+          "expense_type": "Highways maintenance",
+          "transaction_no": "5100355",
+          "amount_gbp": 18902.4
+        },
+        {
+          "payment_date": "2026-10-20",
+          "directorate": "Environment",
+          "supplier": "Brightwater Environmental Services Limited",
+          "expense_type": "Refund: overpaid gate fees",
+          "transaction_no": "5100356",
+          "amount_gbp": -1250.0
+        },
+        {
+          "payment_date": "2026-10-20",
+          "directorate": "Resources",
+          "supplier": "Greystoke Construction (Midlands) Limited",
+          "expense_type": "Capital works: depot roof",
+          "transaction_no": "5100357",
+          "amount_gbp": 96400.0
+        },
+        {
+          "payment_date": "2026-10-27",
+          "directorate": "Resources",
+          "supplier": "Alderman Facilities Group Ltd",
+          "expense_type": "Facilities management",
+          "transaction_no": "5100410",
+          "amount_gbp": 23118.0
+        },
+        {
+          "payment_date": "2026-10-27",
+          "directorate": "Resources",
+          "supplier": "Elmstead ICT Solutions Ltd",
+          "expense_type": "Telephony",
+          "transaction_no": "5100411",
+          "amount_gbp": 845.0
+        },
+        {
+          "payment_date": "2026-10-27",
+          "directorate": "Leisure",
+          "supplier": "Halbrook Leisure Operations Ltd",
+          "expense_type": "Utilities recharge",
+          "transaction_no": "5100412",
+          "amount_gbp": 7302.18
+        },
+        {
+          "payment_date": "2026-10-27",
+          "directorate": "Leisure",
+          "supplier": "Fenwick Grounds Maintenance Ltd",
+          "expense_type": "Sports pitch renovation",
+          "transaction_no": "5100413",
+          "amount_gbp": 4980.0
+        }
+      ],
+      "seconds": 162.9,
+      "error": null,
+      "raw": "{\n  \"rows\": [\n    {\n      \"payment_date\": \"2026-10-06\",\n      \"directorate\": \"Environment\",\n      \"supplier\": \"Brightwater Environmental Services Limited\",\n      \"expense_type\": \"Waste collection contract\",\n      \"transaction_no\": \"5100231\",\n      \"amount_gbp\": 84612.00\n    },\n    {\n      \"payment_date\": \"2026-10-06\",\n      \"directorate\": \"Environment\",\n      \"supplier\": \"Fenwick Grounds Maintenance Ltd\",\n      \"expense_type\": \"Grounds maintenance\",\n      \"transaction_no\": \"5100232\",\n      \"amount_gbp\": 6240.50\n    },\n    {\n      \"payment_date\": \"2026-10-06\",\n      \"directorate\": \"Environment\",\n      \"supplier\": \"Fenwick Grounds Maintenance Ltd\",\n      \"expense_type\": \"Tree works\",\n      \"transaction_no\": \"5100233\",\n      \"amount_gbp\": 1180.00\n    },\n    {\n      \"payment_date\": \"2026-10-06\",\n      \"directorate\": \"Resources\",\n      \"supplier\": \"Elmstead ICT Solutions Ltd\",\n      \"expense_type\": \"Software licences\",\n      \"transaction_no\": \"5100234\",\n      \"amount_gbp\": 12950.00\n    },\n    {\n      \"payment_date\": \"2026-10-06\",\n      \"directorate\": \"Resources\",\n      \"supplier\": \"Elmstead ICT Solutions Ltd\",\n      \"expense_type\": \"Hardware maintenance\",\n      \"transaction_no\": \"5100235\",\n      \"amount_gbp\": 2310.75\n    },\n    {\n      \"payment_date\": \"2026-10-13\",\n      \"directorate\": \"Housing\",\n      \"supplier\": \"Dunmore Care Partnership CIC\",\n      \"expense_type\": \"Temporary accommodation\",\n      \"transaction_no\": \"5100298\",\n      \"amount_gbp\": 3465.00\n    },\n    {\n      \"payment_date\": \"2026-10-13\",\n      \"directorate\": \"Housing\",\n      \"supplier\": \"Dunmore Care Partnership CIC\",\n      \"expense_type\": \"Temporary accommodation\",\n      \"transaction_no\": \"5100299\",\n      \"amount_gbp\": 3465.00\n    },\n    {\n      \"payment_date\": \"2026-10-13\",\n      \"directorate\": \"Housing\",\n      \"supplier\": \"Alderman Facilities Group Ltd\",\n      \"expense_type\": \"Void property repairs\",\n      \"transaction_no\": \"5100300\",\n      \"amount_gbp\": 2775.20\n    },\n    {\n      \"payment_date\": \"2026-10-13\",\n      \"directorate\": \"Leisure\",\n      \"supplier\": \"Halbrook Leisure Operations Ltd\",\n      \"expense_type\": \"Management fee\",\n      \"transaction_no\": \"5100301\",\n      \"amount_gbp\": 41666.67\n    },\n    {\n      \"payment_date\": \"2026-10-20\",\n      \"directorate\": \"Environment\",\n      \"supplier\": \"Cresswell Highways Ltd\",\n      \"expense_type\": \"Highways maintenance\",\n      \"transaction_no\": \"5100355\",\n      \"amount_gbp\": 18902.40\n    },\n    {\n      \"payment_date\": \"2026-10-20\",\n      \"directorate\": \"Environment\",\n      \"supplier\": \"Brightwater Environmental Services Limited\",\n      \"expense_type\": \"Refund: overpaid gate fees\",\n      \"transaction_no\": \"5100356\",\n      \"amount_gbp\": -1250.00\n    },\n    {\n      \"payment_date\": \"2026-10-20\",\n      \"directorate\": \"Resources\",\n      \"supplier\": \"Greystoke Construction (Midlands) Limited\",\n      \"expense_type\": \"Capital works: depot roof\",\n      \"transaction_no\": \"5100357\",\n      \"amount_gbp\": 96400.00\n    },\n    {\n      \"payment_date\": \"2026-10-27\",\n      \"directorate\": \"Resources\",\n      \"supplier\": \"Alderman Facilities Group Ltd\",\n      \"expense_type\": \"Facilities management\",\n      \"transaction_no\": \"5100410\",\n      \"amount_gbp\": 23118.00\n    },\n    {\n      \"payment_date\": \"2026-10-27\",\n      \"directorate\": \"Resources\",\n      \"supplier\": \"Elmstead ICT Solutions Ltd\",\n      \"expense_type\": \"Telephony\",\n      \"transaction_no\": \"5100411\",\n      \"amount_gbp\": 845.00\n    },\n    {\n      \"payment_date\": \"2026-10-27\",\n      \"directorate\": \"Leisure\",\n      \"supplier\": \"Halbrook Leisure Operations Ltd\",\n      \"expense_type\": \"Utilities recharge\",\n      \"transaction_no\": \"5100412\",\n      \"amount_gbp\": 7302.18\n    },\n    {\n      \"payment_date\": \"2026-10-27\",\n      \"directorate\": \"Leisure\",\n      \"supplier\": \"Fenwick Grounds Maintenance Ltd\",\n      \"expense_type\": \"Sports pitch renovation\",\n      \"transaction_no\": \"5100413\",\n      \"amount_gbp\": 4980.00\n    }\n  ]\n}"
+    },
+    "TB-003": {
+      "rows": [
+        {
+          "milestone_no": "1",
+          "milestone": "Mobilisation and site set-up",
+          "payment_trigger": "Site compound established and welfare facilities accepted by the Contract Administrator",
+          "due_date": "2027-01-12",
+          "amount_gbp": 48500.0
+        },
+        {
+          "milestone_no": "2",
+          "milestone": "Enabling works",
+          "payment_trigger": "Asbestos removal certificate issued and demolition of the former salt barn complete",
+          "due_date": "2027-02-26",
+          "amount_gbp": 132750.0
+        },
+        {
+          "milestone_no": "3",
+          "milestone": "Substructure",
+          "payment_trigger": "Foundations and ground-bearing slab signed off by the Council's structural engineer",
+          "due_date": "2027-04-30",
+          "amount_gbp": 286400.0
+        },
+        {
+          "milestone_no": "4",
+          "milestone": "Frame",
+          "payment_trigger": "Steel frame erected, plumbed and bolted, with the frame inspection certificate issued",
+          "due_date": "2027-06-18",
+          "amount_gbp": 412900.0
+        },
+        {
+          "milestone_no": "5",
+          "milestone": "Envelope",
+          "payment_trigger": "Roof covering, wall cladding, glazing and the vehicle bay doors complete so that the building is weathertight, confirmed in writing by the Contract Administrator after a water test of every roof outlet and gutter and a visual inspection of all flashings, sealant joints and door seals",
+          "due_date": "2027-08-27",
+          "amount_gbp": 365200.0
+        },
+        {
+          "milestone_no": "6",
+          "milestone": "Mechanical and electrical first fix",
+          "payment_trigger": "Containment, cabling and pipework installed and pressure-tested",
+          "due_date": "2027-10-22",
+          "amount_gbp": 241300.0
+        },
+        {
+          "milestone_no": "7",
+          "milestone": "Vehicle wash bay and interceptor",
+          "payment_trigger": "Wash bay, oil interceptor and discharge consent in place",
+          "due_date": "2027-11-26",
+          "amount_gbp": 98650.0
+        },
+        {
+          "milestone_no": "8",
+          "milestone": "Internal finishes",
+          "payment_trigger": "Floors, partitions, ceilings and decorations complete in all rooms",
+          "due_date": "2028-01-21",
+          "amount_gbp": 154800.0
+        },
+        {
+          "milestone_no": "9",
+          "milestone": "External works and drainage",
+          "payment_trigger": "Yard surfacing, drainage connections and site lighting complete",
+          "due_date": "2028-03-03",
+          "amount_gbp": 176250.0
+        },
+        {
+          "milestone_no": "10",
+          "milestone": "Commissioning",
+          "payment_trigger": "All plant commissioned and the operation and maintenance manuals accepted",
+          "due_date": "2028-04-14",
+          "amount_gbp": 64900.0
+        },
+        {
+          "milestone_no": "11",
+          "milestone": "Practical completion",
+          "payment_trigger": "Certificate of practical completion issued",
+          "due_date": "2028-05-05",
+          "amount_gbp": 120000.0
+        },
+        {
+          "milestone_no": "12",
+          "milestone": "End of defects period",
+          "payment_trigger": "Certificate of making good defects issued, 12 months after practical completion",
+          "due_date": "2029-05-05",
+          "amount_gbp": 50000.0
+        }
+      ],
+      "seconds": 133.9,
+      "error": null,
+      "raw": "{\"rows\": [{\"milestone_no\": \"1\", \"milestone\": \"Mobilisation and site set-up\", \"payment_trigger\": \"Site compound established and welfare facilities accepted by the Contract Administrator\", \"due_date\": \"2027-01-12\", \"amount_gbp\": 48500.00}, {\"milestone_no\": \"2\", \"milestone\": \"Enabling works\", \"payment_trigger\": \"Asbestos removal certificate issued and demolition of the former salt barn complete\", \"due_date\": \"2027-02-26\", \"amount_gbp\": 132750.00}, {\"milestone_no\": \"3\", \"milestone\": \"Substructure\", \"payment_trigger\": \"Foundations and ground-bearing slab signed off by the Council's structural engineer\", \"due_date\": \"2027-04-30\", \"amount_gbp\": 286400.00}, {\"milestone_no\": \"4\", \"milestone\": \"Frame\", \"payment_trigger\": \"Steel frame erected, plumbed and bolted, with the frame inspection certificate issued\", \"due_date\": \"2027-06-18\", \"amount_gbp\": 412900.00}, {\"milestone_no\": \"5\", \"milestone\": \"Envelope\", \"payment_trigger\": \"Roof covering, wall cladding, glazing and the vehicle bay doors complete so that the building is weathertight, confirmed in writing by the Contract Administrator after a water test of every roof outlet and gutter and a visual inspection of all flashings, sealant joints and door seals\", \"due_date\": \"2027-08-27\", \"amount_gbp\": 365200.00}, {\"milestone_no\": \"6\", \"milestone\": \"Mechanical and electrical first fix\", \"payment_trigger\": \"Containment, cabling and pipework installed and pressure-tested\", \"due_date\": \"2027-10-22\", \"amount_gbp\": 241300.00}, {\"milestone_no\": \"7\", \"milestone\": \"Vehicle wash bay and interceptor\", \"payment_trigger\": \"Wash bay, oil interceptor and discharge consent in place\", \"due_date\": \"2027-11-26\", \"amount_gbp\": 98650.00}, {\"milestone_no\": \"8\", \"milestone\": \"Internal finishes\", \"payment_trigger\": \"Floors, partitions, ceilings and decorations complete in all rooms\", \"due_date\": \"2028-01-21\", \"amount_gbp\": 154800.00}, {\"milestone_no\": \"9\", \"milestone\": \"External works and drainage\", \"payment_trigger\": \"Yard surfacing, drainage connections and site lighting complete\", \"due_date\": \"2028-03-03\", \"amount_gbp\": 176250.00}, {\"milestone_no\": \"10\", \"milestone\": \"Commissioning\", \"payment_trigger\": \"All plant commissioned and the operation and maintenance manuals accepted\", \"due_date\": \"2028-04-14\", \"amount_gbp\": 64900.00}, {\"milestone_no\": \"11\", \"milestone\": \"Practical completion\", \"payment_trigger\": \"Certificate of practical completion issued\", \"due_date\": \"2028-05-05\", \"amount_gbp\": 120000.00}, {\"milestone_no\": \"12\", \"milestone\": \"End of defects period\", \"payment_trigger\": \"Certificate of making good defects issued, 12 months after practical completion\", \"due_date\": \"2029-05-05\", \"amount_gbp\": 50000.00}]}"
+    },
+    "TB-004": {
+      "rows": [
+        {
+          "week_ending": "2026-07-03",
+          "order_no": "HW-7101",
+          "description": "Pothole repairs, Victoria Square and Market Street (14 no.)",
+          "cost_centre": "HWY-310",
+          "net_gbp": 8420.0,
+          "vat_gbp": 1684.0,
+          "gross_gbp": 10104.0
+        },
+        {
+          "week_ending": "2026-07-03",
+          "order_no": "HW-7102",
+          "description": "Gully emptying, Ward 3 cyclic programme",
+          "cost_centre": "HWY-325",
+          "net_gbp": 3150.0,
+          "vat_gbp": 630.0,
+          "gross_gbp": 3780.0
+        },
+        {
+          "week_ending": "2026-07-03",
+          "order_no": "HW-7103",
+          "description": "Road closure notices and permit fees, Canal Street resurfacing",
+          "cost_centre": "HWY-301",
+          "net_gbp": 640.0,
+          "vat_gbp": 0.0,
+          "gross_gbp": 640.0
+        },
+        {
+          "week_ending": "2026-07-10",
+          "order_no": "HW-7118",
+          "description": "Carriageway resurfacing, Canal Street (inlay 40mm, 1,180 m2), including traffic management",
+          "cost_centre": "HWY-340",
+          "net_gbp": 46210.0,
+          "vat_gbp": 9242.0,
+          "gross_gbp": 55452.0
+        },
+        {
+          "week_ending": "2026-07-10",
+          "order_no": "HW-7119",
+          "description": "Replacement of damaged safety barrier, Northam Road bridge approach",
+          "cost_centre": "HWY-355",
+          "net_gbp": 5875.5,
+          "vat_gbp": 1175.1,
+          "gross_gbp": 7050.6
+        },
+        {
+          "week_ending": "2026-07-10",
+          "order_no": "HW-7120",
+          "description": "Out-of-hours emergency call-out: fallen tree, Fenwick Lane",
+          "cost_centre": "HWY-390",
+          "net_gbp": 1290.0,
+          "vat_gbp": 258.0,
+          "gross_gbp": 1548.0
+        },
+        {
+          "week_ending": "2026-07-10",
+          "order_no": "HW-7121",
+          "description": "Street lighting: column replacement (3 no.), Chapel Street",
+          "cost_centre": "LGT-120",
+          "net_gbp": 7340.0,
+          "vat_gbp": 1468.0,
+          "gross_gbp": 8808.0
+        },
+        {
+          "week_ending": "2026-07-17",
+          "order_no": "HW-7140",
+          "description": "Footway reconstruction, Bridge Street (both sides), including dropped kerbs at four crossings",
+          "cost_centre": "HWY-345",
+          "net_gbp": 31975.0,
+          "vat_gbp": 6395.0,
+          "gross_gbp": 38370.0
+        },
+        {
+          "week_ending": "2026-07-17",
+          "order_no": "HW-7141",
+          "description": "Line painting refresh, school keep-clear markings (6 schools)",
+          "cost_centre": "HWY-360",
+          "net_gbp": 2210.0,
+          "vat_gbp": 442.0,
+          "gross_gbp": 2652.0
+        },
+        {
+          "week_ending": "2026-07-17",
+          "order_no": "HW-7142",
+          "description": "Gully emptying, Ward 4 cyclic programme",
+          "cost_centre": "HWY-325",
+          "net_gbp": 3150.0,
+          "vat_gbp": 630.0,
+          "gross_gbp": 3780.0
+        },
+        {
+          "week_ending": "2026-07-17",
+          "order_no": "HW-7143",
+          "description": "Drainage CCTV survey and jetting, Riverside culvert",
+          "cost_centre": "HWY-330",
+          "net_gbp": 4480.0,
+          "vat_gbp": 896.0,
+          "gross_gbp": 5376.0
+        },
+        {
+          "week_ending": "2026-07-17",
+          "order_no": "HW-7144",
+          "description": "Permit fees, Bridge Street works",
+          "cost_centre": "HWY-301",
+          "net_gbp": 410.0,
+          "vat_gbp": 0.0,
+          "gross_gbp": 410.0
+        },
+        {
+          "week_ending": "2026-07-24",
+          "order_no": "HW-7160",
+          "description": "Winter service: gritter calibration and salt barn inspection",
+          "cost_centre": "WIN-100",
+          "net_gbp": 1840.0,
+          "vat_gbp": 368.0,
+          "gross_gbp": 2208.0
+        },
+        {
+          "week_ending": "2026-07-24",
+          "order_no": "HW-7161",
+          "description": "Pothole repairs, Ward 5 (22 no.)",
+          "cost_centre": "HWY-310",
+          "net_gbp": 11260.0,
+          "vat_gbp": 2252.0,
+          "gross_gbp": 13512.0
+        },
+        {
+          "week_ending": "2026-07-24",
+          "order_no": "HW-7162",
+          "description": "Traffic signal maintenance, Victoria Square junction",
+          "cost_centre": "SIG-200",
+          "net_gbp": 3925.0,
+          "vat_gbp": 785.0,
+          "gross_gbp": 4710.0
+        }
+      ],
+      "seconds": 194.3,
+      "error": null,
+      "raw": "```json\n{\n  \"rows\": [\n    {\n      \"week_ending\": \"2026-07-03\",\n      \"order_no\": \"HW-7101\",\n      \"description\": \"Pothole repairs, Victoria Square and Market Street (14 no.)\",\n      \"cost_centre\": \"HWY-310\",\n      \"net_gbp\": 8420.00,\n      \"vat_gbp\": 1684.00,\n      \"gross_gbp\": 10104.00\n    },\n    {\n      \"week_ending\": \"2026-07-03\",\n      \"order_no\": \"HW-7102\",\n      \"description\": \"Gully emptying, Ward 3 cyclic programme\",\n      \"cost_centre\": \"HWY-325\",\n      \"net_gbp\": 3150.00,\n      \"vat_gbp\": 630.00,\n      \"gross_gbp\": 3780.00\n    },\n    {\n      \"week_ending\": \"2026-07-03\",\n      \"order_no\": \"HW-7103\",\n      \"description\": \"Road closure notices and permit fees, Canal Street resurfacing\",\n      \"cost_centre\": \"HWY-301\",\n      \"net_gbp\": 640.00,\n      \"vat_gbp\": 0.00,\n      \"gross_gbp\": 640.00\n    },\n    {\n      \"week_ending\": \"2026-07-10\",\n      \"order_no\": \"HW-7118\",\n      \"description\": \"Carriageway resurfacing, Canal Street (inlay 40mm, 1,180 m2), including traffic management\",\n      \"cost_centre\": \"HWY-340\",\n      \"net_gbp\": 46210.00,\n      \"vat_gbp\": 9242.00,\n      \"gross_gbp\": 55452.00\n    },\n    {\n      \"week_ending\": \"2026-07-10\",\n      \"order_no\": \"HW-7119\",\n      \"description\": \"Replacement of damaged safety barrier, Northam Road bridge approach\",\n      \"cost_centre\": \"HWY-355\",\n      \"net_gbp\": 5875.50,\n      \"vat_gbp\": 1175.10,\n      \"gross_gbp\": 7050.60\n    },\n    {\n      \"week_ending\": \"2026-07-10\",\n      \"order_no\": \"HW-7120\",\n      \"description\": \"Out-of-hours emergency call-out: fallen tree, Fenwick Lane\",\n      \"cost_centre\": \"HWY-390\",\n      \"net_gbp\": 1290.00,\n      \"vat_gbp\": 258.00,\n      \"gross_gbp\": 1548.00\n    },\n    {\n      \"week_ending\": \"2026-07-10\",\n      \"order_no\": \"HW-7121\",\n      \"description\": \"Street lighting: column replacement (3 no.), Chapel Street\",\n      \"cost_centre\": \"LGT-120\",\n      \"net_gbp\": 7340.00,\n      \"vat_gbp\": 1468.00,\n      \"gross_gbp\": 8808.00\n    },\n    {\n      \"week_ending\": \"2026-07-17\",\n      \"order_no\": \"HW-7140\",\n      \"description\": \"Footway reconstruction, Bridge Street (both sides), including dropped kerbs at four crossings\",\n      \"cost_centre\": \"HWY-345\",\n      \"net_gbp\": 31975.00,\n      \"vat_gbp\": 6395.00,\n      \"gross_gbp\": 38370.00\n    },\n    {\n      \"week_ending\": \"2026-07-17\",\n      \"order_no\": \"HW-7141\",\n      \"description\": \"Line painting refresh, school keep-clear markings (6 schools)\",\n      \"cost_centre\": \"HWY-360\",\n      \"net_gbp\": 2210.00,\n      \"vat_gbp\": 442.00,\n      \"gross_gbp\": 2652.00\n    },\n    {\n      \"week_ending\": \"2026-07-17\",\n      \"order_no\": \"HW-7142\",\n      \"description\": \"Gully emptying, Ward 4 cyclic programme\",\n      \"cost_centre\": \"HWY-325\",\n      \"net_gbp\": 3150.00,\n      \"vat_gbp\": 630.00,\n      \"gross_gbp\": 3780.00\n    },\n    {\n      \"week_ending\": \"2026-07-17\",\n      \"order_no\": \"HW-7143\",\n      \"description\": \"Drainage CCTV survey and jetting, Riverside culvert\",\n      \"cost_centre\": \"HWY-330\",\n      \"net_gbp\": 4480.00,\n      \"vat_gbp\": 896.00,\n      \"gross_gbp\": 5376.00\n    },\n    {\n      \"week_ending\": \"2026-07-17\",\n      \"order_no\": \"HW-7144\",\n      \"description\": \"Permit fees, Bridge Street works\",\n      \"cost_centre\": \"HWY-301\",\n      \"net_gbp\": 410.00,\n      \"vat_gbp\": 0.00,\n      \"gross_gbp\": 410.00\n    },\n    {\n      \"week_ending\": \"2026-07-24\",\n      \"order_no\": \"HW-7160\",\n      \"description\": \"Winter service: gritter calibration and salt barn inspection\",\n      \"cost_centre\": \"WIN-100\",\n      \"net_gbp\": 1840.00,\n      \"vat_gbp\": 368.00,\n      \"gross_gbp\": 2208.00\n    },\n    {\n      \"week_ending\": \"2026-07-24\",\n      \"order_no\": \"HW-7161\",\n      \"description\": \"Pothole repairs, Ward 5 (22 no.)\",\n      \"cost_centre\": \"HWY-310\",\n      \"net_gbp\": 11260.00,\n      \"vat_gbp\": 2252.00,\n      \"gross_gbp\": 13512.00\n    },\n    {\n      \"week_ending\": \"2026-07-24\",\n      \"order_no\": \"HW-7162\",\n      \"description\": \"Traffic signal maintenance, Victoria Square junction\",\n      \"cost_centre\": \"SIG-200\",\n      \"net_gbp\": 3925.00,\n      \"vat_gbp\": 785.00,\n      \"gross_gbp\": 4710.00\n    }\n  ]\n}\n```"
+    }
+  }
+}

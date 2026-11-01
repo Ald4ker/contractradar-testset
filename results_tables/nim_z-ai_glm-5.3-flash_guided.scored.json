@@ -1,0 +1,117 @@
+{
+  "summary": {
+    "extractor": "llm:nim/z-ai/glm-5.3-flash:text:guided-prompt",
+    "description": "z-ai/glm-5.3-flash via https://integrate.api.nvidia.com/v1 (text, guided prompt)",
+    "version": "0.1.0",
+    "run_at": "2026-11-01T03:42:20Z",
+    "track": "tables",
+    "cases": 4,
+    "cell_accuracy": 0.977,
+    "cell_recall": 0.977,
+    "rows_exact": 53,
+    "rows_expected": 54,
+    "rows_extra": 0,
+    "rows_missing": 1,
+    "tables_exact": 3
+  },
+  "per_case": {
+    "TB-001": {
+      "case_id": "TB-001",
+      "rows_expected": 11,
+      "rows_predicted": 10,
+      "rows_exact": 10,
+      "rows_missing": 1,
+      "rows_extra": 0,
+      "cell_accuracy": 0.909,
+      "cell_recall": 0.909,
+      "table_exact": false,
+      "per_column": {
+        "date": 0.909,
+        "reference": 0.909,
+        "details": 0.909,
+        "debit_gbp": 0.909,
+        "credit_gbp": 0.909,
+        "balance_gbp": 0.909
+      },
+      "empty_columns": [],
+      "missing_rows": [
+        1
+      ],
+      "extra_rows": [],
+      "cell_errors": [],
+      "column_mapping": "rows"
+    },
+    "TB-002": {
+      "case_id": "TB-002",
+      "rows_expected": 16,
+      "rows_predicted": 16,
+      "rows_exact": 16,
+      "rows_missing": 0,
+      "rows_extra": 0,
+      "cell_accuracy": 1.0,
+      "cell_recall": 1.0,
+      "table_exact": true,
+      "per_column": {
+        "payment_date": 1.0,
+        "directorate": 1.0,
+        "supplier": 1.0,
+        "expense_type": 1.0,
+        "transaction_no": 1.0,
+        "amount_gbp": 1.0
+      },
+      "empty_columns": [],
+      "missing_rows": [],
+      "extra_rows": [],
+      "cell_errors": [],
+      "column_mapping": "rows"
+    },
+    "TB-003": {
+      "case_id": "TB-003",
+      "rows_expected": 12,
+      "rows_predicted": 12,
+      "rows_exact": 12,
+      "rows_missing": 0,
+      "rows_extra": 0,
+      "cell_accuracy": 1.0,
+      "cell_recall": 1.0,
+      "table_exact": true,
+      "per_column": {
+        "milestone_no": 1.0,
+        "milestone": 1.0,
+        "payment_trigger": 1.0,
+        "due_date": 1.0,
+        "amount_gbp": 1.0
+      },
+      "empty_columns": [],
+      "missing_rows": [],
+      "extra_rows": [],
+      "cell_errors": [],
+      "column_mapping": "rows"
+    },
+    "TB-004": {
+      "case_id": "TB-004",
+      "rows_expected": 15,
+      "rows_predicted": 15,
+      "rows_exact": 15,
+      "rows_missing": 0,
+      "rows_extra": 0,
+      "cell_accuracy": 1.0,
+      "cell_recall": 1.0,
+      "table_exact": true,
+      "per_column": {
+        "week_ending": 1.0,
+        "order_no": 1.0,
+        "description": 1.0,
+        "cost_centre": 1.0,
+        "net_gbp": 1.0,
+        "vat_gbp": 1.0,
+        "gross_gbp": 1.0
+      },
+      "empty_columns": [],
+      "missing_rows": [],
+      "extra_rows": [],
+      "cell_errors": [],
+      "column_mapping": "rows"
+    }
+  }
+}

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Pull the latest main, rebuild the static site, refresh the nginx snippets, reload nginx and restart the MCP/API
-# backend if it is installed (deploy/setup-server.sh). Safe to re-run.
+# backend if it is installed (deploy/setup-server.sh). Safe to re-run. After a change to this script itself, run it
+# twice: bash keeps executing the copy it started with.
 set -euo pipefail
 DIR=${DIR:-/var/www/contractradar-testset}
 REPO=${REPO:-https://github.com/Marxist-Leninist/contractradar-testset.git}
@@ -11,6 +12,7 @@ fi
 cd "$DIR"
 git fetch --quiet origin main
 git reset --hard --quiet origin/main
+chmod -R a+rX "$DIR"   # the backend runs as an unprivileged user and git does not track directory modes
 python3 -m crtest.site --cases cases --results results --out site/dist
 install -m 0644 deploy/nginx-contractradar-ratelimit.conf /etc/nginx/conf.d/contractradar-ratelimit.conf
 install -D -m 0644 deploy/nginx-contractradar-locations.conf /etc/nginx/snippets/contractradar-locations.conf
