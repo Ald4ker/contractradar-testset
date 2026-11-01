@@ -1,0 +1,50 @@
+{
+  "case_id": "TB-003",
+  "slug": "milestones-split-row",
+  "title": "Payment milestone schedule crossing a page, one row split by the page break",
+  "pages": 2,
+  "rows": 12,
+  "columns": [
+    {
+      "name": "milestone_no",
+      "printed_header": "No.",
+      "type": "id"
+    },
+    {
+      "name": "milestone",
+      "printed_header": "Milestone",
+      "type": "text"
+    },
+    {
+      "name": "payment_trigger",
+      "printed_header": "Payment trigger",
+      "type": "text"
+    },
+    {
+      "name": "due_date",
+      "printed_header": "Due date",
+      "type": "date"
+    },
+    {
+      "name": "amount_gbp",
+      "printed_header": "Amount (£, ex VAT)",
+      "type": "money"
+    }
+  ],
+  "hazards": [
+    "table_crosses_page",
+    "split_row",
+    "repeated_header",
+    "footer_interleaves",
+    "wrapped_cells",
+    "totals_row"
+  ],
+  "row_rules": "One row per milestone. Milestone 5's payment trigger starts at the foot of page 1 and finishes at the top of page 2: it is one cell. The repeated header and the Total line are not rows.",
+  "why": "The schedule starts low on page 1, so milestone 5 (Envelope) is split by the page break: the first lines of its payment trigger are on page 1 and the rest continue on page 2, under the repeated header, in a row whose other cells are empty. The running header and the page footer fall between the two halves in a text dump.",
+  "naive_stop": "^\\s*Total\\b",
+  "document": "TB-003/document.pdf",
+  "expected": "TB-003/expected.csv",
+  "layout": {
+    "blank_above_table_mm": 8.8
+  }
+}

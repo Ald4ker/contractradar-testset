@@ -1,0 +1,1187 @@
+{
+  "summary": {
+    "extractor": "PyMuPDF 2.0 find_tables(), defaults",
+    "description": "Stock settings; tables joined across pages, header rows dropped, nothing repaired.",
+    "version": "0.2.0",
+    "run_at": "2026-11-01T03:06:58Z",
+    "track": "tables",
+    "cases": 4,
+    "cell_accuracy": 0.296,
+    "cell_recall": 0.418,
+    "rows_exact": 0,
+    "rows_expected": 54,
+    "rows_extra": 58,
+    "rows_missing": 15,
+    "tables_exact": 0
+  },
+  "per_case": {
+    "TB-001": {
+      "case_id": "TB-001",
+      "rows_expected": 11,
+      "rows_predicted": 23,
+      "rows_exact": 0,
+      "rows_missing": 0,
+      "rows_extra": 12,
+      "cell_accuracy": 0.196,
+      "cell_recall": 0.409,
+      "table_exact": false,
+      "per_column": {
+        "date": 1.0,
+        "reference": 0.091,
+        "details": 0.273,
+        "debit_gbp": 0.455,
+        "credit_gbp": 0.636,
+        "balance_gbp": 0.0
+      },
+      "empty_columns": [],
+      "missing_rows": [],
+      "extra_rows": [
+        {
+          "pred_row": 3,
+          "values": {
+            "details": "Centrepassengerlifts:quarterlyservicevisit"
+          }
+        },
+        {
+          "pred_row": 4,
+          "values": {
+            "details": "andLOLERthoroughexaminationcertificate"
+          }
+        },
+        {
+          "pred_row": 7,
+          "values": {
+            "details": "onboiler2 MarketWalkdepot ,"
+          }
+        },
+        {
+          "pred_row": 9,
+          "values": {
+            "details": "out -of -hours call -out charge)"
+          }
+        },
+        {
+          "pred_row": 11,
+          "values": {
+            "details": "lanterns columns4to9 ,"
+          }
+        },
+        {
+          "pred_row": 13,
+          "values": {
+            "details": "offices:firealarmandemergencylighting"
+          }
+        },
+        {
+          "pred_row": 14,
+          "values": {
+            "details": "tests"
+          }
+        },
+        {
+          "pred_row": 16,
+          "values": {
+            "details": "within2hours)missedinQ2"
+          }
+        },
+        {
+          "pred_row": 19,
+          "values": {
+            "details": "park:outofhours 2operativesfor6hours , ,"
+          }
+        },
+        {
+          "pred_row": 20,
+          "values": {
+            "details": "jettingandCCTVsurvey"
+          }
+        },
+        {
+          "pred_row": 22,
+          "values": {
+            "details": "schedule"
+          }
+        },
+        {
+          "pred_row": 23,
+          "values": {
+            "details": "Totals",
+            "debit_gbp": "1071095 , .",
+            "credit_gbp": "2032500 , ."
+          }
+        }
+      ],
+      "cell_errors": [
+        {
+          "row": 1,
+          "column": "balance_gbp",
+          "expected": "12480.00",
+          "got": "1248000 , ."
+        },
+        {
+          "row": 2,
+          "column": "reference",
+          "expected": "INV-40871",
+          "got": "INV40871 -"
+        },
+        {
+          "row": 2,
+          "column": "details",
+          "expected": "Planned preventative maintenance, Civic Centre passenger lifts: quarterly service visit and LOLER thorough examination certificate",
+          "got": "Plannedpreventativemaintenance Civic ,"
+        },
+        {
+          "row": 2,
+          "column": "debit_gbp",
+          "expected": "3240.00",
+          "got": "324000 , ."
+        },
+        {
+          "row": 2,
+          "column": "balance_gbp",
+          "expected": "15720.00",
+          "got": "1572000 , ."
+        },
+        {
+          "row": 3,
+          "column": "reference",
+          "expected": "PAY-77812",
+          "got": "PAY77812 -"
+        },
+        {
+          "row": 3,
+          "column": "credit_gbp",
+          "expected": "12480.00",
+          "got": "1248000 , ."
+        },
+        {
+          "row": 3,
+          "column": "balance_gbp",
+          "expected": "3240.00",
+          "got": "324000 , ."
+        },
+        {
+          "row": 4,
+          "column": "reference",
+          "expected": "INV-40902",
+          "got": "INV40902 -"
+        },
+        {
+          "row": 4,
+          "column": "details",
+          "expected": "Reactive repair: replacement circulating pump on boiler 2, Market Walk depot",
+          "got": "Reactiverepair:replacementcirculatingpump"
+        },
+        {
+          "row": 4,
+          "column": "debit_gbp",
+          "expected": "1186.50",
+          "got": "118650 , ."
+        },
+        {
+          "row": 4,
+          "column": "balance_gbp",
+          "expected": "4426.50",
+          "got": "442650 , ."
+        },
+        {
+          "row": 5,
+          "column": "reference",
+          "expected": "CN-2207",
+          "got": "CN2207 -"
+        },
+        {
+          "row": 5,
+          "column": "details",
+          "expected": "Credit note against INV-40755 (duplicate out-of-hours call-out charge)",
+          "got": "Credit note against INV -40755 (duplicate"
+        },
+        {
+          "row": 5,
+          "column": "credit_gbp",
+          "expected": "245.00",
+          "got": "24500 ."
+        },
+        {
+          "row": 5,
+          "column": "balance_gbp",
+          "expected": "4181.50",
+          "got": "418150 , ."
+        },
+        {
+          "row": 6,
+          "column": "reference",
+          "expected": "INV-40933",
+          "got": "INV40933 -"
+        },
+        {
+          "row": 6,
+          "column": "details",
+          "expected": "Car park lighting: replace 6 failed LED lanterns, columns 4 to 9",
+          "got": "Carparklighting:replace6failedLED"
+        },
+        {
+          "row": 6,
+          "column": "debit_gbp",
+          "expected": "812.40",
+          "got": "81240 ."
+        },
+        {
+          "row": 6,
+          "column": "balance_gbp",
+          "expected": "4993.90",
+          "got": "499390 , ."
+        },
+        {
+          "row": 7,
+          "column": "reference",
+          "expected": "INV-40951",
+          "got": "INV40951 -"
+        },
+        {
+          "row": 7,
+          "column": "details",
+          "expected": "Planned preventative maintenance, Riverside offices: fire alarm and emergency lighting tests",
+          "got": "Plannedpreventativemaintenance Riverside ,"
+        },
+        {
+          "row": 7,
+          "column": "debit_gbp",
+          "expected": "2460.00",
+          "got": "246000 , ."
+        },
+        {
+          "row": 7,
+          "column": "balance_gbp",
+          "expected": "7453.90",
+          "got": "745390 , ."
+        },
+        {
+          "row": 8,
+          "column": "reference",
+          "expected": "ADJ-118",
+          "got": "ADJ118 -"
+        },
+        {
+          "row": 8,
+          "column": "details",
+          "expected": "Service credit: KPI 3 (emergency response within 2 hours) missed in Q2",
+          "got": "Servicecredit:KPI3(emergencyresponse"
+        },
+        {
+          "row": 8,
+          "column": "credit_gbp",
+          "expected": "1600.00",
+          "got": "160000 , ."
+        },
+        {
+          "row": 8,
+          "column": "balance_gbp",
+          "expected": "5853.90",
+          "got": "585390 , ."
+        },
+        {
+          "row": 9,
+          "column": "reference",
+          "expected": "PAY-78044",
+          "got": "PAY78044 -"
+        },
+        {
+          "row": 9,
+          "column": "credit_gbp",
+          "expected": "6000.00",
+          "got": "600000 , ."
+        },
+        {
+          "row": 9,
+          "column": "balance_gbp",
+          "expected": "-146.10",
+          "got": "(14610) ."
+        },
+        {
+          "row": 10,
+          "column": "reference",
+          "expected": "INV-40988",
+          "got": "INV40988 -"
+        },
+        {
+          "row": 10,
+          "column": "details",
+          "expected": "Emergency drainage works, Riverside car park: out of hours, 2 operatives for 6 hours, jetting and CCTV survey",
+          "got": "Emergencydrainageworks Riversidecar ,"
+        },
+        {
+          "row": 10,
+          "column": "debit_gbp",
+          "expected": "2915.25",
+          "got": "291525 , ."
+        },
+        {
+          "row": 10,
+          "column": "balance_gbp",
+          "expected": "2769.15",
+          "got": "276915 , ."
+        },
+        {
+          "row": 11,
+          "column": "reference",
+          "expected": "INV-41002",
+          "got": "INV41002 -"
+        },
+        {
+          "row": 11,
+          "column": "details",
+          "expected": "Consumables and parts as per attached schedule",
+          "got": "Consumablesandpartsasperattached"
+        },
+        {
+          "row": 11,
+          "column": "debit_gbp",
+          "expected": "96.80",
+          "got": "9680 ."
+        },
+        {
+          "row": 11,
+          "column": "balance_gbp",
+          "expected": "2865.95",
+          "got": "286595 , ."
+        }
+      ],
+      "column_mapping": "names"
+    },
+    "TB-002": {
+      "case_id": "TB-002",
+      "rows_expected": 16,
+      "rows_predicted": 24,
+      "rows_exact": 0,
+      "rows_missing": 0,
+      "rows_extra": 8,
+      "cell_accuracy": 0.319,
+      "cell_recall": 0.479,
+      "table_exact": false,
+      "per_column": {
+        "payment_date": 0.25,
+        "directorate": 0.5,
+        "supplier": 0.312,
+        "expense_type": 0.812,
+        "transaction_no": 1.0,
+        "amount_gbp": 0.0
+      },
+      "empty_columns": [],
+      "missing_rows": [],
+      "extra_rows": [
+        {
+          "pred_row": 2,
+          "values": {
+            "supplier": "ServicesLimited"
+          }
+        },
+        {
+          "pred_row": 8,
+          "values": {
+            "supplier": "CIC",
+            "expense_type": "accommodation"
+          }
+        },
+        {
+          "pred_row": 10,
+          "values": {
+            "expense_type": "accommodation"
+          }
+        },
+        {
+          "pred_row": 13,
+          "values": {
+            "supplier": "Ltd"
+          }
+        },
+        {
+          "pred_row": 16,
+          "values": {
+            "supplier": "ServicesLimited",
+            "expense_type": "fees"
+          }
+        },
+        {
+          "pred_row": 18,
+          "values": {
+            "supplier": "(Midlands)Limited"
+          }
+        },
+        {
+          "pred_row": 22,
+          "values": {
+            "supplier": "Ltd"
+          }
+        },
+        {
+          "pred_row": 24,
+          "values": {
+            "supplier": "Ltd"
+          }
+        }
+      ],
+      "cell_errors": [
+        {
+          "row": 1,
+          "column": "supplier",
+          "expected": "Brightwater Environmental Services Limited",
+          "got": "BrightwaterEnvironmental"
+        },
+        {
+          "row": 1,
+          "column": "amount_gbp",
+          "expected": "84612.00",
+          "got": "8461200 , ."
+        },
+        {
+          "row": 2,
+          "column": "payment_date",
+          "expected": "2026-10-06",
+          "got": ""
+        },
+        {
+          "row": 2,
+          "column": "directorate",
+          "expected": "Environment",
+          "got": ""
+        },
+        {
+          "row": 2,
+          "column": "supplier",
+          "expected": "Fenwick Grounds Maintenance Ltd",
+          "got": "FenwickGroundsMaintenance"
+        },
+        {
+          "row": 2,
+          "column": "amount_gbp",
+          "expected": "6240.50",
+          "got": "624050 , ."
+        },
+        {
+          "row": 3,
+          "column": "payment_date",
+          "expected": "2026-10-06",
+          "got": ""
+        },
+        {
+          "row": 3,
+          "column": "directorate",
+          "expected": "Environment",
+          "got": ""
+        },
+        {
+          "row": 3,
+          "column": "supplier",
+          "expected": "Fenwick Grounds Maintenance Ltd",
+          "got": "Ltd"
+        },
+        {
+          "row": 3,
+          "column": "amount_gbp",
+          "expected": "1180.00",
+          "got": "118000 , ."
+        },
+        {
+          "row": 4,
+          "column": "payment_date",
+          "expected": "2026-10-06",
+          "got": ""
+        },
+        {
+          "row": 4,
+          "column": "amount_gbp",
+          "expected": "12950.00",
+          "got": "1295000 , ."
+        },
+        {
+          "row": 5,
+          "column": "payment_date",
+          "expected": "2026-10-06",
+          "got": ""
+        },
+        {
+          "row": 5,
+          "column": "directorate",
+          "expected": "Resources",
+          "got": ""
+        },
+        {
+          "row": 5,
+          "column": "supplier",
+          "expected": "Elmstead ICT Solutions Ltd",
+          "got": ""
+        },
+        {
+          "row": 5,
+          "column": "amount_gbp",
+          "expected": "2310.75",
+          "got": "231075 , ."
+        },
+        {
+          "row": 6,
+          "column": "supplier",
+          "expected": "Dunmore Care Partnership CIC",
+          "got": "DunmoreCarePartnership"
+        },
+        {
+          "row": 6,
+          "column": "expense_type",
+          "expected": "Temporary accommodation",
+          "got": "Temporary"
+        },
+        {
+          "row": 6,
+          "column": "amount_gbp",
+          "expected": "3465.00",
+          "got": "346500 , ."
+        },
+        {
+          "row": 7,
+          "column": "payment_date",
+          "expected": "2026-10-13",
+          "got": ""
+        },
+        {
+          "row": 7,
+          "column": "directorate",
+          "expected": "Housing",
+          "got": ""
+        },
+        {
+          "row": 7,
+          "column": "supplier",
+          "expected": "Dunmore Care Partnership CIC",
+          "got": ""
+        },
+        {
+          "row": 7,
+          "column": "expense_type",
+          "expected": "Temporary accommodation",
+          "got": "Temporary"
+        },
+        {
+          "row": 7,
+          "column": "amount_gbp",
+          "expected": "3465.00",
+          "got": "346500 , ."
+        },
+        {
+          "row": 8,
+          "column": "payment_date",
+          "expected": "2026-10-13",
+          "got": ""
+        },
+        {
+          "row": 8,
+          "column": "directorate",
+          "expected": "Housing",
+          "got": ""
+        },
+        {
+          "row": 8,
+          "column": "amount_gbp",
+          "expected": "2775.20",
+          "got": "277520 , ."
+        },
+        {
+          "row": 9,
+          "column": "payment_date",
+          "expected": "2026-10-13",
+          "got": ""
+        },
+        {
+          "row": 9,
+          "column": "supplier",
+          "expected": "Halbrook Leisure Operations Ltd",
+          "got": "HalbrookLeisureOperations"
+        },
+        {
+          "row": 9,
+          "column": "amount_gbp",
+          "expected": "41666.67",
+          "got": "4166667 , ."
+        },
+        {
+          "row": 10,
+          "column": "amount_gbp",
+          "expected": "18902.40",
+          "got": "1890240 , ."
+        },
+        {
+          "row": 11,
+          "column": "payment_date",
+          "expected": "2026-10-20",
+          "got": ""
+        },
+        {
+          "row": 11,
+          "column": "directorate",
+          "expected": "Environment",
+          "got": ""
+        },
+        {
+          "row": 11,
+          "column": "supplier",
+          "expected": "Brightwater Environmental Services Limited",
+          "got": "BrightwaterEnvironmental"
+        },
+        {
+          "row": 11,
+          "column": "expense_type",
+          "expected": "Refund: overpaid gate fees",
+          "got": "Refund:overpaidgate"
+        },
+        {
+          "row": 11,
+          "column": "amount_gbp",
+          "expected": "-1250.00",
+          "got": "125000 - , ."
+        },
+        {
+          "row": 12,
+          "column": "payment_date",
+          "expected": "2026-10-20",
+          "got": ""
+        },
+        {
+          "row": 12,
+          "column": "supplier",
+          "expected": "Greystoke Construction (Midlands) Limited",
+          "got": "GreystokeConstruction"
+        },
+        {
+          "row": 12,
+          "column": "amount_gbp",
+          "expected": "96400.00",
+          "got": "9640000 , ."
+        },
+        {
+          "row": 13,
+          "column": "amount_gbp",
+          "expected": "23118.00",
+          "got": "2311800 , ."
+        },
+        {
+          "row": 14,
+          "column": "payment_date",
+          "expected": "2026-10-27",
+          "got": ""
+        },
+        {
+          "row": 14,
+          "column": "directorate",
+          "expected": "Resources",
+          "got": ""
+        },
+        {
+          "row": 14,
+          "column": "amount_gbp",
+          "expected": "845.00",
+          "got": "84500 ."
+        },
+        {
+          "row": 15,
+          "column": "payment_date",
+          "expected": "2026-10-27",
+          "got": ""
+        },
+        {
+          "row": 15,
+          "column": "supplier",
+          "expected": "Halbrook Leisure Operations Ltd",
+          "got": "HalbrookLeisureOperations"
+        },
+        {
+          "row": 15,
+          "column": "amount_gbp",
+          "expected": "7302.18",
+          "got": "730218 , ."
+        },
+        {
+          "row": 16,
+          "column": "payment_date",
+          "expected": "2026-10-27",
+          "got": ""
+        },
+        {
+          "row": 16,
+          "column": "directorate",
+          "expected": "Leisure",
+          "got": ""
+        },
+        {
+          "row": 16,
+          "column": "supplier",
+          "expected": "Fenwick Grounds Maintenance Ltd",
+          "got": "FenwickGroundsMaintenance"
+        },
+        {
+          "row": 16,
+          "column": "amount_gbp",
+          "expected": "4980.00",
+          "got": "498000 , ."
+        }
+      ],
+      "column_mapping": "names"
+    },
+    "TB-003": {
+      "case_id": "TB-003",
+      "rows_expected": 12,
+      "rows_predicted": 14,
+      "rows_exact": 0,
+      "rows_missing": 0,
+      "rows_extra": 2,
+      "cell_accuracy": 0.671,
+      "cell_recall": 0.783,
+      "table_exact": false,
+      "per_column": {
+        "milestone_no": 1.0,
+        "milestone": 1.0,
+        "payment_trigger": 0.917,
+        "due_date": 1.0,
+        "amount_gbp": 0.0
+      },
+      "empty_columns": [],
+      "missing_rows": [],
+      "extra_rows": [
+        {
+          "pred_row": 6,
+          "values": {
+            "payment_trigger": "confirmedinwritingbytheContractAdministratorafter awatertestofeveryroofoutletandgutterandavisual inspectionofallflashings sealantjointsanddoorseals ,"
+          }
+        },
+        {
+          "pred_row": 14,
+          "values": {
+            "milestone": "Total",
+            "amount_gbp": "215165000 , , ."
+          }
+        }
+      ],
+      "cell_errors": [
+        {
+          "row": 1,
+          "column": "amount_gbp",
+          "expected": "48500.00",
+          "got": "4850000 , ."
+        },
+        {
+          "row": 2,
+          "column": "amount_gbp",
+          "expected": "132750.00",
+          "got": "13275000 , ."
+        },
+        {
+          "row": 3,
+          "column": "amount_gbp",
+          "expected": "286400.00",
+          "got": "28640000 , ."
+        },
+        {
+          "row": 4,
+          "column": "amount_gbp",
+          "expected": "412900.00",
+          "got": "41290000 , ."
+        },
+        {
+          "row": 5,
+          "column": "payment_trigger",
+          "expected": "Roof covering, wall cladding, glazing and the vehicle bay doors complete so that the building is weathertight, confirmed in writing by the Contract Administrator after a water test of every roof outlet and gutter and a visual inspection of all flashings, sealant joints and door seals",
+          "got": "Roofcovering wallcladding glazingandthevehicle , , baydoorscompletesothatthebuildingisweathertight ,"
+        },
+        {
+          "row": 5,
+          "column": "amount_gbp",
+          "expected": "365200.00",
+          "got": "36520000 , ."
+        },
+        {
+          "row": 6,
+          "column": "amount_gbp",
+          "expected": "241300.00",
+          "got": "24130000 , ."
+        },
+        {
+          "row": 7,
+          "column": "amount_gbp",
+          "expected": "98650.00",
+          "got": "9865000 , ."
+        },
+        {
+          "row": 8,
+          "column": "amount_gbp",
+          "expected": "154800.00",
+          "got": "15480000 , ."
+        },
+        {
+          "row": 9,
+          "column": "amount_gbp",
+          "expected": "176250.00",
+          "got": "17625000 , ."
+        },
+        {
+          "row": 10,
+          "column": "amount_gbp",
+          "expected": "64900.00",
+          "got": "6490000 , ."
+        },
+        {
+          "row": 11,
+          "column": "amount_gbp",
+          "expected": "120000.00",
+          "got": "12000000 , ."
+        },
+        {
+          "row": 12,
+          "column": "amount_gbp",
+          "expected": "50000.00",
+          "got": "5000000 , ."
+        }
+      ],
+      "column_mapping": "names"
+    },
+    "TB-004": {
+      "case_id": "TB-004",
+      "rows_expected": 15,
+      "rows_predicted": 36,
+      "rows_exact": 0,
+      "rows_missing": 15,
+      "rows_extra": 36,
+      "cell_accuracy": 0.0,
+      "cell_recall": 0.0,
+      "table_exact": false,
+      "per_column": {
+        "week_ending": 0.0,
+        "order_no": 0.0,
+        "description": 0.0,
+        "cost_centre": 0.0,
+        "net_gbp": 0.0,
+        "vat_gbp": 0.0,
+        "gross_gbp": 0.0
+      },
+      "empty_columns": [
+        "week_ending",
+        "order_no"
+      ],
+      "missing_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "extra_rows": [
+        {
+          "pred_row": 1,
+          "values": {
+            "description": "WeekendingFriday3July2026"
+          }
+        },
+        {
+          "pred_row": 2,
+          "values": {
+            "description": "HW -7101 Pothole repairs Victoria Square and Market Street ,",
+            "cost_centre": "HWY310 -",
+            "net_gbp": "842000 , .",
+            "vat_gbp": "168400 , .",
+            "gross_gbp": "1010400 , ."
+          }
+        },
+        {
+          "pred_row": 3,
+          "values": {
+            "description": "(14no) ."
+          }
+        },
+        {
+          "pred_row": 4,
+          "values": {
+            "description": "HW -7102 Gully emptying Ward 3 cyclic programme ,",
+            "cost_centre": "HWY325 -",
+            "net_gbp": "315000 , .",
+            "vat_gbp": "63000 .",
+            "gross_gbp": "378000 , ."
+          }
+        },
+        {
+          "pred_row": 5,
+          "values": {
+            "description": "HW -7103 Road closure notices and permit fees Canal Street ,",
+            "cost_centre": "HWY301 -",
+            "net_gbp": "64000 .",
+            "vat_gbp": "000 .",
+            "gross_gbp": "64000 ."
+          }
+        },
+        {
+          "pred_row": 6,
+          "values": {
+            "description": "resurfacing"
+          }
+        },
+        {
+          "pred_row": 7,
+          "values": {
+            "description": "Weektotal",
+            "net_gbp": "1221000 , .",
+            "vat_gbp": "231400 , .",
+            "gross_gbp": "1452400 , ."
+          }
+        },
+        {
+          "pred_row": 8,
+          "values": {
+            "description": "WeekendingFriday10July2026"
+          }
+        },
+        {
+          "pred_row": 9,
+          "values": {
+            "description": "HW -7118 Carriageway resurfacing Canal Street (inlay 40mm , ,",
+            "cost_centre": "HWY340 -",
+            "net_gbp": "4621000 , .",
+            "vat_gbp": "924200 , .",
+            "gross_gbp": "5545200 , ."
+          }
+        },
+        {
+          "pred_row": 10,
+          "values": {
+            "description": "1180m2) includingtrafficmanagement , ,"
+          }
+        },
+        {
+          "pred_row": 11,
+          "values": {
+            "description": "HW -7119 Replacement of damaged safety barrier Northam ,",
+            "cost_centre": "HWY355 -",
+            "net_gbp": "587550 , .",
+            "vat_gbp": "117510 , .",
+            "gross_gbp": "705060 , ."
+          }
+        },
+        {
+          "pred_row": 12,
+          "values": {
+            "description": "Roadbridgeapproach"
+          }
+        },
+        {
+          "pred_row": 13,
+          "values": {
+            "description": "HW -7120 Out -of -hours emergency call -out: fallen tree ,",
+            "cost_centre": "HWY390 -",
+            "net_gbp": "129000 , .",
+            "vat_gbp": "25800 .",
+            "gross_gbp": "154800 , ."
+          }
+        },
+        {
+          "pred_row": 14,
+          "values": {
+            "description": "FenwickLane"
+          }
+        },
+        {
+          "pred_row": 15,
+          "values": {
+            "description": "HW -7121 Street lighting: column replacement (3 no .) Chapel ,",
+            "cost_centre": "LGT120 -",
+            "net_gbp": "734000 , .",
+            "vat_gbp": "146800 , .",
+            "gross_gbp": "880800 , ."
+          }
+        },
+        {
+          "pred_row": 16,
+          "values": {
+            "description": "Street"
+          }
+        },
+        {
+          "pred_row": 17,
+          "values": {
+            "description": "Weektotal",
+            "net_gbp": "6071550 , .",
+            "vat_gbp": "1214310 , .",
+            "gross_gbp": "7285860 , ."
+          }
+        },
+        {
+          "pred_row": 18,
+          "values": {
+            "description": "WeekendingFriday17July2026"
+          }
+        },
+        {
+          "pred_row": 19,
+          "values": {
+            "description": "HW -7140 Footway reconstruction Bridge Street (both sides) , ,",
+            "cost_centre": "HWY345 -",
+            "net_gbp": "3197500 , .",
+            "vat_gbp": "639500 , .",
+            "gross_gbp": "3837000 , ."
+          }
+        },
+        {
+          "pred_row": 20,
+          "values": {
+            "description": "includingdroppedkerbsatfourcrossings"
+          }
+        },
+        {
+          "pred_row": 21,
+          "values": {
+            "description": "HW -7141 Line painting refresh school keep-clear markings (6 ,",
+            "cost_centre": "HWY360 -",
+            "net_gbp": "221000 , .",
+            "vat_gbp": "44200 .",
+            "gross_gbp": "265200 , ."
+          }
+        },
+        {
+          "pred_row": 22,
+          "values": {
+            "description": "schools)"
+          }
+        },
+        {
+          "pred_row": 23,
+          "values": {
+            "description": "HW -7142 Gully emptying Ward 4 cyclic programme ,",
+            "cost_centre": "HWY325 -",
+            "net_gbp": "315000 , .",
+            "vat_gbp": "63000 .",
+            "gross_gbp": "378000 , ."
+          }
+        },
+        {
+          "pred_row": 24,
+          "values": {
+            "description": "Carriedforward",
+            "net_gbp": "11026050 , .",
+            "vat_gbp": "2192410 , .",
+            "gross_gbp": "13218460 , ."
+          }
+        },
+        {
+          "pred_row": 25,
+          "values": {
+            "description": "Broughtforward",
+            "net_gbp": "11026050 , .",
+            "vat_gbp": "2192410 , .",
+            "gross_gbp": "13218460 , ."
+          }
+        },
+        {
+          "pred_row": 26,
+          "values": {
+            "description": "HW -7143 Drainage CCTV survey and jetting Riverside ,",
+            "cost_centre": "HWY330 -",
+            "net_gbp": "448000 , .",
+            "vat_gbp": "89600 .",
+            "gross_gbp": "537600 , ."
+          }
+        },
+        {
+          "pred_row": 27,
+          "values": {
+            "description": "culvert"
+          }
+        },
+        {
+          "pred_row": 28,
+          "values": {
+            "description": "HW -7144 Permit fees Bridge Street works ,",
+            "cost_centre": "HWY301 -",
+            "net_gbp": "41000 .",
+            "vat_gbp": "000 .",
+            "gross_gbp": "41000 ."
+          }
+        },
+        {
+          "pred_row": 29,
+          "values": {
+            "description": "Weektotal",
+            "net_gbp": "4222500 , .",
+            "vat_gbp": "836300 , .",
+            "gross_gbp": "5058800 , ."
+          }
+        },
+        {
+          "pred_row": 30,
+          "values": {
+            "description": "WeekendingFriday24July2026"
+          }
+        },
+        {
+          "pred_row": 31,
+          "values": {
+            "description": "HW -7160 Winter service: gritter calibration and salt barn",
+            "cost_centre": "WIN100 -",
+            "net_gbp": "184000 , .",
+            "vat_gbp": "36800 .",
+            "gross_gbp": "220800 , ."
+          }
+        },
+        {
+          "pred_row": 32,
+          "values": {
+            "description": "inspection"
+          }
+        },
+        {
+          "pred_row": 33,
+          "values": {
+            "description": "HW -7161 Pothole repairs Ward 5 (22 no .) ,",
+            "cost_centre": "HWY310 -",
+            "net_gbp": "1126000 , .",
+            "vat_gbp": "225200 , .",
+            "gross_gbp": "1351200 , ."
+          }
+        },
+        {
+          "pred_row": 34,
+          "values": {
+            "description": "HW -7162 Traffic signal maintenance Victoria Square junction ,",
+            "cost_centre": "SIG200 -",
+            "net_gbp": "392500 , .",
+            "vat_gbp": "78500 .",
+            "gross_gbp": "471000 , ."
+          }
+        },
+        {
+          "pred_row": 35,
+          "values": {
+            "description": "Weektotal",
+            "net_gbp": "1702500 , .",
+            "vat_gbp": "340500 , .",
+            "gross_gbp": "2043000 , ."
+          }
+        },
+        {
+          "pred_row": 36,
+          "values": {
+            "description": "TotalforJuly2026",
+            "net_gbp": "13217550 , .",
+            "vat_gbp": "2622510 , .",
+            "gross_gbp": "15840060 , ."
+          }
+        }
+      ],
+      "cell_errors": [],
+      "column_mapping": "names"
+    }
+  }
+}

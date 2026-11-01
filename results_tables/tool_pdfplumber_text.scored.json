@@ -1,0 +1,1576 @@
+{
+  "summary": {
+    "extractor": "pdfplumber 0.11.10 extract_tables(), text strategy",
+    "description": "vertical/horizontal_strategy=text; tables joined across pages, header rows dropped, nothing repaired.",
+    "version": "0.2.0",
+    "run_at": "2026-11-01T03:06:58Z",
+    "track": "tables",
+    "cases": 4,
+    "cell_accuracy": 0.257,
+    "cell_recall": 0.722,
+    "rows_exact": 6,
+    "rows_expected": 54,
+    "rows_extra": 120,
+    "rows_missing": 0,
+    "tables_exact": 0
+  },
+  "per_case": {
+    "TB-001": {
+      "case_id": "TB-001",
+      "rows_expected": 11,
+      "rows_predicted": 31,
+      "rows_exact": 3,
+      "rows_missing": 0,
+      "rows_extra": 20,
+      "cell_accuracy": 0.312,
+      "cell_recall": 0.879,
+      "table_exact": false,
+      "per_column": {
+        "date": 1.0,
+        "reference": 1.0,
+        "details": 0.273,
+        "debit_gbp": 1.0,
+        "credit_gbp": 1.0,
+        "balance_gbp": 1.0
+      },
+      "empty_columns": [],
+      "missing_rows": [],
+      "extra_rows": [
+        {
+          "pred_row": 1,
+          "values": {
+            "date": "Statement o",
+            "reference": "f account"
+          }
+        },
+        {
+          "pred_row": 2,
+          "values": {
+            "date": "To: Accounts P",
+            "reference": "ayable, Wexco",
+            "details": "mbe Borough Council, Civic Centre, Market W",
+            "debit_gbp": "alk, Wexcomb",
+            "credit_gbp": "e, WX1 2AB"
+          }
+        },
+        {
+          "pred_row": 3,
+          "values": {
+            "date": "Account: WBC",
+            "reference": "/FM/2291 Sta",
+            "details": "tement date: 31 October 2026 Contract: Faci",
+            "debit_gbp": "lities manage",
+            "credit_gbp": "ment services (lo",
+            "balance_gbp": "t 2)"
+          }
+        },
+        {
+          "pred_row": 6,
+          "values": {
+            "details": "Centre passenger lifts: quarterly service visit"
+          }
+        },
+        {
+          "pred_row": 7,
+          "values": {
+            "details": "and LOLER thorough examination certificate"
+          }
+        },
+        {
+          "pred_row": 10,
+          "values": {
+            "details": "on boiler 2, Market Walk depot"
+          }
+        },
+        {
+          "pred_row": 12,
+          "values": {
+            "details": "out-of-hours call-out charge)"
+          }
+        },
+        {
+          "pred_row": 14,
+          "values": {
+            "details": "lanterns, columns 4 to 9"
+          }
+        },
+        {
+          "pred_row": 16,
+          "values": {
+            "details": "offices: fire alarm and emergency lighting"
+          }
+        },
+        {
+          "pred_row": 17,
+          "values": {
+            "details": "tests"
+          }
+        },
+        {
+          "pred_row": 19,
+          "values": {
+            "details": "within 2 hours) missed in Q2"
+          }
+        },
+        {
+          "pred_row": 22,
+          "values": {
+            "details": "park: out of hours, 2 operatives for 6 hours,"
+          }
+        },
+        {
+          "pred_row": 23,
+          "values": {
+            "details": "jetting and CCTV survey"
+          }
+        },
+        {
+          "pred_row": 25,
+          "values": {
+            "details": "schedule"
+          }
+        },
+        {
+          "pred_row": 26,
+          "values": {
+            "details": "Totals",
+            "debit_gbp": "10,710.95",
+            "credit_gbp": "20,325.00"
+          }
+        },
+        {
+          "pred_row": 27,
+          "values": {
+            "date": "Balance now",
+            "reference": "due: £2,865.95"
+          }
+        },
+        {
+          "pred_row": 28,
+          "values": {
+            "date": "Amounts are in p",
+            "reference": "ounds sterling. Br",
+            "details": "acketed balances are in the Council's favour. Payment t",
+            "debit_gbp": "erms: 30 days fro",
+            "credit_gbp": "m the invoice date.",
+            "balance_gbp": "Please"
+          }
+        },
+        {
+          "pred_row": 29,
+          "values": {
+            "date": "quote the invoice",
+            "reference": "reference with an",
+            "details": "y remittance."
+          }
+        },
+        {
+          "pred_row": 30,
+          "values": {
+            "date": "Alderman Facilities",
+            "reference": "Group Ltd · State",
+            "details": "ment of account",
+            "balance_gbp": "Page 1 of"
+          }
+        },
+        {
+          "pred_row": 31,
+          "values": {
+            "reference": "S",
+            "details": "YNTHETIC TEST DOCUMENT - fictional authority and supplier -",
+            "debit_gbp": "not a real notice"
+          }
+        }
+      ],
+      "cell_errors": [
+        {
+          "row": 2,
+          "column": "details",
+          "expected": "Planned preventative maintenance, Civic Centre passenger lifts: quarterly service visit and LOLER thorough examination certificate",
+          "got": "Planned preventative maintenance, Civic"
+        },
+        {
+          "row": 4,
+          "column": "details",
+          "expected": "Reactive repair: replacement circulating pump on boiler 2, Market Walk depot",
+          "got": "Reactive repair: replacement circulating pump"
+        },
+        {
+          "row": 5,
+          "column": "details",
+          "expected": "Credit note against INV-40755 (duplicate out-of-hours call-out charge)",
+          "got": "Credit note against INV-40755 (duplicate"
+        },
+        {
+          "row": 6,
+          "column": "details",
+          "expected": "Car park lighting: replace 6 failed LED lanterns, columns 4 to 9",
+          "got": "Car park lighting: replace 6 failed LED"
+        },
+        {
+          "row": 7,
+          "column": "details",
+          "expected": "Planned preventative maintenance, Riverside offices: fire alarm and emergency lighting tests",
+          "got": "Planned preventative maintenance, Riverside"
+        },
+        {
+          "row": 8,
+          "column": "details",
+          "expected": "Service credit: KPI 3 (emergency response within 2 hours) missed in Q2",
+          "got": "Service credit: KPI 3 (emergency response"
+        },
+        {
+          "row": 10,
+          "column": "details",
+          "expected": "Emergency drainage works, Riverside car park: out of hours, 2 operatives for 6 hours, jetting and CCTV survey",
+          "got": "Emergency drainage works, Riverside car"
+        },
+        {
+          "row": 11,
+          "column": "details",
+          "expected": "Consumables and parts as per attached schedule",
+          "got": "Consumables and parts as per attached"
+        }
+      ],
+      "column_mapping": "names"
+    },
+    "TB-002": {
+      "case_id": "TB-002",
+      "rows_expected": 16,
+      "rows_predicted": 28,
+      "rows_exact": 2,
+      "rows_missing": 0,
+      "rows_extra": 12,
+      "cell_accuracy": 0.369,
+      "cell_recall": 0.646,
+      "table_exact": false,
+      "per_column": {
+        "payment_date": 0.25,
+        "directorate": 0.5,
+        "supplier": 0.312,
+        "expense_type": 0.812,
+        "transaction_no": 1.0,
+        "amount_gbp": 1.0
+      },
+      "empty_columns": [],
+      "missing_rows": [],
+      "extra_rows": [
+        {
+          "pred_row": 2,
+          "values": {
+            "supplier": "Services Limited"
+          }
+        },
+        {
+          "pred_row": 4,
+          "values": {
+            "supplier": "Ltd"
+          }
+        },
+        {
+          "pred_row": 9,
+          "values": {
+            "supplier": "CIC",
+            "expense_type": "accommodation"
+          }
+        },
+        {
+          "pred_row": 11,
+          "values": {
+            "expense_type": "accommodation"
+          }
+        },
+        {
+          "pred_row": 14,
+          "values": {
+            "supplier": "Ltd"
+          }
+        },
+        {
+          "pred_row": 17,
+          "values": {
+            "supplier": "Services Limited",
+            "expense_type": "fees"
+          }
+        },
+        {
+          "pred_row": 19,
+          "values": {
+            "supplier": "(Midlands) Limited"
+          }
+        },
+        {
+          "pred_row": 23,
+          "values": {
+            "supplier": "Ltd"
+          }
+        },
+        {
+          "pred_row": 25,
+          "values": {
+            "supplier": "Ltd"
+          }
+        },
+        {
+          "pred_row": 26,
+          "values": {
+            "payment_date": "otal for Octob",
+            "directorate": "er 2026: £308,9",
+            "supplier": "62.70 (16 transactions)"
+          }
+        },
+        {
+          "pred_row": 27,
+          "values": {
+            "payment_date": "egative amounts",
+            "directorate": "are refunds or cred",
+            "supplier": "its received."
+          }
+        },
+        {
+          "pred_row": 28,
+          "values": {
+            "payment_date": "arrowdale District C",
+            "directorate": "ouncil · Expenditur",
+            "supplier": "e over £500 - October 2026",
+            "amount_gbp": "Page 1 of"
+          }
+        }
+      ],
+      "cell_errors": [
+        {
+          "row": 1,
+          "column": "supplier",
+          "expected": "Brightwater Environmental Services Limited",
+          "got": "Brightwater Environmental"
+        },
+        {
+          "row": 2,
+          "column": "payment_date",
+          "expected": "2026-10-06",
+          "got": ""
+        },
+        {
+          "row": 2,
+          "column": "directorate",
+          "expected": "Environment",
+          "got": ""
+        },
+        {
+          "row": 2,
+          "column": "supplier",
+          "expected": "Fenwick Grounds Maintenance Ltd",
+          "got": "Fenwick Grounds Maintenance"
+        },
+        {
+          "row": 3,
+          "column": "payment_date",
+          "expected": "2026-10-06",
+          "got": ""
+        },
+        {
+          "row": 3,
+          "column": "directorate",
+          "expected": "Environment",
+          "got": ""
+        },
+        {
+          "row": 3,
+          "column": "supplier",
+          "expected": "Fenwick Grounds Maintenance Ltd",
+          "got": ""
+        },
+        {
+          "row": 4,
+          "column": "payment_date",
+          "expected": "2026-10-06",
+          "got": ""
+        },
+        {
+          "row": 5,
+          "column": "payment_date",
+          "expected": "2026-10-06",
+          "got": ""
+        },
+        {
+          "row": 5,
+          "column": "directorate",
+          "expected": "Resources",
+          "got": ""
+        },
+        {
+          "row": 5,
+          "column": "supplier",
+          "expected": "Elmstead ICT Solutions Ltd",
+          "got": ""
+        },
+        {
+          "row": 6,
+          "column": "supplier",
+          "expected": "Dunmore Care Partnership CIC",
+          "got": "Dunmore Care Partnership"
+        },
+        {
+          "row": 6,
+          "column": "expense_type",
+          "expected": "Temporary accommodation",
+          "got": "Temporary"
+        },
+        {
+          "row": 7,
+          "column": "payment_date",
+          "expected": "2026-10-13",
+          "got": ""
+        },
+        {
+          "row": 7,
+          "column": "directorate",
+          "expected": "Housing",
+          "got": ""
+        },
+        {
+          "row": 7,
+          "column": "supplier",
+          "expected": "Dunmore Care Partnership CIC",
+          "got": ""
+        },
+        {
+          "row": 7,
+          "column": "expense_type",
+          "expected": "Temporary accommodation",
+          "got": "Temporary"
+        },
+        {
+          "row": 8,
+          "column": "payment_date",
+          "expected": "2026-10-13",
+          "got": ""
+        },
+        {
+          "row": 8,
+          "column": "directorate",
+          "expected": "Housing",
+          "got": ""
+        },
+        {
+          "row": 9,
+          "column": "payment_date",
+          "expected": "2026-10-13",
+          "got": ""
+        },
+        {
+          "row": 9,
+          "column": "supplier",
+          "expected": "Halbrook Leisure Operations Ltd",
+          "got": "Halbrook Leisure Operations"
+        },
+        {
+          "row": 11,
+          "column": "payment_date",
+          "expected": "2026-10-20",
+          "got": ""
+        },
+        {
+          "row": 11,
+          "column": "directorate",
+          "expected": "Environment",
+          "got": ""
+        },
+        {
+          "row": 11,
+          "column": "supplier",
+          "expected": "Brightwater Environmental Services Limited",
+          "got": "Brightwater Environmental"
+        },
+        {
+          "row": 11,
+          "column": "expense_type",
+          "expected": "Refund: overpaid gate fees",
+          "got": "Refund: overpaid gate"
+        },
+        {
+          "row": 12,
+          "column": "payment_date",
+          "expected": "2026-10-20",
+          "got": ""
+        },
+        {
+          "row": 12,
+          "column": "supplier",
+          "expected": "Greystoke Construction (Midlands) Limited",
+          "got": "Greystoke Construction"
+        },
+        {
+          "row": 14,
+          "column": "payment_date",
+          "expected": "2026-10-27",
+          "got": ""
+        },
+        {
+          "row": 14,
+          "column": "directorate",
+          "expected": "Resources",
+          "got": ""
+        },
+        {
+          "row": 15,
+          "column": "payment_date",
+          "expected": "2026-10-27",
+          "got": ""
+        },
+        {
+          "row": 15,
+          "column": "supplier",
+          "expected": "Halbrook Leisure Operations Ltd",
+          "got": "Halbrook Leisure Operations"
+        },
+        {
+          "row": 16,
+          "column": "payment_date",
+          "expected": "2026-10-27",
+          "got": ""
+        },
+        {
+          "row": 16,
+          "column": "directorate",
+          "expected": "Leisure",
+          "got": ""
+        },
+        {
+          "row": 16,
+          "column": "supplier",
+          "expected": "Fenwick Grounds Maintenance Ltd",
+          "got": "Fenwick Grounds Maintenance"
+        }
+      ],
+      "column_mapping": "names"
+    },
+    "TB-003": {
+      "case_id": "TB-003",
+      "rows_expected": 12,
+      "rows_predicted": 67,
+      "rows_exact": 1,
+      "rows_missing": 0,
+      "rows_extra": 55,
+      "cell_accuracy": 0.107,
+      "cell_recall": 0.6,
+      "table_exact": false,
+      "per_column": {
+        "milestone_no": 0.583,
+        "milestone": 0.333,
+        "payment_trigger": 0.083,
+        "due_date": 1.0,
+        "amount_gbp": 1.0
+      },
+      "empty_columns": [],
+      "missing_rows": [],
+      "extra_rows": [
+        {
+          "pred_row": 1,
+          "values": {
+            "milestone": "Northam Vale County Council · NVCC/CA",
+            "payment_trigger": "P/0412 · Schedule 2"
+          }
+        },
+        {
+          "pred_row": 2,
+          "values": {
+            "milestone": "Northam Vale County",
+            "payment_trigger": "Council"
+          }
+        },
+        {
+          "pred_row": 3,
+          "values": {
+            "milestone": "Contract for the redevelopment of",
+            "payment_trigger": "the Market Walk highways depot"
+          }
+        },
+        {
+          "pred_row": 4,
+          "values": {
+            "milestone": "Between Northam Vale County Coun",
+            "payment_trigger": "cil (the Council) and Greystoke Construction (Mi",
+            "due_date": "dlands) Lim",
+            "amount_gbp": "ited (the Contractor)."
+          }
+        },
+        {
+          "pred_row": 5,
+          "values": {
+            "milestone": "Contract reference NVCC/CAP/0412",
+            "payment_trigger": "."
+          }
+        },
+        {
+          "pred_row": 6,
+          "values": {
+            "milestone": "Schedule 2: Payment milest",
+            "payment_trigger": "ones"
+          }
+        },
+        {
+          "pred_row": 7,
+          "values": {
+            "milestone": "1. This Schedule sets out the mile",
+            "payment_trigger": "stones at which the Contractor may apply for",
+            "due_date": "payment u",
+            "amount_gbp": "nder clause 4 of the"
+          }
+        },
+        {
+          "pred_row": 8,
+          "values": {
+            "milestone": "Contract. Each application shall be a",
+            "payment_trigger": "ccompanied by the evidence named in the Paym",
+            "due_date": "ent trigger",
+            "amount_gbp": "column."
+          }
+        },
+        {
+          "pred_row": 9,
+          "values": {
+            "milestone": "2. The Contract Administrator shall",
+            "payment_trigger": "certify each milestone within 10 working days",
+            "due_date": "of a comp",
+            "amount_gbp": "lete application. The"
+          }
+        },
+        {
+          "pred_row": 10,
+          "values": {
+            "milestone": "Council shall pay a certified amount",
+            "payment_trigger": "within 30 days of receiving a valid invoice, in a",
+            "due_date": "ccordance",
+            "amount_gbp": "with section 68 of the"
+          }
+        },
+        {
+          "pred_row": 11,
+          "values": {
+            "milestone": "Procurement Act 2023 and the Contr",
+            "payment_trigger": "act."
+          }
+        },
+        {
+          "pred_row": 12,
+          "values": {
+            "milestone": "3. Retention of 3 per cent applies to",
+            "payment_trigger": "milestones 1 to 10. Half of the retention is rele",
+            "due_date": "ased at pra",
+            "amount_gbp": "ctical completion and"
+          }
+        },
+        {
+          "pred_row": 13,
+          "values": {
+            "milestone": "the balance at the end of the defects",
+            "payment_trigger": "period."
+          }
+        },
+        {
+          "pred_row": 14,
+          "values": {
+            "milestone": "4. Amounts exclude VAT. Milestones",
+            "payment_trigger": "may be re-sequenced only by a variation instru",
+            "due_date": "cted in writi",
+            "amount_gbp": "ng."
+          }
+        },
+        {
+          "pred_row": 15,
+          "values": {
+            "milestone": "5. An application shall be made on",
+            "payment_trigger": "the Council's application form and shall state",
+            "due_date": "the milesto",
+            "amount_gbp": "ne number, the sum"
+          }
+        },
+        {
+          "pred_row": 16,
+          "values": {
+            "milestone": "applied for and the evidence enclose",
+            "payment_trigger": "d. An application without the evidence named i",
+            "due_date": "n the Paym",
+            "amount_gbp": "ent trigger column is"
+          }
+        },
+        {
+          "pred_row": 17,
+          "values": {
+            "milestone": "not a complete application, and the C",
+            "payment_trigger": "ontract Administrator shall say so in writing with",
+            "due_date": "in 5 workin",
+            "amount_gbp": "g days."
+          }
+        },
+        {
+          "pred_row": 18,
+          "values": {
+            "milestone": "6. The due date for payment of a ce",
+            "payment_trigger": "rtified milestone is the date on which the Coun",
+            "due_date": "cil receives",
+            "amount_gbp": "a valid invoice for it."
+          }
+        },
+        {
+          "pred_row": 19,
+          "values": {
+            "milestone": "The final date for payment is 30 days",
+            "payment_trigger": "after the due date."
+          }
+        },
+        {
+          "pred_row": 20,
+          "values": {
+            "milestone": "7. The Council shall issue a paymen",
+            "payment_trigger": "t notice within 5 days of the due date, stating th",
+            "due_date": "e sum it co",
+            "amount_gbp": "nsiders due and how"
+          }
+        },
+        {
+          "pred_row": 21,
+          "values": {
+            "milestone": "that sum is calculated. If the Council",
+            "payment_trigger": "intends to pay less than the notified sum, it shal",
+            "due_date": "l issue a p",
+            "amount_gbp": "ay less notice no later"
+          }
+        },
+        {
+          "pred_row": 22,
+          "values": {
+            "milestone": "than 7 days before the final date for p",
+            "payment_trigger": "ayment, giving its reasons."
+          }
+        },
+        {
+          "pred_row": 23,
+          "values": {
+            "milestone": "8. If a certified amount is not paid by",
+            "payment_trigger": "the final date for payment, simple interest is p",
+            "due_date": "ayable on i",
+            "amount_gbp": "t at 8 per cent a year"
+          }
+        },
+        {
+          "pred_row": 24,
+          "values": {
+            "milestone": "above the Bank of England base rate",
+            "payment_trigger": "from the final date for payment until the date of",
+            "due_date": "payment."
+          }
+        },
+        {
+          "pred_row": 25,
+          "values": {
+            "milestone": "9. Invoices shall be addressed to",
+            "payment_trigger": "the Council's Accounts Payable team, quote",
+            "due_date": "the contra",
+            "amount_gbp": "ct reference and the"
+          }
+        },
+        {
+          "pred_row": 26,
+          "values": {
+            "milestone": "milestone number, and be submitted",
+            "payment_trigger": "through the Council's e-invoicing portal. Paper i",
+            "due_date": "nvoices are",
+            "amount_gbp": "not accepted."
+          }
+        },
+        {
+          "pred_row": 27,
+          "values": {
+            "milestone": "10. Payment of a milestone is not e",
+            "payment_trigger": "vidence that the work is complete or free from",
+            "due_date": "defects an",
+            "amount_gbp": "d does not affect the"
+          }
+        },
+        {
+          "pred_row": 28,
+          "values": {
+            "milestone": "Contract Administrator's powers und",
+            "payment_trigger": "er clause 17 of the Contract."
+          }
+        },
+        {
+          "pred_row": 29,
+          "values": {
+            "milestone": "11. Where a milestone is achieved in",
+            "payment_trigger": "part only, the Contract Administrator may certif",
+            "due_date": "y a part pa",
+            "amount_gbp": "yment in proportion to"
+          }
+        },
+        {
+          "pred_row": 30,
+          "values": {
+            "milestone": "the value of the work completed, on t",
+            "payment_trigger": "he Contractor's written request."
+          }
+        },
+        {
+          "pred_row": 31,
+          "values": {
+            "milestone": "12. The Council may deduct from a p",
+            "payment_trigger": "ayment under this Schedule any sum the Contr",
+            "due_date": "actor owes",
+            "amount_gbp": "it under the Contract,"
+          }
+        },
+        {
+          "pred_row": 32,
+          "values": {
+            "milestone": "provided the deduction is stated in its",
+            "payment_trigger": "payment notice or pay less notice."
+          }
+        },
+        {
+          "pred_row": 33,
+          "values": {
+            "milestone": "13. The Contractor shall not assign th",
+            "payment_trigger": "e right to receive payment under this Schedule",
+            "due_date": "without the",
+            "amount_gbp": "Council's prior written"
+          }
+        },
+        {
+          "pred_row": 34,
+          "values": {
+            "milestone": "consent, which shall not be unreason",
+            "payment_trigger": "ably withheld."
+          }
+        },
+        {
+          "pred_row": 35,
+          "values": {
+            "milestone": "14. The amounts in the table below",
+            "payment_trigger": "are fixed. They are not subject to fluctuation, ind",
+            "due_date": "exation or",
+            "amount_gbp": "any other adjustment"
+          }
+        },
+        {
+          "pred_row": 36,
+          "values": {
+            "milestone": "except by a variation under clause 22",
+            "payment_trigger": "of the Contract."
+          }
+        },
+        {
+          "pred_row": 38,
+          "values": {
+            "milestone": "set-up acc",
+            "payment_trigger": "epted by the Contract Administrator"
+          }
+        },
+        {
+          "pred_row": 40,
+          "values": {
+            "milestone": "the",
+            "payment_trigger": "former salt barn complete"
+          }
+        },
+        {
+          "pred_row": 42,
+          "values": {
+            "milestone": "Co",
+            "payment_trigger": "uncil's structural engineer"
+          }
+        },
+        {
+          "pred_row": 44,
+          "values": {
+            "milestone": "fra",
+            "payment_trigger": "me inspection certificate issued"
+          }
+        },
+        {
+          "pred_row": 46,
+          "values": {
+            "milestone": "bay",
+            "payment_trigger": "doors complete so that the building is weathertight,"
+          }
+        },
+        {
+          "pred_row": 47,
+          "values": {
+            "milestone": "Northam Vale County Council · Schedule 2 - P",
+            "payment_trigger": "ayment milestones",
+            "amount_gbp": "Page 1 of 2"
+          }
+        },
+        {
+          "pred_row": 48,
+          "values": {
+            "milestone": "SYNTHETI",
+            "payment_trigger": "C TEST DOCUMENT - fictional authority and supplier - not a real n",
+            "due_date": "otice"
+          }
+        },
+        {
+          "pred_row": 49,
+          "values": {
+            "milestone_no": "ortham",
+            "milestone": "Vale County Council · NVCC",
+            "payment_trigger": "/CAP/0412 · Schedule 2"
+          }
+        },
+        {
+          "pred_row": 50,
+          "values": {
+            "payment_trigger": "confirmed in writing by the Contract Administrator after"
+          }
+        },
+        {
+          "pred_row": 51,
+          "values": {
+            "payment_trigger": "a water test of every roof outlet and gutter and a visual"
+          }
+        },
+        {
+          "pred_row": 52,
+          "values": {
+            "payment_trigger": "inspection of all flashings, sealant joints and door seals"
+          }
+        },
+        {
+          "pred_row": 54,
+          "values": {
+            "milestone": "first fix",
+            "payment_trigger": "pressure-tested"
+          }
+        },
+        {
+          "pred_row": 56,
+          "values": {
+            "milestone": "interceptor",
+            "payment_trigger": "place"
+          }
+        },
+        {
+          "pred_row": 58,
+          "values": {
+            "payment_trigger": "all rooms"
+          }
+        },
+        {
+          "pred_row": 60,
+          "values": {
+            "milestone": "drainage",
+            "payment_trigger": "complete"
+          }
+        },
+        {
+          "pred_row": 62,
+          "values": {
+            "payment_trigger": "maintenance manuals accepted"
+          }
+        },
+        {
+          "pred_row": 65,
+          "values": {
+            "payment_trigger": "after practical completion"
+          }
+        },
+        {
+          "pred_row": 66,
+          "values": {
+            "milestone": "Total",
+            "amount_gbp": "2,151,650.00"
+          }
+        },
+        {
+          "pred_row": 67,
+          "values": {
+            "milestone_no": "igned fo",
+            "milestone": "r the Council: _____________",
+            "payment_trigger": "_________ Signed for the Contractor: _________________",
+            "due_date": "_____"
+          }
+        }
+      ],
+      "cell_errors": [
+        {
+          "row": 1,
+          "column": "milestone_no",
+          "expected": "1",
+          "got": ""
+        },
+        {
+          "row": 1,
+          "column": "milestone",
+          "expected": "Mobilisation and site set-up",
+          "got": "1 Mobilisation and site Site"
+        },
+        {
+          "row": 1,
+          "column": "payment_trigger",
+          "expected": "Site compound established and welfare facilities accepted by the Contract Administrator",
+          "got": "compound established and welfare facilities"
+        },
+        {
+          "row": 2,
+          "column": "milestone_no",
+          "expected": "2",
+          "got": ""
+        },
+        {
+          "row": 2,
+          "column": "milestone",
+          "expected": "Enabling works",
+          "got": "2 Enabling works Asb"
+        },
+        {
+          "row": 2,
+          "column": "payment_trigger",
+          "expected": "Asbestos removal certificate issued and demolition of the former salt barn complete",
+          "got": "estos removal certificate issued and demolition of"
+        },
+        {
+          "row": 3,
+          "column": "milestone_no",
+          "expected": "3",
+          "got": ""
+        },
+        {
+          "row": 3,
+          "column": "milestone",
+          "expected": "Substructure",
+          "got": "3 Substructure Fou"
+        },
+        {
+          "row": 3,
+          "column": "payment_trigger",
+          "expected": "Foundations and ground-bearing slab signed off by the Council's structural engineer",
+          "got": "ndations and ground-bearing slab signed off by the"
+        },
+        {
+          "row": 4,
+          "column": "milestone_no",
+          "expected": "4",
+          "got": ""
+        },
+        {
+          "row": 4,
+          "column": "milestone",
+          "expected": "Frame",
+          "got": "4 Frame Ste"
+        },
+        {
+          "row": 4,
+          "column": "payment_trigger",
+          "expected": "Steel frame erected, plumbed and bolted, with the frame inspection certificate issued",
+          "got": "el frame erected, plumbed and bolted, with the"
+        },
+        {
+          "row": 5,
+          "column": "milestone_no",
+          "expected": "5",
+          "got": ""
+        },
+        {
+          "row": 5,
+          "column": "milestone",
+          "expected": "Envelope",
+          "got": "5 Envelope Ro"
+        },
+        {
+          "row": 5,
+          "column": "payment_trigger",
+          "expected": "Roof covering, wall cladding, glazing and the vehicle bay doors complete so that the building is weathertight, confirmed in writing by the Contract Administrator after a water test of every roof outlet and gutter and a visual inspection of all flashings, sealant joints and door seals",
+          "got": "of covering, wall cladding, glazing and the vehicle"
+        },
+        {
+          "row": 6,
+          "column": "milestone",
+          "expected": "Mechanical and electrical first fix",
+          "got": "Mechanical and electrical"
+        },
+        {
+          "row": 6,
+          "column": "payment_trigger",
+          "expected": "Containment, cabling and pipework installed and pressure-tested",
+          "got": "Containment, cabling and pipework installed and"
+        },
+        {
+          "row": 7,
+          "column": "milestone",
+          "expected": "Vehicle wash bay and interceptor",
+          "got": "Vehicle wash bay and"
+        },
+        {
+          "row": 7,
+          "column": "payment_trigger",
+          "expected": "Wash bay, oil interceptor and discharge consent in place",
+          "got": "Wash bay, oil interceptor and discharge consent in"
+        },
+        {
+          "row": 8,
+          "column": "payment_trigger",
+          "expected": "Floors, partitions, ceilings and decorations complete in all rooms",
+          "got": "Floors, partitions, ceilings and decorations complete in"
+        },
+        {
+          "row": 9,
+          "column": "milestone",
+          "expected": "External works and drainage",
+          "got": "External works and"
+        },
+        {
+          "row": 9,
+          "column": "payment_trigger",
+          "expected": "Yard surfacing, drainage connections and site lighting complete",
+          "got": "Yard surfacing, drainage connections and site lighting"
+        },
+        {
+          "row": 10,
+          "column": "payment_trigger",
+          "expected": "All plant commissioned and the operation and maintenance manuals accepted",
+          "got": "All plant commissioned and the operation and"
+        },
+        {
+          "row": 12,
+          "column": "payment_trigger",
+          "expected": "Certificate of making good defects issued, 12 months after practical completion",
+          "got": "Certificate of making good defects issued, 12 months"
+        }
+      ],
+      "column_mapping": "names"
+    },
+    "TB-004": {
+      "case_id": "TB-004",
+      "rows_expected": 15,
+      "rows_predicted": 48,
+      "rows_exact": 0,
+      "rows_missing": 0,
+      "rows_extra": 33,
+      "cell_accuracy": 0.238,
+      "cell_recall": 0.762,
+      "table_exact": false,
+      "per_column": {
+        "week_ending": 0.0,
+        "order_no": 1.0,
+        "description": 0.333,
+        "cost_centre": 1.0,
+        "net_gbp": 1.0,
+        "vat_gbp": 1.0,
+        "gross_gbp": 1.0
+      },
+      "empty_columns": [
+        "week_ending"
+      ],
+      "missing_rows": [],
+      "extra_rows": [
+        {
+          "pred_row": 1,
+          "values": {
+            "order_no": "tonebridge Met",
+            "description": "ropolitan Borough Council · SMBC/HWY/2023/07 · pay",
+            "cost_centre": "ments statement"
+          }
+        },
+        {
+          "pred_row": 2,
+          "values": {
+            "order_no": "tonebri",
+            "description": "dge Metropolitan Borough C",
+            "cost_centre": "ouncil"
+          }
+        },
+        {
+          "pred_row": 3,
+          "values": {
+            "order_no": "ighways ter",
+            "description": "m maintenance contract: payments stateme",
+            "cost_centre": "nt, quarter 2 (J",
+            "net_gbp": "uly 2026)"
+          }
+        },
+        {
+          "pred_row": 4,
+          "values": {
+            "order_no": "ontractor: Cr",
+            "description": "esswell Highways Ltd. Contract reference SMBC",
+            "cost_centre": "/HWY/2023/07.",
+            "net_gbp": "Orders certifi",
+            "vat_gbp": "ed for payme",
+            "gross_gbp": "nt, groupe"
+          }
+        },
+        {
+          "pred_row": 5,
+          "values": {
+            "order_no": "y the week in",
+            "description": "which they were certified. VAT is charged at 20",
+            "cost_centre": "per cent except",
+            "net_gbp": "on permit fe",
+            "vat_gbp": "es, which are",
+            "gross_gbp": "outside th"
+          }
+        },
+        {
+          "pred_row": 6,
+          "values": {
+            "order_no": "cope of VAT."
+          }
+        },
+        {
+          "pred_row": 7,
+          "values": {
+            "order_no": "Week ending",
+            "description": "Friday 3 July 2026"
+          }
+        },
+        {
+          "pred_row": 9,
+          "values": {
+            "description": "(14 no.)"
+          }
+        },
+        {
+          "pred_row": 12,
+          "values": {
+            "description": "resurfacing"
+          }
+        },
+        {
+          "pred_row": 13,
+          "values": {
+            "description": "Week total",
+            "net_gbp": "12,210.00",
+            "vat_gbp": "2,314.00",
+            "gross_gbp": "14,524.00"
+          }
+        },
+        {
+          "pred_row": 14,
+          "values": {
+            "order_no": "Week ending",
+            "description": "Friday 10 July 2026"
+          }
+        },
+        {
+          "pred_row": 16,
+          "values": {
+            "description": "1,180 m2), including traffic management"
+          }
+        },
+        {
+          "pred_row": 18,
+          "values": {
+            "description": "Road bridge approach"
+          }
+        },
+        {
+          "pred_row": 20,
+          "values": {
+            "description": "Fenwick Lane"
+          }
+        },
+        {
+          "pred_row": 22,
+          "values": {
+            "description": "Street"
+          }
+        },
+        {
+          "pred_row": 23,
+          "values": {
+            "description": "Week total",
+            "net_gbp": "60,715.50",
+            "vat_gbp": "12,143.10",
+            "gross_gbp": "72,858.60"
+          }
+        },
+        {
+          "pred_row": 24,
+          "values": {
+            "order_no": "Week ending",
+            "description": "Friday 17 July 2026"
+          }
+        },
+        {
+          "pred_row": 26,
+          "values": {
+            "description": "including dropped kerbs at four crossings"
+          }
+        },
+        {
+          "pred_row": 28,
+          "values": {
+            "description": "schools)"
+          }
+        },
+        {
+          "pred_row": 30,
+          "values": {
+            "description": "Carried forward",
+            "net_gbp": "110,260.50",
+            "vat_gbp": "21,924.10",
+            "gross_gbp": "132,184.60"
+          }
+        },
+        {
+          "pred_row": 31,
+          "values": {
+            "order_no": "tonebridge Metro",
+            "description": "politan Borough Council · Highways payments statement Q2",
+            "gross_gbp": "Page 1 of"
+          }
+        },
+        {
+          "pred_row": 32,
+          "values": {
+            "description": "SYNTHETIC TEST DOCUMENT - fictional auth",
+            "cost_centre": "ority and supplier - not",
+            "net_gbp": "a real notice"
+          }
+        },
+        {
+          "pred_row": 33,
+          "values": {
+            "order_no": "tonebridge Met",
+            "description": "ropolitan Borough Council · SMBC/HWY/2023/07 · pay",
+            "cost_centre": "ments statement"
+          }
+        },
+        {
+          "pred_row": 34,
+          "values": {
+            "description": "Brought forward",
+            "net_gbp": "110,260.50",
+            "vat_gbp": "21,924.10",
+            "gross_gbp": "132,184.60"
+          }
+        },
+        {
+          "pred_row": 36,
+          "values": {
+            "description": "culvert"
+          }
+        },
+        {
+          "pred_row": 38,
+          "values": {
+            "description": "Week total",
+            "net_gbp": "42,225.00",
+            "vat_gbp": "8,363.00",
+            "gross_gbp": "50,588.00"
+          }
+        },
+        {
+          "pred_row": 39,
+          "values": {
+            "order_no": "Week ending",
+            "description": "Friday 24 July 2026"
+          }
+        },
+        {
+          "pred_row": 41,
+          "values": {
+            "description": "inspection"
+          }
+        },
+        {
+          "pred_row": 44,
+          "values": {
+            "description": "Week total",
+            "net_gbp": "17,025.00",
+            "vat_gbp": "3,405.00",
+            "gross_gbp": "20,430.00"
+          }
+        },
+        {
+          "pred_row": 45,
+          "values": {
+            "description": "Total for July 2026",
+            "net_gbp": "132,175.50",
+            "vat_gbp": "26,225.10",
+            "gross_gbp": "158,400.60"
+          }
+        },
+        {
+          "pred_row": 46,
+          "values": {
+            "order_no": "ertified by the H",
+            "description": "ighways Contract Manager. Payment within 30 days of a v",
+            "cost_centre": "alid invoice."
+          }
+        },
+        {
+          "pred_row": 47,
+          "values": {
+            "order_no": "tonebridge Metro",
+            "description": "politan Borough Council · Highways payments statement Q2",
+            "gross_gbp": "Page 2 of"
+          }
+        },
+        {
+          "pred_row": 48,
+          "values": {
+            "description": "SYNTHETIC TEST DOCUMENT - fictional auth",
+            "cost_centre": "ority and supplier - not",
+            "net_gbp": "a real notice"
+          }
+        }
+      ],
+      "cell_errors": [
+        {
+          "row": 1,
+          "column": "week_ending",
+          "expected": "2026-07-03",
+          "got": ""
+        },
+        {
+          "row": 1,
+          "column": "description",
+          "expected": "Pothole repairs, Victoria Square and Market Street (14 no.)",
+          "got": "Pothole repairs, Victoria Square and Market Street"
+        },
+        {
+          "row": 2,
+          "column": "week_ending",
+          "expected": "2026-07-03",
+          "got": ""
+        },
+        {
+          "row": 3,
+          "column": "week_ending",
+          "expected": "2026-07-03",
+          "got": ""
+        },
+        {
+          "row": 3,
+          "column": "description",
+          "expected": "Road closure notices and permit fees, Canal Street resurfacing",
+          "got": "Road closure notices and permit fees, Canal Street"
+        },
+        {
+          "row": 4,
+          "column": "week_ending",
+          "expected": "2026-07-10",
+          "got": ""
+        },
+        {
+          "row": 4,
+          "column": "description",
+          "expected": "Carriageway resurfacing, Canal Street (inlay 40mm, 1,180 m2), including traffic management",
+          "got": "Carriageway resurfacing, Canal Street (inlay 40mm,"
+        },
+        {
+          "row": 5,
+          "column": "week_ending",
+          "expected": "2026-07-10",
+          "got": ""
+        },
+        {
+          "row": 5,
+          "column": "description",
+          "expected": "Replacement of damaged safety barrier, Northam Road bridge approach",
+          "got": "Replacement of damaged safety barrier, Northam"
+        },
+        {
+          "row": 6,
+          "column": "week_ending",
+          "expected": "2026-07-10",
+          "got": ""
+        },
+        {
+          "row": 6,
+          "column": "description",
+          "expected": "Out-of-hours emergency call-out: fallen tree, Fenwick Lane",
+          "got": "Out-of-hours emergency call-out: fallen tree,"
+        },
+        {
+          "row": 7,
+          "column": "week_ending",
+          "expected": "2026-07-10",
+          "got": ""
+        },
+        {
+          "row": 7,
+          "column": "description",
+          "expected": "Street lighting: column replacement (3 no.), Chapel Street",
+          "got": "Street lighting: column replacement (3 no.), Chapel"
+        },
+        {
+          "row": 8,
+          "column": "week_ending",
+          "expected": "2026-07-17",
+          "got": ""
+        },
+        {
+          "row": 8,
+          "column": "description",
+          "expected": "Footway reconstruction, Bridge Street (both sides), including dropped kerbs at four crossings",
+          "got": "Footway reconstruction, Bridge Street (both sides),"
+        },
+        {
+          "row": 9,
+          "column": "week_ending",
+          "expected": "2026-07-17",
+          "got": ""
+        },
+        {
+          "row": 9,
+          "column": "description",
+          "expected": "Line painting refresh, school keep-clear markings (6 schools)",
+          "got": "Line painting refresh, school keep-clear markings (6"
+        },
+        {
+          "row": 10,
+          "column": "week_ending",
+          "expected": "2026-07-17",
+          "got": ""
+        },
+        {
+          "row": 11,
+          "column": "week_ending",
+          "expected": "2026-07-17",
+          "got": ""
+        },
+        {
+          "row": 11,
+          "column": "description",
+          "expected": "Drainage CCTV survey and jetting, Riverside culvert",
+          "got": "Drainage CCTV survey and jetting, Riverside"
+        },
+        {
+          "row": 12,
+          "column": "week_ending",
+          "expected": "2026-07-17",
+          "got": ""
+        },
+        {
+          "row": 13,
+          "column": "week_ending",
+          "expected": "2026-07-24",
+          "got": ""
+        },
+        {
+          "row": 13,
+          "column": "description",
+          "expected": "Winter service: gritter calibration and salt barn inspection",
+          "got": "Winter service: gritter calibration and salt barn"
+        },
+        {
+          "row": 14,
+          "column": "week_ending",
+          "expected": "2026-07-24",
+          "got": ""
+        },
+        {
+          "row": 15,
+          "column": "week_ending",
+          "expected": "2026-07-24",
+          "got": ""
+        }
+      ],
+      "column_mapping": "names"
+    }
+  }
+}

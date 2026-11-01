@@ -1,0 +1,62 @@
+{
+  "case_id": "TB-004",
+  "slug": "weekly-statement-across-page",
+  "title": "Borderless weekly payments statement: date headings, subtotals and a week split across the page",
+  "pages": 2,
+  "rows": 15,
+  "columns": [
+    {
+      "name": "week_ending",
+      "printed_header": "Week ending (group heading)",
+      "type": "date"
+    },
+    {
+      "name": "order_no",
+      "printed_header": "Order no.",
+      "type": "id"
+    },
+    {
+      "name": "description",
+      "printed_header": "Description",
+      "type": "text"
+    },
+    {
+      "name": "cost_centre",
+      "printed_header": "Cost centre",
+      "type": "id"
+    },
+    {
+      "name": "net_gbp",
+      "printed_header": "Net (£)",
+      "type": "money"
+    },
+    {
+      "name": "vat_gbp",
+      "printed_header": "VAT (£)",
+      "type": "money"
+    },
+    {
+      "name": "gross_gbp",
+      "printed_header": "Gross (£)",
+      "type": "money"
+    }
+  ],
+  "hazards": [
+    "no_ruling_lines",
+    "group_header_rows",
+    "subtotal_rows",
+    "table_crosses_page",
+    "group_crosses_page",
+    "carried_forward_rows",
+    "repeated_header",
+    "footer_interleaves",
+    "wrapped_cells",
+    "totals_row"
+  ],
+  "row_rules": "One row per order. The week-ending date comes from the heading above the order's group; the orders at the top of page 2 still belong to the week that started on page 1. Week headings, week totals, Carried forward, Brought forward and the Total for July 2026 are not rows.",
+  "why": "The date is not in any row: it is a heading above each week's orders, and the week of 17 July is cut by the page break, so the two orders at the top of page 2 sit under no heading of their own: their week is named only on page 1 (the week totals carry no date). Subtotal, carried-forward and brought-forward lines look like data rows, there are no ruled lines, and long descriptions wrap.",
+  "naive_stop": "^\\s*Total for July 2026\\b",
+  "document": "TB-004/document.pdf",
+  "expected": "TB-004/expected.csv",
+  "layout": {}
+}

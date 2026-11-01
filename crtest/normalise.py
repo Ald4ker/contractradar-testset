@@ -14,27 +14,50 @@ _WORD_NUM = {"zero": 0, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "s
 _WORD_MUL = {"hundred": 100, "thousand": 1_000, "million": 1_000_000, "billion": 1_000_000_000}
 
 
+_ISO = re.compile(r"\b(\d{4})([-/.])(\d{1,2})\2(\d{1,2})(?!\d)")                    # 2026-03-03, 2026/3/3, 2026-03-03T09:00
+_DMY = re.compile(r"\b(\d{1,2})([/.-])(\d{1,2})\2(\d{4}|\d{2})(?!\d)")                # 03/03/2026, 3-3-2026, 03.03.26
+_D_MON_Y = re.compile(r"\b(\d{1,2})(?:st|nd|rd|th)?[ -]([A-Za-z]{3,9})\.?[ ,-]*(\d{4}|\d{2})(?!\d)")   # 3rd March 2026, 03-Mar-26
+_MON_D_Y = re.compile(r"\b([A-Za-z]{3,9})\.? (\d{1,2})(?:st|nd|rd|th)?,? (\d{4})(?!\d)")    # March 3rd, 2026
+
+
+def _month(word: str) -> int | None:
+    w = word.lower()
+    return MONTHS.get(w) or (9 if w == "sept" else None)
+
+
+def _iso(y: int, mo: int | None, d: int) -> str | None:
+    if not mo:
+        return None
+    try:
+        return dt.date(y, mo, d).isoformat()
+    except ValueError:
+        return None
+
+
+def _year(s: str) -> int:
+    y = int(s)
+    return y if len(s) == 4 else y + (2000 if y < 69 else 1900)   # 2-digit years as strptime's %y
+
+
 def parse_date(s) -> str | None:
-    """Return ISO date or None. Accepts 3 March 2026, 3rd March 2026, 03/03/2026, 2026-03-03, 03-Mar-2026."""
+    """Return ISO date or None. Accepts 3 March 2026, 3rd March 2026, March 3rd, 2026, 03/03/2026, 03-03-2026, 03.03.26,
+    2026-03-03 (also with a time after it), 2026/03/03, 03-Mar-2026, 3 Sept 2026. Numeric dates are day first, as in the
+    UK: 01/02/2026 is 1 February 2026. Month names must be names or abbreviations, and impossible dates are not dates."""
     if s is None:
         return None
+    if isinstance(s, dt.datetime):
+        return s.date().isoformat()
     if isinstance(s, dt.date):
         return s.isoformat()
     s = str(s).strip()
-    m = re.search(r"\b(\d{4})-(\d{2})-(\d{2})\b", s)
-    if m:
-        return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
-    m = re.search(r"\b(\d{1,2})[/.](\d{1,2})[/.](\d{4})\b", s)
-    if m:
-        return f"{m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}"
-    m = re.search(r"\b(\d{1,2})(?:st|nd|rd|th)?[ -]([A-Za-z]{3,9})[ ,-]*(\d{4})\b", s)
-    if m and m.group(2).lower()[:3] in MONTHS:
-        mo = MONTHS[m.group(2).lower()] if m.group(2).lower() in MONTHS else MONTHS[m.group(2).lower()[:3]]
-        return f"{m.group(3)}-{mo:02d}-{int(m.group(1)):02d}"
-    m = re.search(r"\b([A-Za-z]{3,9}) (\d{1,2}),? (\d{4})\b", s)
-    if m and m.group(1).lower()[:3] in MONTHS:
-        mo = MONTHS.get(m.group(1).lower()) or MONTHS[m.group(1).lower()[:3]]
-        return f"{m.group(3)}-{mo:02d}-{int(m.group(2)):02d}"
+    for pattern, ymd in ((_ISO, lambda m: (int(m[1]), int(m[3]), int(m[4]))),
+                         (_DMY, lambda m: (_year(m[4]), int(m[3]), int(m[1]))),
+                         (_D_MON_Y, lambda m: (_year(m[3]), _month(m[2]), int(m[1]))),
+                         (_MON_D_Y, lambda m: (int(m[3]), _month(m[1]), int(m[2])))):
+        for m in pattern.finditer(s):
+            d = _iso(*ymd(m))
+            if d:
+                return d
     return None
 
 

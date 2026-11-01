@@ -1,0 +1,16 @@
+week_ending,order_no,description,cost_centre,net_gbp,vat_gbp,gross_gbp
+2026-07-03,HW-7101,"Pothole repairs, Victoria Square and Market Street (14 no.)",HWY-310,8420.00,1684.00,10104.00
+2026-07-03,HW-7102,"Gully emptying, Ward 3 cyclic programme",HWY-325,3150.00,630.00,3780.00
+2026-07-03,HW-7103,"Road closure notices and permit fees, Canal Street resurfacing",HWY-301,640.00,0.00,640.00
+2026-07-10,HW-7118,"Carriageway resurfacing, Canal Street (inlay 40mm, 1,180 m2), including traffic management",HWY-340,46210.00,9242.00,55452.00
+2026-07-10,HW-7119,"Replacement of damaged safety barrier, Northam Road bridge approach",HWY-355,5875.50,1175.10,7050.60
+2026-07-10,HW-7120,"Out-of-hours emergency call-out: fallen tree, Fenwick Lane",HWY-390,1290.00,258.00,1548.00
+2026-07-10,HW-7121,"Street lighting: column replacement (3 no.), Chapel Street",LGT-120,7340.00,1468.00,8808.00
+2026-07-17,HW-7140,"Footway reconstruction, Bridge Street (both sides), including dropped kerbs at four crossings",HWY-345,31975.00,6395.00,38370.00
+2026-07-17,HW-7141,"Line painting refresh, school keep-clear markings (6 schools)",HWY-360,2210.00,442.00,2652.00
+2026-07-17,HW-7142,"Gully emptying, Ward 4 cyclic programme",HWY-325,3150.00,630.00,3780.00
+2026-07-17,HW-7143,"Drainage CCTV survey and jetting, Riverside culvert",HWY-330,4480.00,896.00,5376.00
+2026-07-17,HW-7144,"Permit fees, Bridge Street works",HWY-301,410.00,0.00,410.00
+2026-07-24,HW-7160,Winter service: gritter calibration and salt barn inspection,WIN-100,1840.00,368.00,2208.00
+2026-07-24,HW-7161,"Pothole repairs, Ward 5 (22 no.)",HWY-310,11260.00,2252.00,13512.00
+2026-07-24,HW-7162,"Traffic signal maintenance, Victoria Square junction",SIG-200,3925.00,785.00,4710.00

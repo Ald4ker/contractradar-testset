@@ -1,0 +1,53 @@
+{
+  "case_id": "TB-001",
+  "slug": "statement-no-ruling",
+  "title": "Supplier statement of account with no ruled lines",
+  "pages": 1,
+  "rows": 11,
+  "columns": [
+    {
+      "name": "date",
+      "printed_header": "Date",
+      "type": "date"
+    },
+    {
+      "name": "reference",
+      "printed_header": "Ref",
+      "type": "id"
+    },
+    {
+      "name": "details",
+      "printed_header": "Details",
+      "type": "text"
+    },
+    {
+      "name": "debit_gbp",
+      "printed_header": "Debit",
+      "type": "money"
+    },
+    {
+      "name": "credit_gbp",
+      "printed_header": "Credit",
+      "type": "money"
+    },
+    {
+      "name": "balance_gbp",
+      "printed_header": "Balance",
+      "type": "money"
+    }
+  ],
+  "hazards": [
+    "no_ruling_lines",
+    "wrapped_cells",
+    "empty_cells",
+    "negative_in_brackets",
+    "brought_forward_row",
+    "totals_row"
+  ],
+  "row_rules": "Every statement line is a row, including the opening balance brought forward. The Totals line is not a row. Bracketed amounts are negative. A blank debit or credit cell stays blank.",
+  "why": "The statement has no lines between columns or rows. Details wrap onto a second or third line, every row has either the Debit or the Credit cell empty, and the balance goes negative once, printed in brackets. A text dump split on whitespace turns each wrapped line into a new row and slides credits into the Debit column.",
+  "naive_stop": "^\\s*Totals\\b",
+  "document": "TB-001/document.pdf",
+  "expected": "TB-001/expected.csv",
+  "layout": {}
+}

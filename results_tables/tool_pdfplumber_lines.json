@@ -1,0 +1,21 @@
+{
+ "extractor": "pdfplumber 0.11.10 extract_tables(), defaults",
+ "version": "0.2.0",
+ "track": "tables",
+ "description": "Cells from ruling lines, stock settings; tables joined across pages, header rows dropped, nothing repaired.",
+ "run_at": "2026-11-01T03:06:58Z",
+ "cases": {
+  "TB-001": {
+   "csv": "date,reference,details,debit_gbp,credit_gbp,balance_gbp\n"
+  },
+  "TB-002": {
+   "csv": "payment_date,directorate,supplier,expense_type,transaction_no,amount_gbp\n"
+  },
+  "TB-003": {
+   "csv": "milestone_no,milestone,payment_trigger,due_date,amount_gbp\n1,Mobilisation and site set-up,Site compound established and welfare facilities accepted by the Contract Administrator,12/01/2027,\"48,500.00\"\n2,Enabling works,Asbestos removal certificate issued and demolition of the former salt barn complete,26/02/2027,\"132,750.00\"\n3,Substructure,Foundations and ground-bearing slab signed off by the Council's structural engineer,30/04/2027,\"286,400.00\"\n4,Frame,\"Steel frame erected, plumbed and bolted, with the frame inspection certificate issued\",18/06/2027,\"412,900.00\"\n5,Envelope,\"Roof covering, wall cladding, glazing and the vehicle bay doors complete so that the building is weathertight,\",27/08/2027,\"365,200.00\"\n,,\"confirmed in writing by the Contract Administrator after a water test of every roof outlet and gutter and a visual inspection of all flashings, sealant joints and door seals\",,\n6,Mechanical and electrical first fix,\"Containment, cabling and pipework installed and pressure-tested\",22/10/2027,\"241,300.00\"\n7,Vehicle wash bay and interceptor,\"Wash bay, oil interceptor and discharge consent in place\",26/11/2027,\"98,650.00\"\n8,Internal finishes,\"Floors, partitions, ceilings and decorations complete in all rooms\",21/01/2028,\"154,800.00\"\n9,External works and drainage,\"Yard surfacing, drainage connections and site lighting complete\",03/03/2028,\"176,250.00\"\n10,Commissioning,All plant commissioned and the operation and maintenance manuals accepted,14/04/2028,\"64,900.00\"\n11,Practical completion,Certificate of practical completion issued,05/05/2028,\"120,000.00\"\n12,End of defects period,\"Certificate of making good defects issued, 12 months after practical completion\",05/05/2029,\"50,000.00\"\n,Total,,,\"2,151,650.00\"\n"
+  },
+  "TB-004": {
+   "csv": "week_ending,order_no,description,cost_centre,net_gbp,vat_gbp,gross_gbp\n"
+  }
+ }
+}

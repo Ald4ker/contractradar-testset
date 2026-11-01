@@ -1,0 +1,241 @@
+{
+  "track": "tables",
+  "generator_version": "0.2.0",
+  "generated_at": "2026-11-01T03:03:20Z",
+  "hazards": {
+    "no_ruling_lines": "No ruled lines or cell borders: column boundaries have to be inferred from alignment alone.",
+    "wrapped_cells": "Long cell text wraps onto two or more lines; the continuation lines are not new rows.",
+    "empty_cells": "Some cells are blank (a debit or a credit); splitting a line on whitespace shifts the next value into the wrong column.",
+    "negative_in_brackets": "A negative amount is printed in brackets, (146.10), not with a minus sign.",
+    "brought_forward_row": "The statement opens with a 'balance brought forward' line, which is a row of the statement.",
+    "totals_row": "A totals line closes the table; it is not a row.",
+    "suppressed_repeats": "Repeated values (date, directorate, supplier) are printed only on the first row of each run; the rows below inherit them.",
+    "identical_rows": "Two rows are identical apart from the transaction number; both are real and both must be kept.",
+    "group_header_rows": "A date is printed as a full-width heading above its group; it is a value for every row below it, not a row of its own.",
+    "subtotal_rows": "Group subtotal lines are not rows.",
+    "table_crosses_page": "The table runs over a page break.",
+    "split_row": "One row is split by the page break: its text continues on the next page, under the repeated header, with the other cells empty.",
+    "repeated_header": "The header row is printed again on the next page; it is not a data row.",
+    "footer_interleaves": "Page footer and running-header text fall between table rows in a text dump.",
+    "carried_forward_rows": "'Carried forward' and 'brought forward' subtotal lines at the page break are not rows.",
+    "group_crosses_page": "A date group starts on one page and continues on the next without the date being printed again."
+  },
+  "cases": [
+    {
+      "case_id": "TB-001",
+      "slug": "statement-no-ruling",
+      "title": "Supplier statement of account with no ruled lines",
+      "pages": 1,
+      "rows": 11,
+      "columns": [
+        {
+          "name": "date",
+          "printed_header": "Date",
+          "type": "date"
+        },
+        {
+          "name": "reference",
+          "printed_header": "Ref",
+          "type": "id"
+        },
+        {
+          "name": "details",
+          "printed_header": "Details",
+          "type": "text"
+        },
+        {
+          "name": "debit_gbp",
+          "printed_header": "Debit",
+          "type": "money"
+        },
+        {
+          "name": "credit_gbp",
+          "printed_header": "Credit",
+          "type": "money"
+        },
+        {
+          "name": "balance_gbp",
+          "printed_header": "Balance",
+          "type": "money"
+        }
+      ],
+      "hazards": [
+        "no_ruling_lines",
+        "wrapped_cells",
+        "empty_cells",
+        "negative_in_brackets",
+        "brought_forward_row",
+        "totals_row"
+      ],
+      "row_rules": "Every statement line is a row, including the opening balance brought forward. The Totals line is not a row. Bracketed amounts are negative. A blank debit or credit cell stays blank.",
+      "why": "The statement has no lines between columns or rows. Details wrap onto a second or third line, every row has either the Debit or the Credit cell empty, and the balance goes negative once, printed in brackets. A text dump split on whitespace turns each wrapped line into a new row and slides credits into the Debit column.",
+      "naive_stop": "^\\s*Totals\\b",
+      "document": "TB-001/document.pdf",
+      "expected": "TB-001/expected.csv",
+      "layout": {}
+    },
+    {
+      "case_id": "TB-002",
+      "slug": "spend-grouped-dates",
+      "title": "Council spend statement with grouped dates, directorates and suppliers",
+      "pages": 1,
+      "rows": 16,
+      "columns": [
+        {
+          "name": "payment_date",
+          "printed_header": "Payment date",
+          "type": "date"
+        },
+        {
+          "name": "directorate",
+          "printed_header": "Directorate",
+          "type": "text"
+        },
+        {
+          "name": "supplier",
+          "printed_header": "Supplier",
+          "type": "text"
+        },
+        {
+          "name": "expense_type",
+          "printed_header": "Expense type",
+          "type": "text"
+        },
+        {
+          "name": "transaction_no",
+          "printed_header": "Transaction no.",
+          "type": "id"
+        },
+        {
+          "name": "amount_gbp",
+          "printed_header": "Amount (£)",
+          "type": "money"
+        }
+      ],
+      "hazards": [
+        "suppressed_repeats",
+        "identical_rows",
+        "wrapped_cells",
+        "totals_row"
+      ],
+      "row_rules": "One row per transaction. A blank Payment date, Directorate or Supplier cell repeats the value above it, within the same date group. Negative amounts are refunds and stay negative.",
+      "why": "The payment date is printed once per date group, the directorate once per run within a date, and the supplier once per run within a directorate, so most rows show only some of their values. Two Dunmore rows are identical apart from the transaction number. Long supplier names wrap onto a second line.",
+      "naive_stop": "^\\s*Total for\\b",
+      "document": "TB-002/document.pdf",
+      "expected": "TB-002/expected.csv",
+      "layout": {}
+    },
+    {
+      "case_id": "TB-003",
+      "slug": "milestones-split-row",
+      "title": "Payment milestone schedule crossing a page, one row split by the page break",
+      "pages": 2,
+      "rows": 12,
+      "columns": [
+        {
+          "name": "milestone_no",
+          "printed_header": "No.",
+          "type": "id"
+        },
+        {
+          "name": "milestone",
+          "printed_header": "Milestone",
+          "type": "text"
+        },
+        {
+          "name": "payment_trigger",
+          "printed_header": "Payment trigger",
+          "type": "text"
+        },
+        {
+          "name": "due_date",
+          "printed_header": "Due date",
+          "type": "date"
+        },
+        {
+          "name": "amount_gbp",
+          "printed_header": "Amount (£, ex VAT)",
+          "type": "money"
+        }
+      ],
+      "hazards": [
+        "table_crosses_page",
+        "split_row",
+        "repeated_header",
+        "footer_interleaves",
+        "wrapped_cells",
+        "totals_row"
+      ],
+      "row_rules": "One row per milestone. Milestone 5's payment trigger starts at the foot of page 1 and finishes at the top of page 2: it is one cell. The repeated header and the Total line are not rows.",
+      "why": "The schedule starts low on page 1, so milestone 5 (Envelope) is split by the page break: the first lines of its payment trigger are on page 1 and the rest continue on page 2, under the repeated header, in a row whose other cells are empty. The running header and the page footer fall between the two halves in a text dump.",
+      "naive_stop": "^\\s*Total\\b",
+      "document": "TB-003/document.pdf",
+      "expected": "TB-003/expected.csv",
+      "layout": {
+        "blank_above_table_mm": 8.8
+      }
+    },
+    {
+      "case_id": "TB-004",
+      "slug": "weekly-statement-across-page",
+      "title": "Borderless weekly payments statement: date headings, subtotals and a week split across the page",
+      "pages": 2,
+      "rows": 15,
+      "columns": [
+        {
+          "name": "week_ending",
+          "printed_header": "Week ending (group heading)",
+          "type": "date"
+        },
+        {
+          "name": "order_no",
+          "printed_header": "Order no.",
+          "type": "id"
+        },
+        {
+          "name": "description",
+          "printed_header": "Description",
+          "type": "text"
+        },
+        {
+          "name": "cost_centre",
+          "printed_header": "Cost centre",
+          "type": "id"
+        },
+        {
+          "name": "net_gbp",
+          "printed_header": "Net (£)",
+          "type": "money"
+        },
+        {
+          "name": "vat_gbp",
+          "printed_header": "VAT (£)",
+          "type": "money"
+        },
+        {
+          "name": "gross_gbp",
+          "printed_header": "Gross (£)",
+          "type": "money"
+        }
+      ],
+      "hazards": [
+        "no_ruling_lines",
+        "group_header_rows",
+        "subtotal_rows",
+        "table_crosses_page",
+        "group_crosses_page",
+        "carried_forward_rows",
+        "repeated_header",
+        "footer_interleaves",
+        "wrapped_cells",
+        "totals_row"
+      ],
+      "row_rules": "One row per order. The week-ending date comes from the heading above the order's group; the orders at the top of page 2 still belong to the week that started on page 1. Week headings, week totals, Carried forward, Brought forward and the Total for July 2026 are not rows.",
+      "why": "The date is not in any row: it is a heading above each week's orders, and the week of 17 July is cut by the page break, so the two orders at the top of page 2 sit under no heading of their own: their week is named only on page 1 (the week totals carry no date). Subtotal, carried-forward and brought-forward lines look like data rows, there are no ruled lines, and long descriptions wrap.",
+      "naive_stop": "^\\s*Total for July 2026\\b",
+      "document": "TB-004/document.pdf",
+      "expected": "TB-004/expected.csv",
+      "layout": {}
+    }
+  ]
+}

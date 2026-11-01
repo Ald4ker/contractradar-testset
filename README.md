@@ -98,6 +98,26 @@ methods. Rows in the curated table come from pull requests that add `results/<na
 Run the backend yourself with `pip install -r requirements-server.txt && make serve`; `deploy/setup-server.sh` and
 `deploy/contractradar-mcp.service` are the production setup behind nginx.
 
+## Tables track
+
+`tables/TB-00N/` holds four documents built around table failures raised in the pilot thread: a statement with no ruled
+lines (TB-001), a spend statement where dates, directorates and suppliers are printed once per group (TB-002), a ruled
+milestone schedule with one row split by the page break (TB-003), and a borderless weekly statement whose dates are only
+group headings and one of whose weeks runs over the page (TB-004). Each has `document.pdf`, `expected.csv`, `wrong.csv`
+(the naive text-dump extraction), `notes.md`, `spec.json` and the page images.
+
+```bash
+python -m crtest.gen_tables --out tables                                   # regenerate (needs reportlab)
+python -m crtest.extract_tables_naive                                      # wrong.csv + results_tables/naive_text.json
+python -m crtest.extract_tables_llm --out results_tables/my_model.json --prompt guided
+python -m crtest.score_tables --pred results_tables/my_model.json          # or a directory of TB-00N.csv files
+python -m crtest.extract_tables_tools --tables tables --out /tmp/tools     # pdfplumber / PyMuPDF baselines (optional deps)
+```
+
+Cell score = right cells / ((expected rows + invented rows) x columns), so invented rows cost as much as wrong ones; cell
+recall is reported next to it. The gold was checked by eight blind transcriptions (four from page images, four from the
+text dump), all exact.
+
 ## Scoring rules
 
 * Gold null and prediction null: not counted. Gold null and prediction non-null: wrong.

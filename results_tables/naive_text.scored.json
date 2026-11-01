@@ -1,0 +1,1259 @@
+{
+  "summary": {
+    "extractor": "naive_text_tables",
+    "description": "pdftotext -layout, one line = one row, cells split on 2+ spaces. Deliberately simple baseline.",
+    "version": "0.1.0",
+    "run_at": "2026-11-01T03:03:20Z",
+    "track": "tables",
+    "cases": 4,
+    "cell_accuracy": 0.204,
+    "cell_recall": 0.495,
+    "rows_exact": 3,
+    "rows_expected": 54,
+    "rows_extra": 77,
+    "rows_missing": 12,
+    "tables_exact": 0
+  },
+  "per_case": {
+    "TB-001": {
+      "case_id": "TB-001",
+      "rows_expected": 11,
+      "rows_predicted": 22,
+      "rows_exact": 0,
+      "rows_missing": 0,
+      "rows_extra": 11,
+      "cell_accuracy": 0.235,
+      "cell_recall": 0.47,
+      "table_exact": false,
+      "per_column": {
+        "date": 1.0,
+        "reference": 0.909,
+        "details": 0.182,
+        "debit_gbp": 0.636,
+        "credit_gbp": 0.091,
+        "balance_gbp": 0.0
+      },
+      "empty_columns": [
+        "balance_gbp"
+      ],
+      "missing_rows": [],
+      "extra_rows": [
+        {
+          "pred_row": 3,
+          "values": {
+            "date": "Centre passenger lifts: quarterly service visit"
+          }
+        },
+        {
+          "pred_row": 4,
+          "values": {
+            "date": "and LOLER thorough examination certificate"
+          }
+        },
+        {
+          "pred_row": 7,
+          "values": {
+            "date": "on boiler 2, Market Walk depot"
+          }
+        },
+        {
+          "pred_row": 9,
+          "values": {
+            "date": "out-of-hours call-out charge)"
+          }
+        },
+        {
+          "pred_row": 11,
+          "values": {
+            "date": "lanterns, columns 4 to 9"
+          }
+        },
+        {
+          "pred_row": 13,
+          "values": {
+            "date": "offices: fire alarm and emergency lighting"
+          }
+        },
+        {
+          "pred_row": 14,
+          "values": {
+            "date": "tests"
+          }
+        },
+        {
+          "pred_row": 16,
+          "values": {
+            "date": "within 2 hours) missed in Q2"
+          }
+        },
+        {
+          "pred_row": 19,
+          "values": {
+            "date": "park: out of hours, 2 operatives for 6 hours,"
+          }
+        },
+        {
+          "pred_row": 20,
+          "values": {
+            "date": "jetting and CCTV survey"
+          }
+        },
+        {
+          "pred_row": 22,
+          "values": {
+            "date": "schedule"
+          }
+        }
+      ],
+      "cell_errors": [
+        {
+          "row": 1,
+          "column": "reference",
+          "expected": "",
+          "got": "Balance brought forward"
+        },
+        {
+          "row": 1,
+          "column": "details",
+          "expected": "Balance brought forward",
+          "got": "12,480.00"
+        },
+        {
+          "row": 1,
+          "column": "balance_gbp",
+          "expected": "12480.00",
+          "got": ""
+        },
+        {
+          "row": 2,
+          "column": "details",
+          "expected": "Planned preventative maintenance, Civic Centre passenger lifts: quarterly service visit and LOLER thorough examination certificate",
+          "got": "Planned preventative maintenance, Civic"
+        },
+        {
+          "row": 2,
+          "column": "credit_gbp",
+          "expected": "",
+          "got": "15,720.00"
+        },
+        {
+          "row": 2,
+          "column": "balance_gbp",
+          "expected": "15720.00",
+          "got": ""
+        },
+        {
+          "row": 3,
+          "column": "debit_gbp",
+          "expected": "",
+          "got": "12,480.00"
+        },
+        {
+          "row": 3,
+          "column": "credit_gbp",
+          "expected": "12480.00",
+          "got": "3,240.00"
+        },
+        {
+          "row": 3,
+          "column": "balance_gbp",
+          "expected": "3240.00",
+          "got": ""
+        },
+        {
+          "row": 4,
+          "column": "details",
+          "expected": "Reactive repair: replacement circulating pump on boiler 2, Market Walk depot",
+          "got": "Reactive repair: replacement circulating pump"
+        },
+        {
+          "row": 4,
+          "column": "credit_gbp",
+          "expected": "",
+          "got": "4,426.50"
+        },
+        {
+          "row": 4,
+          "column": "balance_gbp",
+          "expected": "4426.50",
+          "got": ""
+        },
+        {
+          "row": 5,
+          "column": "details",
+          "expected": "Credit note against INV-40755 (duplicate out-of-hours call-out charge)",
+          "got": "Credit note against INV-40755 (duplicate"
+        },
+        {
+          "row": 5,
+          "column": "debit_gbp",
+          "expected": "",
+          "got": "245.00"
+        },
+        {
+          "row": 5,
+          "column": "credit_gbp",
+          "expected": "245.00",
+          "got": "4,181.50"
+        },
+        {
+          "row": 5,
+          "column": "balance_gbp",
+          "expected": "4181.50",
+          "got": ""
+        },
+        {
+          "row": 6,
+          "column": "details",
+          "expected": "Car park lighting: replace 6 failed LED lanterns, columns 4 to 9",
+          "got": "Car park lighting: replace 6 failed LED"
+        },
+        {
+          "row": 6,
+          "column": "credit_gbp",
+          "expected": "",
+          "got": "4,993.90"
+        },
+        {
+          "row": 6,
+          "column": "balance_gbp",
+          "expected": "4993.90",
+          "got": ""
+        },
+        {
+          "row": 7,
+          "column": "details",
+          "expected": "Planned preventative maintenance, Riverside offices: fire alarm and emergency lighting tests",
+          "got": "Planned preventative maintenance, Riverside"
+        },
+        {
+          "row": 7,
+          "column": "credit_gbp",
+          "expected": "",
+          "got": "7,453.90"
+        },
+        {
+          "row": 7,
+          "column": "balance_gbp",
+          "expected": "7453.90",
+          "got": ""
+        },
+        {
+          "row": 8,
+          "column": "details",
+          "expected": "Service credit: KPI 3 (emergency response within 2 hours) missed in Q2",
+          "got": "Service credit: KPI 3 (emergency response"
+        },
+        {
+          "row": 8,
+          "column": "debit_gbp",
+          "expected": "",
+          "got": "1,600.00"
+        },
+        {
+          "row": 8,
+          "column": "credit_gbp",
+          "expected": "1600.00",
+          "got": "5,853.90"
+        },
+        {
+          "row": 8,
+          "column": "balance_gbp",
+          "expected": "5853.90",
+          "got": ""
+        },
+        {
+          "row": 9,
+          "column": "debit_gbp",
+          "expected": "",
+          "got": "6,000.00"
+        },
+        {
+          "row": 9,
+          "column": "credit_gbp",
+          "expected": "6000.00",
+          "got": "(146.10)"
+        },
+        {
+          "row": 9,
+          "column": "balance_gbp",
+          "expected": "-146.10",
+          "got": ""
+        },
+        {
+          "row": 10,
+          "column": "details",
+          "expected": "Emergency drainage works, Riverside car park: out of hours, 2 operatives for 6 hours, jetting and CCTV survey",
+          "got": "Emergency drainage works, Riverside car"
+        },
+        {
+          "row": 10,
+          "column": "credit_gbp",
+          "expected": "",
+          "got": "2,769.15"
+        },
+        {
+          "row": 10,
+          "column": "balance_gbp",
+          "expected": "2769.15",
+          "got": ""
+        },
+        {
+          "row": 11,
+          "column": "details",
+          "expected": "Consumables and parts as per attached schedule",
+          "got": "Consumables and parts as per attached"
+        },
+        {
+          "row": 11,
+          "column": "credit_gbp",
+          "expected": "",
+          "got": "2,865.95"
+        },
+        {
+          "row": 11,
+          "column": "balance_gbp",
+          "expected": "2865.95",
+          "got": ""
+        }
+      ],
+      "column_mapping": "rows"
+    },
+    "TB-002": {
+      "case_id": "TB-002",
+      "rows_expected": 16,
+      "rows_predicted": 26,
+      "rows_exact": 2,
+      "rows_missing": 12,
+      "rows_extra": 22,
+      "cell_accuracy": 0.079,
+      "cell_recall": 0.188,
+      "table_exact": false,
+      "per_column": {
+        "payment_date": 0.25,
+        "directorate": 0.25,
+        "supplier": 0.125,
+        "expense_type": 0.125,
+        "transaction_no": 0.188,
+        "amount_gbp": 0.188
+      },
+      "empty_columns": [],
+      "missing_rows": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        12,
+        14,
+        15,
+        16
+      ],
+      "extra_rows": [
+        {
+          "pred_row": 1,
+          "values": {
+            "payment_date": "no."
+          }
+        },
+        {
+          "pred_row": 3,
+          "values": {
+            "payment_date": "Services Limited"
+          }
+        },
+        {
+          "pred_row": 4,
+          "values": {
+            "payment_date": "Fenwick Grounds Maintenance Grounds maintenance",
+            "directorate": "5100232",
+            "supplier": "6,240.50"
+          }
+        },
+        {
+          "pred_row": 5,
+          "values": {
+            "payment_date": "Ltd"
+          }
+        },
+        {
+          "pred_row": 6,
+          "values": {
+            "payment_date": "Tree works",
+            "directorate": "5100233",
+            "supplier": "1,180.00"
+          }
+        },
+        {
+          "pred_row": 7,
+          "values": {
+            "payment_date": "Resources",
+            "directorate": "Elmstead ICT Solutions Ltd",
+            "supplier": "Software licences",
+            "expense_type": "5100234",
+            "transaction_no": "12,950.00"
+          }
+        },
+        {
+          "pred_row": 8,
+          "values": {
+            "payment_date": "Hardware maintenance",
+            "directorate": "5100235",
+            "supplier": "2,310.75"
+          }
+        },
+        {
+          "pred_row": 10,
+          "values": {
+            "payment_date": "CIC",
+            "directorate": "accommodation"
+          }
+        },
+        {
+          "pred_row": 11,
+          "values": {
+            "payment_date": "Temporary",
+            "directorate": "5100299",
+            "supplier": "3,465.00"
+          }
+        },
+        {
+          "pred_row": 12,
+          "values": {
+            "payment_date": "accommodation"
+          }
+        },
+        {
+          "pred_row": 13,
+          "values": {
+            "payment_date": "Alderman Facilities Group Ltd",
+            "directorate": "Void property repairs",
+            "supplier": "5100300",
+            "expense_type": "2,775.20"
+          }
+        },
+        {
+          "pred_row": 14,
+          "values": {
+            "payment_date": "Leisure",
+            "directorate": "Halbrook Leisure Operations",
+            "supplier": "Management fee",
+            "expense_type": "5100301",
+            "transaction_no": "41,666.67"
+          }
+        },
+        {
+          "pred_row": 15,
+          "values": {
+            "payment_date": "Ltd"
+          }
+        },
+        {
+          "pred_row": 17,
+          "values": {
+            "payment_date": "Brightwater Environmental",
+            "directorate": "Refund: overpaid gate",
+            "supplier": "5100356",
+            "expense_type": "-1,250.00"
+          }
+        },
+        {
+          "pred_row": 18,
+          "values": {
+            "payment_date": "Services Limited",
+            "directorate": "fees"
+          }
+        },
+        {
+          "pred_row": 19,
+          "values": {
+            "payment_date": "Resources",
+            "directorate": "Greystoke Construction",
+            "supplier": "Capital works: depot roof 5100357",
+            "expense_type": "96,400.00"
+          }
+        },
+        {
+          "pred_row": 20,
+          "values": {
+            "payment_date": "(Midlands) Limited"
+          }
+        },
+        {
+          "pred_row": 22,
+          "values": {
+            "payment_date": "Elmstead ICT Solutions Ltd",
+            "directorate": "Telephony",
+            "supplier": "5100411",
+            "expense_type": "845.00"
+          }
+        },
+        {
+          "pred_row": 23,
+          "values": {
+            "payment_date": "Leisure",
+            "directorate": "Halbrook Leisure Operations",
+            "supplier": "Utilities recharge",
+            "expense_type": "5100412",
+            "transaction_no": "7,302.18"
+          }
+        },
+        {
+          "pred_row": 24,
+          "values": {
+            "payment_date": "Ltd"
+          }
+        },
+        {
+          "pred_row": 25,
+          "values": {
+            "payment_date": "Fenwick Grounds Maintenance Sports pitch renovation",
+            "directorate": "5100413",
+            "supplier": "4,980.00"
+          }
+        },
+        {
+          "pred_row": 26,
+          "values": {
+            "payment_date": "Ltd"
+          }
+        }
+      ],
+      "cell_errors": [
+        {
+          "row": 1,
+          "column": "supplier",
+          "expected": "Brightwater Environmental Services Limited",
+          "got": "Brightwater Environmental"
+        },
+        {
+          "row": 1,
+          "column": "expense_type",
+          "expected": "Waste collection contract",
+          "got": "Waste collection contract 5100231"
+        },
+        {
+          "row": 1,
+          "column": "transaction_no",
+          "expected": "5100231",
+          "got": "84,612.00"
+        },
+        {
+          "row": 1,
+          "column": "amount_gbp",
+          "expected": "84612.00",
+          "got": ""
+        },
+        {
+          "row": 6,
+          "column": "supplier",
+          "expected": "Dunmore Care Partnership CIC",
+          "got": "Dunmore Care Partnership"
+        },
+        {
+          "row": 6,
+          "column": "expense_type",
+          "expected": "Temporary accommodation",
+          "got": "Temporary"
+        }
+      ],
+      "column_mapping": "rows"
+    },
+    "TB-003": {
+      "case_id": "TB-003",
+      "rows_expected": 12,
+      "rows_predicted": 32,
+      "rows_exact": 1,
+      "rows_missing": 0,
+      "rows_extra": 20,
+      "cell_accuracy": 0.256,
+      "cell_recall": 0.683,
+      "table_exact": false,
+      "per_column": {
+        "milestone_no": 1.0,
+        "milestone": 0.667,
+        "payment_trigger": 0.083,
+        "due_date": 0.833,
+        "amount_gbp": 0.833
+      },
+      "empty_columns": [],
+      "missing_rows": [],
+      "extra_rows": [
+        {
+          "pred_row": 1,
+          "values": {
+            "milestone_no": "VAT)"
+          }
+        },
+        {
+          "pred_row": 3,
+          "values": {
+            "milestone_no": "set-up",
+            "milestone": "accepted by the Contract Administrator"
+          }
+        },
+        {
+          "pred_row": 5,
+          "values": {
+            "milestone_no": "the former salt barn complete"
+          }
+        },
+        {
+          "pred_row": 7,
+          "values": {
+            "milestone_no": "Council's structural engineer"
+          }
+        },
+        {
+          "pred_row": 9,
+          "values": {
+            "milestone_no": "frame inspection certificate issued"
+          }
+        },
+        {
+          "pred_row": 11,
+          "values": {
+            "milestone_no": "bay doors complete so that the building is weathertight,"
+          }
+        },
+        {
+          "pred_row": 12,
+          "values": {
+            "milestone_no": "Northam Vale County Council · Schedule 2 - Payment milestones",
+            "milestone": "Page 1 of 2"
+          }
+        },
+        {
+          "pred_row": 13,
+          "values": {
+            "milestone_no": "SYNTHETIC TEST DOCUMENT - fictional authority and supplier - not a real notice"
+          }
+        },
+        {
+          "pred_row": 14,
+          "values": {
+            "milestone_no": "Northam Vale County Council · NVCC/CAP/0412 · Schedule 2"
+          }
+        },
+        {
+          "pred_row": 15,
+          "values": {
+            "milestone_no": "No.",
+            "milestone": "Milestone",
+            "payment_trigger": "Payment trigger",
+            "due_date": "Due date",
+            "amount_gbp": "Amount (£, ex"
+          }
+        },
+        {
+          "pred_row": 16,
+          "values": {
+            "milestone_no": "VAT)"
+          }
+        },
+        {
+          "pred_row": 17,
+          "values": {
+            "milestone_no": "confirmed in writing by the Contract Administrator after"
+          }
+        },
+        {
+          "pred_row": 18,
+          "values": {
+            "milestone_no": "a water test of every roof outlet and gutter and a visual"
+          }
+        },
+        {
+          "pred_row": 19,
+          "values": {
+            "milestone_no": "inspection of all flashings, sealant joints and door seals"
+          }
+        },
+        {
+          "pred_row": 21,
+          "values": {
+            "milestone_no": "first fix",
+            "milestone": "pressure-tested"
+          }
+        },
+        {
+          "pred_row": 23,
+          "values": {
+            "milestone_no": "interceptor",
+            "milestone": "place"
+          }
+        },
+        {
+          "pred_row": 25,
+          "values": {
+            "milestone_no": "all rooms"
+          }
+        },
+        {
+          "pred_row": 27,
+          "values": {
+            "milestone_no": "drainage",
+            "milestone": "complete"
+          }
+        },
+        {
+          "pred_row": 29,
+          "values": {
+            "milestone_no": "maintenance manuals accepted"
+          }
+        },
+        {
+          "pred_row": 32,
+          "values": {
+            "milestone_no": "after practical completion"
+          }
+        }
+      ],
+      "cell_errors": [
+        {
+          "row": 1,
+          "column": "milestone",
+          "expected": "Mobilisation and site set-up",
+          "got": "Mobilisation and site"
+        },
+        {
+          "row": 1,
+          "column": "payment_trigger",
+          "expected": "Site compound established and welfare facilities accepted by the Contract Administrator",
+          "got": "Site compound established and welfare facilities"
+        },
+        {
+          "row": 2,
+          "column": "payment_trigger",
+          "expected": "Asbestos removal certificate issued and demolition of the former salt barn complete",
+          "got": "Asbestos removal certificate issued and demolition of"
+        },
+        {
+          "row": 3,
+          "column": "payment_trigger",
+          "expected": "Foundations and ground-bearing slab signed off by the Council's structural engineer",
+          "got": "Foundations and ground-bearing slab signed off by the 30/04/2027"
+        },
+        {
+          "row": 3,
+          "column": "due_date",
+          "expected": "2027-04-30",
+          "got": "286,400.00"
+        },
+        {
+          "row": 3,
+          "column": "amount_gbp",
+          "expected": "286400.00",
+          "got": ""
+        },
+        {
+          "row": 4,
+          "column": "payment_trigger",
+          "expected": "Steel frame erected, plumbed and bolted, with the frame inspection certificate issued",
+          "got": "Steel frame erected, plumbed and bolted, with the"
+        },
+        {
+          "row": 5,
+          "column": "payment_trigger",
+          "expected": "Roof covering, wall cladding, glazing and the vehicle bay doors complete so that the building is weathertight, confirmed in writing by the Contract Administrator after a water test of every roof outlet and gutter and a visual inspection of all flashings, sealant joints and door seals",
+          "got": "Roof covering, wall cladding, glazing and the vehicle"
+        },
+        {
+          "row": 6,
+          "column": "milestone",
+          "expected": "Mechanical and electrical first fix",
+          "got": "Mechanical and electrical"
+        },
+        {
+          "row": 6,
+          "column": "payment_trigger",
+          "expected": "Containment, cabling and pipework installed and pressure-tested",
+          "got": "Containment, cabling and pipework installed and"
+        },
+        {
+          "row": 7,
+          "column": "milestone",
+          "expected": "Vehicle wash bay and interceptor",
+          "got": "Vehicle wash bay and"
+        },
+        {
+          "row": 7,
+          "column": "payment_trigger",
+          "expected": "Wash bay, oil interceptor and discharge consent in place",
+          "got": "Wash bay, oil interceptor and discharge consent in"
+        },
+        {
+          "row": 8,
+          "column": "payment_trigger",
+          "expected": "Floors, partitions, ceilings and decorations complete in all rooms",
+          "got": "Floors, partitions, ceilings and decorations complete in 21/01/2028"
+        },
+        {
+          "row": 8,
+          "column": "due_date",
+          "expected": "2028-01-21",
+          "got": "154,800.00"
+        },
+        {
+          "row": 8,
+          "column": "amount_gbp",
+          "expected": "154800.00",
+          "got": ""
+        },
+        {
+          "row": 9,
+          "column": "milestone",
+          "expected": "External works and drainage",
+          "got": "External works and"
+        },
+        {
+          "row": 9,
+          "column": "payment_trigger",
+          "expected": "Yard surfacing, drainage connections and site lighting complete",
+          "got": "Yard surfacing, drainage connections and site lighting"
+        },
+        {
+          "row": 10,
+          "column": "payment_trigger",
+          "expected": "All plant commissioned and the operation and maintenance manuals accepted",
+          "got": "All plant commissioned and the operation and"
+        },
+        {
+          "row": 12,
+          "column": "payment_trigger",
+          "expected": "Certificate of making good defects issued, 12 months after practical completion",
+          "got": "Certificate of making good defects issued, 12 months"
+        }
+      ],
+      "column_mapping": "rows"
+    },
+    "TB-004": {
+      "case_id": "TB-004",
+      "rows_expected": 15,
+      "rows_predicted": 39,
+      "rows_exact": 0,
+      "rows_missing": 0,
+      "rows_extra": 24,
+      "cell_accuracy": 0.245,
+      "cell_recall": 0.638,
+      "table_exact": false,
+      "per_column": {
+        "week_ending": 0.0,
+        "order_no": 1.0,
+        "description": 0.267,
+        "cost_centre": 0.8,
+        "net_gbp": 0.8,
+        "vat_gbp": 0.8,
+        "gross_gbp": 0.8
+      },
+      "empty_columns": [
+        "week_ending"
+      ],
+      "missing_rows": [],
+      "extra_rows": [
+        {
+          "pred_row": 1,
+          "values": {
+            "order_no": "Week ending Friday 3 July 2026"
+          }
+        },
+        {
+          "pred_row": 3,
+          "values": {
+            "order_no": "(14 no.)"
+          }
+        },
+        {
+          "pred_row": 6,
+          "values": {
+            "order_no": "resurfacing"
+          }
+        },
+        {
+          "pred_row": 7,
+          "values": {
+            "order_no": "Week total",
+            "description": "12,210.00",
+            "cost_centre": "2,314.00",
+            "net_gbp": "14,524.00"
+          }
+        },
+        {
+          "pred_row": 8,
+          "values": {
+            "order_no": "Week ending Friday 10 July 2026"
+          }
+        },
+        {
+          "pred_row": 10,
+          "values": {
+            "order_no": "1,180 m2), including traffic management"
+          }
+        },
+        {
+          "pred_row": 12,
+          "values": {
+            "order_no": "Road bridge approach"
+          }
+        },
+        {
+          "pred_row": 14,
+          "values": {
+            "order_no": "Fenwick Lane"
+          }
+        },
+        {
+          "pred_row": 16,
+          "values": {
+            "order_no": "Street"
+          }
+        },
+        {
+          "pred_row": 17,
+          "values": {
+            "order_no": "Week total",
+            "description": "60,715.50",
+            "cost_centre": "12,143.10",
+            "net_gbp": "72,858.60"
+          }
+        },
+        {
+          "pred_row": 18,
+          "values": {
+            "order_no": "Week ending Friday 17 July 2026"
+          }
+        },
+        {
+          "pred_row": 20,
+          "values": {
+            "order_no": "including dropped kerbs at four crossings"
+          }
+        },
+        {
+          "pred_row": 22,
+          "values": {
+            "order_no": "schools)"
+          }
+        },
+        {
+          "pred_row": 24,
+          "values": {
+            "order_no": "Carried forward",
+            "description": "110,260.50",
+            "cost_centre": "21,924.10",
+            "net_gbp": "132,184.60"
+          }
+        },
+        {
+          "pred_row": 25,
+          "values": {
+            "order_no": "Stonebridge Metropolitan Borough Council · Highways payments statement Q2",
+            "description": "Page 1 of 2"
+          }
+        },
+        {
+          "pred_row": 26,
+          "values": {
+            "order_no": "SYNTHETIC TEST DOCUMENT - fictional authority and supplier - not a real notice"
+          }
+        },
+        {
+          "pred_row": 27,
+          "values": {
+            "order_no": "Stonebridge Metropolitan Borough Council · SMBC/HWY/2023/07 · payments statement"
+          }
+        },
+        {
+          "pred_row": 28,
+          "values": {
+            "order_no": "Order no.",
+            "description": "Description",
+            "cost_centre": "Cost centre",
+            "net_gbp": "Net (£)",
+            "vat_gbp": "VAT (£)",
+            "gross_gbp": "Gross (£)"
+          }
+        },
+        {
+          "pred_row": 29,
+          "values": {
+            "order_no": "Brought forward",
+            "description": "110,260.50",
+            "cost_centre": "21,924.10",
+            "net_gbp": "132,184.60"
+          }
+        },
+        {
+          "pred_row": 31,
+          "values": {
+            "order_no": "culvert"
+          }
+        },
+        {
+          "pred_row": 33,
+          "values": {
+            "order_no": "Week total",
+            "description": "42,225.00",
+            "cost_centre": "8,363.00",
+            "net_gbp": "50,588.00"
+          }
+        },
+        {
+          "pred_row": 34,
+          "values": {
+            "order_no": "Week ending Friday 24 July 2026"
+          }
+        },
+        {
+          "pred_row": 36,
+          "values": {
+            "order_no": "inspection"
+          }
+        },
+        {
+          "pred_row": 39,
+          "values": {
+            "order_no": "Week total",
+            "description": "17,025.00",
+            "cost_centre": "3,405.00",
+            "net_gbp": "20,430.00"
+          }
+        }
+      ],
+      "cell_errors": [
+        {
+          "row": 1,
+          "column": "week_ending",
+          "expected": "2026-07-03",
+          "got": ""
+        },
+        {
+          "row": 1,
+          "column": "description",
+          "expected": "Pothole repairs, Victoria Square and Market Street (14 no.)",
+          "got": "Pothole repairs, Victoria Square and Market Street"
+        },
+        {
+          "row": 2,
+          "column": "week_ending",
+          "expected": "2026-07-03",
+          "got": ""
+        },
+        {
+          "row": 3,
+          "column": "week_ending",
+          "expected": "2026-07-03",
+          "got": ""
+        },
+        {
+          "row": 3,
+          "column": "description",
+          "expected": "Road closure notices and permit fees, Canal Street resurfacing",
+          "got": "Road closure notices and permit fees, Canal Street"
+        },
+        {
+          "row": 4,
+          "column": "week_ending",
+          "expected": "2026-07-10",
+          "got": ""
+        },
+        {
+          "row": 4,
+          "column": "description",
+          "expected": "Carriageway resurfacing, Canal Street (inlay 40mm, 1,180 m2), including traffic management",
+          "got": "Carriageway resurfacing, Canal Street (inlay 40mm, HWY-340"
+        },
+        {
+          "row": 4,
+          "column": "cost_centre",
+          "expected": "HWY-340",
+          "got": "46,210.00"
+        },
+        {
+          "row": 4,
+          "column": "net_gbp",
+          "expected": "46210.00",
+          "got": "9,242.00"
+        },
+        {
+          "row": 4,
+          "column": "vat_gbp",
+          "expected": "9242.00",
+          "got": "55,452.00"
+        },
+        {
+          "row": 4,
+          "column": "gross_gbp",
+          "expected": "55452.00",
+          "got": ""
+        },
+        {
+          "row": 5,
+          "column": "week_ending",
+          "expected": "2026-07-10",
+          "got": ""
+        },
+        {
+          "row": 5,
+          "column": "description",
+          "expected": "Replacement of damaged safety barrier, Northam Road bridge approach",
+          "got": "Replacement of damaged safety barrier, Northam"
+        },
+        {
+          "row": 6,
+          "column": "week_ending",
+          "expected": "2026-07-10",
+          "got": ""
+        },
+        {
+          "row": 6,
+          "column": "description",
+          "expected": "Out-of-hours emergency call-out: fallen tree, Fenwick Lane",
+          "got": "Out-of-hours emergency call-out: fallen tree,"
+        },
+        {
+          "row": 7,
+          "column": "week_ending",
+          "expected": "2026-07-10",
+          "got": ""
+        },
+        {
+          "row": 7,
+          "column": "description",
+          "expected": "Street lighting: column replacement (3 no.), Chapel Street",
+          "got": "Street lighting: column replacement (3 no.), Chapel"
+        },
+        {
+          "row": 8,
+          "column": "week_ending",
+          "expected": "2026-07-17",
+          "got": ""
+        },
+        {
+          "row": 8,
+          "column": "description",
+          "expected": "Footway reconstruction, Bridge Street (both sides), including dropped kerbs at four crossings",
+          "got": "Footway reconstruction, Bridge Street (both sides),"
+        },
+        {
+          "row": 9,
+          "column": "week_ending",
+          "expected": "2026-07-17",
+          "got": ""
+        },
+        {
+          "row": 9,
+          "column": "description",
+          "expected": "Line painting refresh, school keep-clear markings (6 schools)",
+          "got": "Line painting refresh, school keep-clear markings (6 HWY-360"
+        },
+        {
+          "row": 9,
+          "column": "cost_centre",
+          "expected": "HWY-360",
+          "got": "2,210.00"
+        },
+        {
+          "row": 9,
+          "column": "net_gbp",
+          "expected": "2210.00",
+          "got": "442.00"
+        },
+        {
+          "row": 9,
+          "column": "vat_gbp",
+          "expected": "442.00",
+          "got": "2,652.00"
+        },
+        {
+          "row": 9,
+          "column": "gross_gbp",
+          "expected": "2652.00",
+          "got": ""
+        },
+        {
+          "row": 10,
+          "column": "week_ending",
+          "expected": "2026-07-17",
+          "got": ""
+        },
+        {
+          "row": 11,
+          "column": "week_ending",
+          "expected": "2026-07-17",
+          "got": ""
+        },
+        {
+          "row": 11,
+          "column": "description",
+          "expected": "Drainage CCTV survey and jetting, Riverside culvert",
+          "got": "Drainage CCTV survey and jetting, Riverside"
+        },
+        {
+          "row": 12,
+          "column": "week_ending",
+          "expected": "2026-07-17",
+          "got": ""
+        },
+        {
+          "row": 13,
+          "column": "week_ending",
+          "expected": "2026-07-24",
+          "got": ""
+        },
+        {
+          "row": 13,
+          "column": "description",
+          "expected": "Winter service: gritter calibration and salt barn inspection",
+          "got": "Winter service: gritter calibration and salt barn"
+        },
+        {
+          "row": 14,
+          "column": "week_ending",
+          "expected": "2026-07-24",
+          "got": ""
+        },
+        {
+          "row": 15,
+          "column": "week_ending",
+          "expected": "2026-07-24",
+          "got": ""
+        },
+        {
+          "row": 15,
+          "column": "description",
+          "expected": "Traffic signal maintenance, Victoria Square junction",
+          "got": "Traffic signal maintenance, Victoria Square junction SIG-200"
+        },
+        {
+          "row": 15,
+          "column": "cost_centre",
+          "expected": "SIG-200",
+          "got": "3,925.00"
+        },
+        {
+          "row": 15,
+          "column": "net_gbp",
+          "expected": "3925.00",
+          "got": "785.00"
+        },
+        {
+          "row": 15,
+          "column": "vat_gbp",
+          "expected": "785.00",
+          "got": "4,710.00"
+        },
+        {
+          "row": 15,
+          "column": "gross_gbp",
+          "expected": "4710.00",
+          "got": ""
+        }
+      ],
+      "column_mapping": "rows"
+    }
+  }
+}

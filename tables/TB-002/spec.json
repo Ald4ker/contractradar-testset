@@ -1,0 +1,51 @@
+{
+  "case_id": "TB-002",
+  "slug": "spend-grouped-dates",
+  "title": "Council spend statement with grouped dates, directorates and suppliers",
+  "pages": 1,
+  "rows": 16,
+  "columns": [
+    {
+      "name": "payment_date",
+      "printed_header": "Payment date",
+      "type": "date"
+    },
+    {
+      "name": "directorate",
+      "printed_header": "Directorate",
+      "type": "text"
+    },
+    {
+      "name": "supplier",
+      "printed_header": "Supplier",
+      "type": "text"
+    },
+    {
+      "name": "expense_type",
+      "printed_header": "Expense type",
+      "type": "text"
+    },
+    {
+      "name": "transaction_no",
+      "printed_header": "Transaction no.",
+      "type": "id"
+    },
+    {
+      "name": "amount_gbp",
+      "printed_header": "Amount (£)",
+      "type": "money"
+    }
+  ],
+  "hazards": [
+    "suppressed_repeats",
+    "identical_rows",
+    "wrapped_cells",
+    "totals_row"
+  ],
+  "row_rules": "One row per transaction. A blank Payment date, Directorate or Supplier cell repeats the value above it, within the same date group. Negative amounts are refunds and stay negative.",
+  "why": "The payment date is printed once per date group, the directorate once per run within a date, and the supplier once per run within a directorate, so most rows show only some of their values. Two Dunmore rows are identical apart from the transaction number. Long supplier names wrap onto a second line.",
+  "naive_stop": "^\\s*Total for\\b",
+  "document": "TB-002/document.pdf",
+  "expected": "TB-002/expected.csv",
+  "layout": {}
+}

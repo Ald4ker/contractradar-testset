@@ -55,6 +55,7 @@ def layout(title: str, body: str, depth: int = 0, extra_head: str = "") -> str:
   <nav>
     <a href="{root}index.html#cases">Cases</a>
     <a href="{root}index.html#leaderboard">Leaderboard</a>
+    <a href="{root}tables.html">Tables track</a>
     <a href="{root}submit.html">Submit results</a>
     <a href="{root}schema.html">Schema &amp; rules</a>
     <a href="{root}index.html#contribute">Contribute</a>
@@ -255,6 +256,12 @@ High-severity flag precision/recall is only shown for extractors that output fla
 They are self-reported: the gold labels ship with the cases, so read this table as an honour-system comparison of methods.</p>
 <div id="community-board"><p class="muted small">Loading community submissions&hellip;</p></div>
 <script src="static/community.js" defer></script>
+
+<h2 id="tables">Tables track</h2>
+<p>A second set of documents built around the table failures raised in the pilot thread: statements with no ruled lines,
+values such as dates printed once for a group of rows, and tables that cross a page break, including a row split by the
+break. Each comes as the PDF, the expected CSV and the wrong extraction a text dump produces.
+<a href="tables.html">See the tables track</a>.</p>
 
 <h2 id="cases">Cases</h2>
 <div class="grid">
@@ -497,6 +504,115 @@ python -m crtest.submit --pred results/my_model.json --contact https://github.co
     return layout("Submit results", body)
 
 
+def load_table_results(results_dir: str) -> list[dict]:
+    out = []
+    for path in sorted(glob.glob(os.path.join(results_dir, "*.scored.json"))):
+        with open(path, encoding="utf-8") as fh:
+            r = json.load(fh)
+        r["_file"] = os.path.basename(path)
+        r["_pred_file"] = os.path.basename(path).replace(".scored.json", ".json")
+        out.append(r)
+    out.sort(key=lambda r: (-(r["summary"].get("cell_accuracy") or 0), -(r["summary"].get("rows_exact") or 0)))
+    return out
+
+
+def build_tables_page(manifest: dict, results: list[dict], zip_name: str) -> str:
+    hazards = manifest.get("hazards", {})
+    naive = next((r for r in results if r["summary"].get("extractor") == "naive_text_tables"), None)
+    board_rows = []
+    for r in results:
+        s = r["summary"]
+        board_rows.append(
+            f"<tr><td><b>{e(s.get('extractor'))}</b><br><span class='muted small'>{e(s.get('description') or '')}</span></td>"
+            f"<td class='num'>{(s.get('cell_accuracy') or 0):.1%}</td><td class='num'>{(s.get('cell_recall') or 0):.1%}</td>"
+            f"<td class='num'>{s.get('rows_exact')}/{s.get('rows_expected')}</td>"
+            f"<td class='num'>{s.get('rows_extra')}</td><td class='num'>{s.get('rows_missing')}</td><td class='num'>{s.get('tables_exact')}/{s.get('cases')}</td>"
+            f"<td class='small'><a href='results_tables/{e(r['_file'])}'>scored json</a> · <a href='results_tables/{e(r['_pred_file'])}'>predictions</a>"
+            f"<br><span class='muted'>{e((s.get('run_at') or '')[:10])}</span></td></tr>")
+    board = ("<table><thead><tr><th>Extractor</th><th class='num'>Cell score</th><th class='num'>Cells recovered</th><th class='num'>Rows exactly right</th>"
+             "<th class='num'>Invented rows</th><th class='num'>Missing rows</th><th class='num'>Tables exact</th><th>Files</th></tr></thead><tbody>"
+             + "".join(board_rows) + "</tbody></table>") if board_rows else "<p class='muted'>No results yet.</p>"
+    cards = []
+    for c in manifest["cases"]:
+        cid = c["case_id"]
+        pc = (naive or {}).get("per_case", {}).get(cid) if naive else None
+        chips = "".join(f"<span class='chip' title='{e(hazards.get(h, ''))}'>{e(h)}</span>" for h in c["hazards"])
+        naive_txt = (f"<div class='score'>text-dump extraction: cell score <b>{pc['cell_accuracy']:.0%}</b> "
+                     f"({pc['cell_recall']:.0%} of cells recovered), <b>{pc['rows_exact']}/{pc['rows_expected']}</b> rows right, "
+                     f"<b>{pc['rows_extra']}</b> invented rows</div>") if pc else ""
+        pages = " ".join(f"<a href='tables/{cid}/pages/page-{i}.png'>page {i}</a>" for i in range(1, int(c["pages"]) + 1))
+        cards.append(f"""<div class="card">
+  <a class="thumb" href="tables/{cid}/document.pdf"><img src="tables/{cid}/pages/page-1.png" alt="First page of {cid}" loading="lazy"></a>
+  <div class="body">
+    <div class="id">{cid} · {c['pages']} page{'s' if c['pages'] != 1 else ''} · {c['rows']} rows</div>
+    <h3>{e(c['title'])}</h3>
+    <p class="small">{e(c['why'])}</p>
+    <div class="chips">{chips}</div>
+    {naive_txt}
+    <p class="small"><a href="tables/{cid}/document.pdf">PDF</a> · <a href="tables/{cid}/expected.csv">expected.csv</a> ·
+    <a href="tables/{cid}/wrong.csv">wrong.csv</a> · <a href="tables/{cid}/notes.md">notes</a> · <a href="tables/{cid}/text.txt">text dump</a> · {pages}</p>
+  </div>
+</div>""")
+    hazard_rows = "".join(f"<tr><td><code>{e(k)}</code></td><td>{e(v)}</td><td class='num'>{sum(1 for c in manifest['cases'] if k in c['hazards'])}</td></tr>"
+                          for k, v in hazards.items() if any(k in c["hazards"] for c in manifest["cases"]))
+    body = f"""
+<h1>Tables track</h1>
+<p class="lede">Four synthetic documents built around the table failures raised in the pilot thread: tables without set
+boundaries in statements, ID values such as dates printed once for a group of rows, and page boundaries, including a
+row split by the page break. Each case is the PDF in, the expected CSV out, and the wrong extraction.</p>
+<div class="btns">
+  <a class="btn" href="downloads/{e(zip_name)}">Download the tables track (zip)</a>
+  <a class="btn alt" href="{REPO_URL}/tree/main/tables">Files on GitHub</a>
+</div>
+
+<h2 id="tables-leaderboard">Leaderboard</h2>
+<p class="muted small">Rows are aligned to the expected rows in document order, so a missing or invented row costs only itself.
+<b>Cell score</b> = right cells / ((expected rows + invented rows) x columns): an invented row counts as a row of wrong cells, so
+padding or hedging never helps. <b>Cells recovered</b> = right cells / expected cells. A blank expected cell must stay blank; text
+must have the same words; money must be exactly one amount. LLM runs get the column list and the document text ("guided" adds the
+same generic table rules for every case) and never see a case's own notes. Stock tools run with their documented defaults and no
+repair.</p>
+{board}
+
+<p class="small"><b>Gold checked:</b> eight independent blind transcriptions, four from the page images only and four from the
+text dump only, reproduce every <code>expected.csv</code> exactly. <b>This is a first version:</b> if your pipeline breaks on a layout
+that is not here, describe it in the <a href="https://discord.com/channels/1558912731019608085/1565685928394231930">pilot thread</a> or
+open an <a href="{REPO_URL}/issues">issue</a> and we will add a case for it.</p>
+
+<h2 id="tables-cases">Cases</h2>
+<div class="grid">
+{"".join(cards)}
+</div>
+
+<h2>Hazards</h2>
+<table><thead><tr><th>Hazard</th><th>What it is</th><th class="num">Cases</th></tr></thead><tbody>{hazard_rows}</tbody></table>
+
+<h2>Score your own table extraction</h2>
+<pre><code># one CSV per case named TB-00N.csv (columns as in expected.csv), or one JSON file
+python -m crtest.score_tables --pred my_tables/
+# the same text-dump baseline and LLM extractor the leaderboard uses
+python -m crtest.extract_tables_naive
+python -m crtest.extract_tables_llm --out results_tables/my_model.json --prompt guided</code></pre>
+<p class="small">Every value is generated from one row list per case, so the PDF and <code>expected.csv</code> cannot disagree.
+Dates are ISO, money is a plain number (negative for bracketed amounts), blank cells are empty.</p>
+"""
+    return layout("Tables track", body)
+
+
+def make_tables_zip(tables_dir: str, results_dir: str, out_path: str) -> None:
+    with zipfile.ZipFile(out_path, "w", zipfile.ZIP_DEFLATED) as z:
+        for root, _dirs, files in os.walk(tables_dir):
+            for fn in files:
+                p = os.path.join(root, fn)
+                z.write(p, os.path.join("contractradar-tables", os.path.relpath(p, tables_dir)))
+        if os.path.isdir(results_dir):
+            for fn in os.listdir(results_dir):
+                if fn.endswith(".json"):
+                    z.write(os.path.join(results_dir, fn), os.path.join("contractradar-tables", "results", fn))
+        z.writestr("contractradar-tables/README.txt", "Tables track of the ContractRadar test set: synthetic documents, expected CSVs and the wrong "
+                   f"text-dump extraction.\nCode and docs: {REPO_URL}\nSynthetic documents and labels: CC0-1.0. Fictional organisations.\n")
+
+
 def make_zip(cases_dir: str, results_dir: str, schema_path: str, out_path: str) -> None:
     with zipfile.ZipFile(out_path, "w", zipfile.ZIP_DEFLATED) as z:
         for root, _dirs, files in os.walk(cases_dir):
@@ -518,6 +634,8 @@ def main(argv=None) -> None:
     ap.add_argument("--cases", default="cases")
     ap.add_argument("--results", default="results")
     ap.add_argument("--out", default="site/dist")
+    ap.add_argument("--tables", default="tables")
+    ap.add_argument("--results-tables", default="results_tables")
     args = ap.parse_args(argv)
     with open(os.path.join(args.cases, "manifest.json"), encoding="utf-8") as fh:
         manifest = json.load(fh)
@@ -560,6 +678,17 @@ def main(argv=None) -> None:
         fh.write(build_submit_page(schema))
     with open(os.path.join(args.out, "leaderboard.json"), "w", encoding="utf-8") as fh:
         json.dump([r["summary"] for r in results], fh, indent=2)
+    if os.path.isfile(os.path.join(args.tables, "manifest.json")):
+        with open(os.path.join(args.tables, "manifest.json"), encoding="utf-8") as fh:
+            tmanifest = json.load(fh)
+        shutil.copytree(args.tables, os.path.join(args.out, "tables"))
+        tresults = load_table_results(args.results_tables) if os.path.isdir(args.results_tables) else []
+        if os.path.isdir(args.results_tables):
+            shutil.copytree(args.results_tables, os.path.join(args.out, "results_tables"))
+        tzip = f"contractradar-tables-v{tmanifest.get('generator_version', '0.1.0')}.zip"
+        make_tables_zip(args.tables, args.results_tables, os.path.join(args.out, "downloads", tzip))
+        with open(os.path.join(args.out, "tables.html"), "w", encoding="utf-8") as fh:
+            fh.write(build_tables_page(tmanifest, tresults, tzip))
     with open(os.path.join(args.out, "robots.txt"), "w", encoding="utf-8") as fh:
         fh.write("User-agent: *\nAllow: /\n")
     print(f"site written to {args.out}: {len(manifest['cases'])} cases, {len(results)} result sets")
