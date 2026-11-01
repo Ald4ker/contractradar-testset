@@ -1,0 +1,48 @@
+Contract details notice
+Procurement Act 2023, section 53 · Notice reference 002907-2026 · Published 05-Feb-2026
+
+Contract particulars
+ Authority                     Name                                                 Northam Vale County Council
+                               Address                                              County Hall, Vale Road, Northam, NV2 9TT
+                               Contact                                              commercial@northamvale.example.gov
+ Contract                      Title                                                Highways Reactive Maintenance and Winter Service
+                               Reference                                            NVCC/HW/0442
+                               Nature                                               Works
+                               CPV                                                  45233141, 45233139, 90620000
+                               Procedure                                            Open procedure
+                               Tenders received                                     5
+ Supplier                      Legal name                                           Cresswell Highways Ltd
+                               Registration                                         05583107
+                               Address                                              Depot Road, Northam Industrial Estate, Northam, NV4
+                                                                                    6HW
+ Dates                         Award decision                                       09-Jan-2026
+                               Entered into                                         20-Jan-2026
+                               Commencement                                         01-Mar-2026
+                               Initial expiry                                       28-Feb-2029
+                               Extension options                                    12 months (one option)
+                               Maximum term                                         48 months
+ Value                         Annual (ex VAT)                                      £2,133,333.33
+                               Estimated total (ex VAT)                             £6,400,000.00
+                               Basis                                                Schedule of rates with target cost
+ Terms                         Payment                                              30 days from a valid invoice
+                               KPIs                                                 3 set (see schedule)
+
+Key performance indicator schedule
+Measured and reported in accordance with section 52. Review dates are printed once for each reporting period.
+ Review date             Ref             Indicator                                                                             Target
+ 30-Jun-2026             KPI 1           Emergency call-outs attended within 2 hours                                           95%
+                         KPI 2           Pothole repairs completed within 5 working days                                       90%
+                         KPI 3           Winter gritting routes completed to schedule                                          100%
+ 30-Sep-2026             KPI 1           Emergency call-outs attended within 2 hours                                           95%
+                         KPI 2           Pothole repairs completed within 5 working days                                       90%
+                         KPI 3           Winter gritting routes completed to schedule                                          100%
+ 31-Dec-2026             KPI 1           Emergency call-outs attended within 2 hours                                           95%
+                         KPI 2           Pothole repairs completed within 5 working days                                       90%
+                         KPI 3           Winter gritting routes completed to schedule                                          100%
+
+
+
+
+Northam Vale County Council · Contract details notice                                                                                Page 1 of 1
+                                       SYNTHETIC TEST DOCUMENT - fictional authority and supplier - not a real notice
+

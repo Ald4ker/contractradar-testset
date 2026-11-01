@@ -17,7 +17,7 @@ import os
 import re
 import subprocess
 
-from .gen import FIELD_NAMES
+from .schema import FIELD_NAMES
 from .normalise import parse_date, parse_money, to_int
 
 NAME = "naive_text"

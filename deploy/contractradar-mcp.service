@@ -1,0 +1,40 @@
+# MCP + HTTP submission backend for the ContractRadar test set (crtest.server). Installed by deploy/setup-server.sh.
+[Unit]
+Description=ContractRadar test set: MCP server and submission API
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=contractradar
+Group=contractradar
+WorkingDirectory=/var/www/contractradar-testset
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=CR_SITE_URL=https://contractradar.opentransformers.online
+ExecStart=/opt/contractradar-mcp/venv/bin/python -m crtest.server --root /var/www/contractradar-testset --store /var/lib/contractradar/submissions --host 127.0.0.1 --port 8765
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/contractradar
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+ProtectHostname=yes
+RestrictSUIDSGID=yes
+RestrictNamespaces=yes
+RestrictRealtime=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+LockPersonality=yes
+SystemCallArchitectures=native
+CapabilityBoundingSet=
+MemoryMax=512M
+TasksMax=64
+
+[Install]
+WantedBy=multi-user.target

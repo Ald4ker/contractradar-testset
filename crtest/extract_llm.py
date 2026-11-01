@@ -27,7 +27,7 @@ import time
 import urllib.error
 import urllib.request
 
-from .gen import FIELD_NAMES, SCHEMA
+from .schema import FIELD_NAMES, SCHEMA
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 

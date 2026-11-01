@@ -11,7 +11,7 @@ Rules for cases: fictional authority and supplier (use `crtest/corpus.py`), the 
 
 ## Add an extractor result
 
-Write predictions in the `results/` format (see README), run the scorer, commit both `results/<name>.json` and `results/<name>.scored.json`. Say which model/endpoint and mode (text, OCR, vision) in `description`. Never commit API keys.
+Quickest: submit it to the community table over MCP, the HTTP API or `python -m crtest.submit --pred results/<name>.json` (see the README or https://contractradar.opentransformers.online/submit.html). For the curated table: write predictions in the `results/` format (see README), run the scorer, and open a pull request with both `results/<name>.json` and `results/<name>.scored.json`. Say which model/endpoint and mode (text, OCR, vision) in `description`. Never commit API keys.
 
 ## Add a real, hand-labelled document
 

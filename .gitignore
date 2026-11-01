@@ -5,3 +5,4 @@ collected/
 *.env
 .env*
 site/dist/
+submissions/

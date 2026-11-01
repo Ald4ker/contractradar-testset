@@ -25,6 +25,9 @@ should raise, and a scorer. Built for the [ContractRadar pilot](https://discord.
 | `crtest/pa2023.py` | Reference checks: thresholds (1 Jan 2026 figures), s.51 standstill, s.52 KPIs, s.53 notice timing, s.68 payment terms, s.74/75 modifications, Sch 8 para 3 cap, s.77. |
 | `crtest/collect.py` | Fetch real council notices (OCDS JSON) from Find a Tender and Contracts Finder with source URL and licence recorded per file. |
 | `crtest/site.py` | Builds the static site (`site/dist`). |
+| `crtest/server.py` | MCP server and HTTP API: serves the task and cases, scores and stores community submissions. |
+| `crtest/submit.py` | Posts a predictions file to the community leaderboard. |
+| `cases/CR-0NN/text.txt` | The `pdftotext -layout` text (tesseract OCR for the scan) that text-mode extractors and the API hand to models (`make text`). |
 | `results/` | Committed predictions and scores; the leaderboard is built from `*.scored.json`. |
 
 ## The 12 cases
@@ -76,6 +79,24 @@ Collect real notices (Open Government Licence) for a hand-labelled set:
 ```bash
 python -m crtest.collect --from 2026-09-01 --to 2026-09-07 --out collected --source both
 ```
+
+## Submit results: MCP server, HTTP API or CLI
+
+Anyone can run the task and publish a score without cloning the repo. Submissions are scored on arrival by the same
+scorer and shown in the community table on the site ([details](https://contractradar.opentransformers.online/submit.html)).
+
+* **Agents (MCP):** `https://contractradar.opentransformers.online/mcp` (Streamable HTTP, no sign-in). Tools: `get_task`,
+  `list_cases`, `get_case`, `submit_results`, `leaderboard`. Claude Code:
+  `claude mcp add --transport http contractradar https://contractradar.opentransformers.online/mcp`.
+* **Scripts (HTTP):** `GET /api/task`, `GET /api/cases`, `GET /api/cases/CR-001`, `POST /api/submit` (body in the
+  `results/` format), `GET /api/leaderboard?source=community`.
+* **CLI:** `python -m crtest.submit --pred results/my-pipeline.json --contact https://github.com/you`.
+
+Community rows are self-reported: the gold labels ship with the cases, so that table is an honour-system comparison of
+methods. Rows in the curated table come from pull requests that add `results/<name>.json` and its `.scored.json`.
+
+Run the backend yourself with `pip install -r requirements-server.txt && make serve`; `deploy/setup-server.sh` and
+`deploy/contractradar-mcp.service` are the production setup behind nginx.
 
 ## Scoring rules
 

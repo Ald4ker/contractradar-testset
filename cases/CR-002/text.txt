@@ -1,0 +1,76 @@
+Contract details notice
+Procurement Act 2023, section 53 · Notice reference 004213-2026 · Published 20 March 2026
+
+1. Contracting authority
+ Contracting authority                              Harrowdale District Council
+ Address                                            The Guildhall, Bridge Street, Harrowdale, HD4 7QP
+ Contact                                            contracts@harrowdale.example.gov
+
+2. Contract
+ Contract title                                     Household Waste and Recycling Collection Service
+ Contract reference                                 HDC-ENV-2025-014
+ Supplier                                           Ironside Waste Management Ltd
+ Supplier registration number                       07114290
+ Nature of the contract                             Services
+ CPV codes                                          90511000, 90512000, 90511200
+ Procedure                                          Competitive flexible procedure
+ Tenders received                                   3
+ Date of award                                      24 February 2026
+ Date contract entered into                         3 March 2026
+ Contract start date                                6 April 2026
+ Contract end date                                  5 April 2033
+ Extension options                                  24 months
+ Maximum term (including options)                   108 months
+ Total contract value (excluding VAT)               £3,950,000.00 per annum; £27,650,000.00 over the 84-month initial term
+ Payment terms                                      30 days from receipt of a valid invoice
+
+3. Key performance indicators
+The following key performance indicators have been set under section 52 of the Act:
+KPI 1: Missed collections per 100,000
+KPI 2: Recycling rate (%)
+KPI 3: Customer satisfaction score (quarterly survey)
+
+4. Schedule of priced service elements (annual, year 1 prices, excluding VAT)
+The annual price is payable in twelve equal monthly instalments and is subject to indexation from year 2 in
+accordance with Schedule 6 of the contract.
+
+ Ref           Service element                                                                                        Annual price
+ 1.1           Residual waste collection (fortnightly)                                                                £1,650,000.00
+ 1.2           Dry recycling collection (fortnightly)                                                                 £740,000.00
+ 1.3           Food waste collection (weekly)                                                                         £395,000.00
+ 1.4           Garden waste subscription service                                                                      £212,500.00
+ 1.5           Bulky waste collection                                                                                 £61,200.00
+ 1.6           Clinical waste collection                                                                              £18,900.00
+ 1.7           Assisted collections                                                                                   £44,300.00
+ 1.8           Communal bin servicing (flats)                                                                         £96,750.00
+ 1.9           Bring-site servicing                                                                                   £27,400.00
+ 1.10          Container delivery and replacement                                                                     £38,600.00
+
+
+Harrowdale District Council · Contract details notice                                                                                 Page 1 of 2
+                                     SYNTHETIC TEST DOCUMENT - fictional authority and supplier - not a real notice
+ Ref           Service element                                                                                        Annual price
+ 2.1           Depot and fleet (incl. 14 RCVs)                                                                        £402,000.00
+ 2.2           Fleet maintenance and MOT                                                                              £88,000.00
+ 2.3           Fuel (indexed, baseline)                                                                               £131,000.00
+ 2.4           Telematics and in-cab devices                                                                          £9,850.00
+ 3.1           Contract management and reporting                                                                      £52,000.00
+ 3.2           Customer contact handling                                                                              £21,000.00
+ 3.3           Education and engagement programme                                                                     £12,000.00
+ 3.4           Social value commitments                                                                               £0.00
+ 4.1           Christmas and bank-holiday catch-up                                                                    £16,500.00
+ 4.2           Severe weather contingency                                                                             £11,000.00
+ 4.3           Missed collection rectification                                                                        £0.00
+ 4.4           Street-side bin cleansing (optional)                                                                   £24,000.00
+               Total annual price (year 1)                                                                            £3,950,000.00
+The total contract value of £27,650,000.00 is the estimated whole-life value over the initial term of 84 months, excluding extension options
+and VAT.
+
+A copy of the contract will be published in accordance with section 53(3) where the estimated value exceeds £5 million.
+
+
+
+
+Harrowdale District Council · Contract details notice                                                                                 Page 2 of 2
+                                     SYNTHETIC TEST DOCUMENT - fictional authority and supplier - not a real notice
+

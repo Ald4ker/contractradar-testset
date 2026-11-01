@@ -29,6 +29,8 @@ with open(os.path.join(HERE, "..", "schema", "fields.json"), encoding="utf-8") a
 FIELD_TYPES = {f["name"]: f["type"] for f in SCHEMA["fields"]}
 CRITICAL = set(SCHEMA["critical_fields"])
 HIGH_FLAGS = {f["id"] for f in SCHEMA["flags"] if f["severity"] == "high"}
+# Bump when scoring semantics change: crtest.server re-scores stored community submissions when it changes.
+SCORER_VERSION = "0.1.1"
 
 
 def compare(name: str, gold, pred) -> tuple[str, str]:
@@ -83,6 +85,10 @@ def compare(name: str, gold, pred) -> tuple[str, str]:
             if gl["awarded"]:
                 if text_similarity(pl.get("supplier_name") or "", gl["supplier_name"]) < 0.92:
                     return "wrong", f"lot {n} supplier {pl.get('supplier_name')!r}"
+                if gl.get("value_gbp") is None:   # an awarded lot whose value is not printed
+                    if pl.get("value_gbp") not in (None, ""):
+                        return "wrong", f"lot {n} value {pl.get('value_gbp')!r} where none is printed"
+                    continue
                 pv, gv = parse_money(pl.get("value_gbp")), float(gl["value_gbp"])
                 if pv is None or abs(pv - gv) > max(1.0, 0.001 * gv):
                     return "wrong", f"lot {n} value {pl.get('value_gbp')!r}"
@@ -93,10 +99,15 @@ def compare(name: str, gold, pred) -> tuple[str, str]:
 
 
 def score(cases_dir: str, pred_path: str) -> dict:
-    with open(os.path.join(cases_dir, "manifest.json"), encoding="utf-8") as fh:
-        manifest = json.load(fh)
     with open(pred_path, encoding="utf-8") as fh:
         pred = json.load(fh)
+    return score_predictions(cases_dir, pred, default_name=os.path.basename(pred_path))
+
+
+def score_predictions(cases_dir: str, pred: dict, default_name: str = "unnamed") -> dict:
+    """Score an in-memory predictions object (the results/ format); score() is the file wrapper."""
+    with open(os.path.join(cases_dir, "manifest.json"), encoding="utf-8") as fh:
+        manifest = json.load(fh)
     per_case = {}
     field_tot = defaultdict(lambda: [0, 0])  # name -> [correct, counted]
     hazard_tot = defaultdict(lambda: [0, 0])
@@ -105,13 +116,20 @@ def score(cases_dir: str, pred_path: str) -> dict:
     for c in manifest["cases"]:
         with open(os.path.join(cases_dir, c["gold"]), encoding="utf-8") as fh:
             gold = json.load(fh)
-        p = pred.get("cases", {}).get(c["case_id"], {})
-        pf = p.get("fields", {}) or {}
+        pred_cases = pred.get("cases") if isinstance(pred.get("cases"), dict) else {}
+        p = pred_cases.get(c["case_id"]) if isinstance(pred_cases.get(c["case_id"]), dict) else {}
+        pf = p.get("fields") if isinstance(p.get("fields"), dict) else {}
         verdicts = {}
         correct = counted = 0
         crit_ok = True
         for name, gv in gold["fields"].items():
-            v, note = compare(name, gv, pf.get(name))
+            if name not in FIELD_TYPES:
+                raise KeyError(f"{c['case_id']}: gold field {name!r} is not in schema/fields.json")
+            try:
+                v, note = compare(name, gv, pf.get(name))
+            except Exception as exc:
+                compare(name, gv, gv)   # raises if the gold itself cannot be compared: a gold or scorer bug, not the submitter's
+                v, note = "wrong", f"could not compare the predicted value ({type(exc).__name__})"
             verdicts[name] = {"verdict": v, "note": note, "gold": gv, "pred": pf.get(name)}
             if v == "skip":
                 continue
@@ -129,8 +147,8 @@ def score(cases_dir: str, pred_path: str) -> dict:
         passes += 1 if crit_ok else 0
         exp_flags = {x["id"] for x in gold["expected_flags"] if x["id"] in HIGH_FLAGS}
         got_flags = None
-        if "flags" in p and p["flags"] is not None:
-            got_flags = {x["id"] if isinstance(x, dict) else str(x) for x in p["flags"]} & HIGH_FLAGS
+        if isinstance(p.get("flags"), list):
+            got_flags = {str(x.get("id")) if isinstance(x, dict) else str(x) for x in p["flags"]} & HIGH_FLAGS
             flag_stats["cases_with_flag_output"] += 1
             flag_stats["tp"] += len(exp_flags & got_flags)
             flag_stats["fp"] += len(got_flags - exp_flags)
@@ -147,7 +165,7 @@ def score(cases_dir: str, pred_path: str) -> dict:
     prec = tp / (tp + fp) if tp + fp else None
     rec = tp / (tp + fn) if tp + fn else None
     summary = {
-        "extractor": pred.get("extractor", os.path.basename(pred_path)),
+        "extractor": pred.get("extractor", default_name),
         "version": pred.get("version"),
         "description": pred.get("description"),
         "run_at": pred.get("run_at"),

@@ -1,11 +1,14 @@
 PY ?= python3
 
-.PHONY: cases naive score site all test clean
+.PHONY: cases text naive score site all test serve clean
 
-all: cases naive site
+all: cases text naive site
 
 cases:
 	$(PY) -m crtest.gen --out cases
+
+text:
+	$(PY) -m crtest.dump_text --cases cases
 
 naive:
 	$(PY) -m crtest.extract_naive --cases cases --out results/naive_text.json
@@ -19,6 +22,9 @@ site:
 
 test:
 	$(PY) -m pytest -q tests
+
+serve:
+	$(PY) -m crtest.server --root . --store submissions --port 8765
 
 clean:
 	rm -rf site/dist

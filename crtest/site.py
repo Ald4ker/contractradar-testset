@@ -17,6 +17,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO_URL = "https://github.com/Marxist-Leninist/contractradar-testset"
 PILOT_THREAD = "https://discord.com/channels/1558912731019608085/1565349622535299214/threads/1565685928394231930"
 SITE_TITLE = "ContractRadar test set"
+SITE_URL = "https://contractradar.opentransformers.online"
+SUBMIT_LIMIT_PER_HOUR = 12   # crtest.server.SUBMIT_PER_IP_PER_HOUR (kept here so the site builds without the server deps)
 
 
 def e(s) -> str:
@@ -53,6 +55,7 @@ def layout(title: str, body: str, depth: int = 0, extra_head: str = "") -> str:
   <nav>
     <a href="{root}index.html#cases">Cases</a>
     <a href="{root}index.html#leaderboard">Leaderboard</a>
+    <a href="{root}submit.html">Submit results</a>
     <a href="{root}schema.html">Schema &amp; rules</a>
     <a href="{root}index.html#contribute">Contribute</a>
     <a href="{REPO_URL}">GitHub</a>
@@ -202,6 +205,7 @@ the compliance flags a Procurement Act 2023 rule engine should raise, and a scor
   <a class="btn" href="downloads/{e(zip_name)}">Download the test set (zip)</a>
   <a class="btn alt" href="{REPO_URL}">Code on GitHub</a>
   <a class="btn alt" href="schema.html">Field schema &amp; rules</a>
+  <a class="btn alt" href="submit.html">Submit results (MCP / API)</a>
 </div>
 <div class="stats">
   <div class="stat"><b>{len(manifest['cases'])}</b><span>synthetic cases (PDF + gold)</span></div>
@@ -233,7 +237,10 @@ python -m crtest.score --pred results/my_extractor.json
 # OpenAI-compatible endpoint (no keys in the repo)
 export LLM_BASE_URL=https://api.deepseek.com/v1 LLM_API_KEY=... LLM_MODEL=deepseek-chat
 python -m crtest.extract_llm --out results/deepseek.json --vision --ocr
-python -m crtest.score --pred results/deepseek.json</code></pre>
+python -m crtest.score --pred results/deepseek.json
+
+# publish it on the community leaderboard
+python -m crtest.submit --pred results/deepseek.json</code></pre>
 </div>
 </div>
 
@@ -242,6 +249,12 @@ python -m crtest.score --pred results/deepseek.json</code></pre>
 "Critical-field pass" means authority, supplier, title, value and dates (and the modification fields for change notices) were all correct.
 High-severity flag precision/recall is only shown for extractors that output flags.</p>
 {leaderboard_table(results)}
+
+<h3 id="community">Community submissions</h3>
+<p class="muted small">Submitted through the <a href="submit.html">MCP server, HTTP API or <code>crtest.submit</code></a> and scored on arrival by the same scorer.
+They are self-reported: the gold labels ship with the cases, so read this table as an honour-system comparison of methods.</p>
+<div id="community-board"><p class="muted small">Loading community submissions&hellip;</p></div>
+<script src="static/community.js" defer></script>
 
 <h2 id="cases">Cases</h2>
 <div class="grid">
@@ -255,7 +268,7 @@ High-severity flag precision/recall is only shown for extractors that output fla
 <div class="two">
 <div>
 <p><b>Add a case.</b> Add a spec to <code>crtest/gen.py</code> (gold fields + layout style + hazards) and run <code>make cases</code>. The PDF and gold labels are generated from the same spec, so they cannot disagree. Good targets from the pilot discussion: tables without set boundaries, grouped ID rows such as dates, and page boundaries - we have one of each, more variants welcome.</p>
-<p><b>Score an extractor.</b> Write predictions as <code>{{"extractor": "name", "cases": {{"CR-001": {{"fields": {{...}}, "flags": [...]}}}}}}</code> and run the scorer. Commit the predictions and the <code>.scored.json</code> to <code>results/</code> and the leaderboard picks them up.</p>
+<p><b>Score an extractor.</b> Write predictions as <code>{{"extractor": "name", "cases": {{"CR-001": {{"fields": {{...}}, "flags": [...]}}}}}}</code> and run the scorer. To publish it, <a href="submit.html">submit it</a> over MCP, the HTTP API or <code>python -m crtest.submit</code> (it appears in the community table straight away), or open a pull request adding the predictions and the <code>.scored.json</code> to <code>results/</code> for the curated table.</p>
 </div>
 <div>
 <p><b>Label real documents.</b> Use <code>crtest.collect</code> to fetch council notices, copy the OCDS values into a <code>gold.json</code> with the same field names, and attach the published document. Keep the <code>_provenance</code> block: the pilot's data rules require source and licence for everything uploaded.</p>
@@ -338,6 +351,152 @@ def build_schema_page(schema: dict) -> str:
     return layout("Schema", body)
 
 
+COMMUNITY_JS = r"""(function () {
+  // Community leaderboard rows from the live API. Every value is set with textContent, never as HTML.
+  var box = document.getElementById("community-board");
+  if (!box) return;
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined && text !== null) e.textContent = text;
+    return e;
+  }
+  function link(href, text) {
+    var a = el("a", null, text);
+    a.href = href;
+    a.rel = "nofollow noopener";
+    return a;
+  }
+  function pct(x) { return typeof x === "number" ? (x * 100).toFixed(1) + "%" : "-"; }
+  function offline() {
+    box.textContent = "";
+    var p = el("p", "muted small", "Community submissions are served by the live site: ");
+    p.appendChild(link("https://contractradar.opentransformers.online/index.html#community", "contractradar.opentransformers.online"));
+    box.appendChild(p);
+  }
+  if (!window.fetch || location.protocol === "file:") { offline(); return; }
+  fetch("/api/leaderboard?source=community&limit=500", {headers: {"Accept": "application/json"}})
+    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (data) {
+      var rows = (data && data.rows) || [];
+      box.textContent = "";
+      if (!rows.length) {
+        var p = el("p", "muted small", "No community submissions yet. ");
+        p.appendChild(link("submit.html", "Be the first."));
+        box.appendChild(p);
+        return;
+      }
+      var table = el("table"), thead = el("thead"), head = el("tr"), tbody = el("tbody");
+      [["#", "num"], ["Extractor", null], ["Field accuracy", "num"], ["Critical-field pass", "num"], ["High-severity flags", null], ["Files", null]]
+        .forEach(function (h) { head.appendChild(el("th", h[1], h[0])); });
+      thead.appendChild(head);
+      table.appendChild(thead);
+      rows.forEach(function (r, i) {
+        var tr = el("tr");
+        tr.appendChild(el("td", "num", String(i + 1)));
+        var who = el("td");
+        who.appendChild(el("b", null, r.extractor || "?"));
+        if (r.description) { who.appendChild(el("br")); who.appendChild(el("span", "muted small", r.description)); }
+        if (r.contact) {
+          who.appendChild(el("br"));
+          var c = el("span", "muted small");
+          if (/^https?:\/\/[^\s]+$/i.test(r.contact)) c.appendChild(link(r.contact, r.contact)); else c.textContent = r.contact;
+          who.appendChild(c);
+        }
+        tr.appendChild(who);
+        tr.appendChild(el("td", "num", pct(r.field_accuracy)));
+        var passed = (typeof r.cases_passed === "number") ? r.cases_passed + "/" + r.cases : "-";
+        if (typeof r.cases_submitted === "number" && r.cases_submitted !== r.cases) passed += " (" + r.cases_submitted + " submitted)";
+        tr.appendChild(el("td", "num", passed));
+        var fl = r.flags || {};
+        tr.appendChild(el("td", fl.cases_with_flag_output ? null : "muted",
+          (fl.cases_with_flag_output && typeof fl.precision === "number" && typeof fl.recall === "number")
+            ? "P " + fl.precision.toFixed(2) + " / R " + fl.recall.toFixed(2) : "no flags output"));
+        var files = el("td", "small");
+        if (r.links) {
+          files.appendChild(link(r.links.scored, "scored json"));
+          files.appendChild(document.createTextNode(" · "));
+          files.appendChild(link(r.links.predictions, "predictions"));
+        }
+        files.appendChild(el("br"));
+        files.appendChild(el("span", "muted", (r.run_at || "").slice(0, 10)));
+        tr.appendChild(files);
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      box.appendChild(table);
+      if (typeof data.total === "number" && data.total > rows.length) {
+        var more = el("p", "muted small", "Showing the top " + rows.length + " of " + data.total + ". The rest: ");
+        more.appendChild(link("/api/leaderboard?source=community&limit=500&offset=" + rows.length, "next page (JSON)"));
+        box.appendChild(more);
+      }
+    })
+    .catch(offline);
+})();
+"""
+
+
+def build_submit_page(schema: dict) -> str:
+    mcp_url = f"{SITE_URL}/mcp"
+    api = f"{SITE_URL}/api"
+    body = f"""
+<h1>Submit results</h1>
+<p class="lede">Run the extraction task with any model, pipeline or agent and put the score on the leaderboard in one call.
+Submissions are scored on arrival by the same scorer as the curated rows and appear in the
+<a href="index.html#community">community table</a> straight away.</p>
+
+<h2 id="mcp">1. Agents: the MCP server</h2>
+<p>Endpoint (Streamable HTTP, no sign-in): <code>{e(mcp_url)}</code></p>
+<table><thead><tr><th>Tool</th><th>What it does</th></tr></thead><tbody>
+<tr><td><code>get_task</code></td><td>Extraction instructions, the {len(schema['fields'])} field names, flag rule ids, output format and scoring rules.</td></tr>
+<tr><td><code>list_cases</code></td><td>The cases with PDF, page-image and text URLs.</td></tr>
+<tr><td><code>get_case</code></td><td>One case with its document text (<code>pdftotext -layout</code>, OCR for the scanned case).</td></tr>
+<tr><td><code>submit_results</code></td><td>Scores predictions for every case and publishes them; returns the score and rank.</td></tr>
+<tr><td><code>leaderboard</code></td><td>Current standings, curated and community.</td></tr>
+</tbody></table>
+<pre><code># Claude Code
+claude mcp add --transport http contractradar {e(mcp_url)}
+
+# Claude on the web or desktop: Settings &gt; Connectors &gt; Add custom connector, paste the URL.
+# Other clients that take a JSON config:
+{{"mcpServers": {{"contractradar": {{"type": "http", "url": "{e(mcp_url)}"}}}}}}</code></pre>
+<p>Then ask your agent something like:</p>
+<pre><code>Use the contractradar tools. Call get_task and follow its instructions exactly. For every case from
+list_cases, call get_case and extract all fields and flags from the document text: null when the document
+does not state a value, never guess, and do not look up the gold labels. Then call submit_results once with
+all the cases, extractor set to "&lt;your model&gt; agent via MCP" and a one-line description of how you worked.</code></pre>
+
+<h2 id="http">2. Scripts: the HTTP API</h2>
+<pre><code>curl -s {e(api)}/task                  # instructions, field names, flag ids, output format
+curl -s {e(api)}/cases                 # case index
+curl -s {e(api)}/cases/CR-001          # one case with its text
+curl -s -X POST -H 'Content-Type: application/json' \\
+     --data @results/my_extractor.json {e(api)}/submit
+curl -s '{e(api)}/leaderboard?source=community'</code></pre>
+<p class="small">The submit body is the <code>results/</code> format: <code>{{"extractor": "...", "description": "...", "contact": "...",
+"cases": {{"CR-001": {{"fields": {{...}}, "flags": [...]}}}}}}</code>. Other keys are ignored.</p>
+
+<h2 id="cli">3. From a clone of the repo</h2>
+<pre><code>export LLM_BASE_URL=... LLM_API_KEY=... LLM_MODEL=...
+python -m crtest.extract_llm --out results/my_model.json --ocr
+python -m crtest.score --pred results/my_model.json        # local score, same scorer
+python -m crtest.submit --pred results/my_model.json --contact https://github.com/you</code></pre>
+<p>For a row in the curated table instead, open a pull request adding <code>results/&lt;name&gt;.json</code> and its
+<code>.scored.json</code>, with the model, endpoint and mode (text, OCR, vision) in <code>description</code>.</p>
+
+<h2 id="rules">Rules</h2>
+<ul>
+<li><b>Honour system.</b> The gold labels ship with the cases. Don't read them while extracting: a perfect score copied from the gold tells nobody anything.</li>
+<li><b>One submission covers every case.</b> Missing cases count as missed fields. Field names and flag ids outside the schema are ignored and listed in the reply, so check it.</li>
+<li><b>Limits.</b> 256 KB per request and {SUBMIT_LIMIT_PER_HOUR} new submissions per hour from one address. Hosted MCP clients such as claude.ai connectors share addresses between users and get a higher shared limit; if you still hit it, submit from your own machine with <code>crtest.submit</code>. Identical predictions sent again return the earlier result, re-scored if the gold has changed since.</li>
+<li><b>Scores stay current.</b> If a gold label is corrected or a case is added, every stored submission is re-scored against the new gold.</li>
+<li><b>What is published.</b> Your predictions, the name, description and contact you give, and the time. The backend keeps no record of who sent a submission; the web server keeps ordinary access logs. Keep secrets and personal data out of the description.</li>
+<li><b>Retention and removal.</b> Nothing is deleted automatically. The community table holds up to 2,000 submissions; when it is full, new ones are refused until spam is removed. To have a row removed, open an issue on <a href="{REPO_URL}/issues">GitHub</a> with the submission id.</li>
+</ul>
+"""
+    return layout("Submit results", body)
+
+
 def make_zip(cases_dir: str, results_dir: str, schema_path: str, out_path: str) -> None:
     with zipfile.ZipFile(out_path, "w", zipfile.ZIP_DEFLATED) as z:
         for root, _dirs, files in os.walk(cases_dir):
@@ -378,6 +537,8 @@ def main(argv=None) -> None:
     os.makedirs(os.path.join(args.out, "downloads"))
     with open(os.path.join(args.out, "static", "style.css"), "w", encoding="utf-8") as fh:
         fh.write(CSS)
+    with open(os.path.join(args.out, "static", "community.js"), "w", encoding="utf-8") as fh:
+        fh.write(COMMUNITY_JS)
     for c in manifest["cases"]:
         src = os.path.join(args.cases, c["case_id"])
         shutil.copytree(src, os.path.join(args.out, "cases", c["case_id"]))
@@ -395,6 +556,8 @@ def main(argv=None) -> None:
         fh.write(build_index(args.cases, manifest, results, schema, hazards, zip_name))
     with open(os.path.join(args.out, "schema.html"), "w", encoding="utf-8") as fh:
         fh.write(build_schema_page(schema))
+    with open(os.path.join(args.out, "submit.html"), "w", encoding="utf-8") as fh:
+        fh.write(build_submit_page(schema))
     with open(os.path.join(args.out, "leaderboard.json"), "w", encoding="utf-8") as fh:
         json.dump([r["summary"] for r in results], fh, indent=2)
     with open(os.path.join(args.out, "robots.txt"), "w", encoding="utf-8") as fh:

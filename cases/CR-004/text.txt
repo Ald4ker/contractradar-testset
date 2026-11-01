@@ -1,0 +1,54 @@
+Contract change notice
+Procurement Act 2023, section 75 · Notice reference 006540-2026 · Published 04/05/2026
+
+1. Contracting authority
+ Contracting authority                            Stonebridge Metropolitan Borough Council
+ Address                                          Town Hall, Victoria Square, Stonebridge, SB1 1AA
+ Contact                                          procurement@stonebridge.example.gov
+
+2. Contract being modified
+ Contract title                                   Facilities Management for Corporate Buildings
+ Contract reference                               SMBC/FM/2025/003
+ Supplier                                         Alderman Facilities Group Ltd
+ Supplier registration number                     09418832
+ Nature of the contract                           Services
+ CPV codes                                        79993100, 50700000, 90911200
+ Procedure used at award                          Competitive flexible procedure
+ Date of award decision                           14/11/2025
+ Date contract entered into                       20/03/2026
+ Contract start date                              01/04/2026
+ Contract end date before                         31/03/2029
+ modification
+ Extension options at award                       None
+ Maximum term at award (including                 36 months
+ options)
+ Contract value before modification               £1,800,000.00
+ (ex VAT)
+
+3. Modification
+ Modification number                              1
+ Date modification takes effect                   11/05/2026
+ Description of the modification                  Addition of three annexe buildings to the cleaning and M&E maintenance scope
+                                                  following the transfer of the Riverside offices to the Council, and a 12-month
+                                                  extension of the term to align with the corporate accommodation strategy.
+ Ground relied on                                 Section 74(1)(c) (below-threshold modification)
+ Change in contract value (ex VAT)                +£260,000.00
+ Contract value after modification (ex            £2,060,000.00
+ VAT)
+ Contract end date after modification             31/03/2030
+ Change in term                                   +12 months
+ Voluntary standstill period                      Yes - eight working days from publication of this notice
+
+4. Statement
+The contracting authority intends to modify the contract as described above. This contract change notice is published
+before the modification is made, in accordance with section 75(1) of the Procurement Act 2023.
+The authority considers the modification to be a below-threshold modification under section 74(1)(c): it does not
+materially change the scope of the contract.
+
+Authorised by M. Reilly, Strategic Commissioning Manager.
+
+
+
+Stonebridge Metropolitan Borough Council · Contract change notice                                                          Page 1 of 1
+                                   SYNTHETIC TEST DOCUMENT - fictional authority and supplier - not a real notice
+
