@@ -1,0 +1,24 @@
+{
+  "case_id": "TB-001",
+  "rows_expected": 11,
+  "rows_predicted": 11,
+  "rows_exact": 11,
+  "rows_missing": 0,
+  "rows_extra": 0,
+  "cell_accuracy": 1.0,
+  "cell_recall": 1.0,
+  "table_exact": true,
+  "per_column": {
+    "date": 1.0,
+    "reference": 1.0,
+    "details": 1.0,
+    "debit_gbp": 1.0,
+    "credit_gbp": 1.0,
+    "balance_gbp": 1.0
+  },
+  "empty_columns": [],
+  "missing_rows": [],
+  "extra_rows": [],
+  "cell_errors": [],
+  "column_mapping": "rows"
+}

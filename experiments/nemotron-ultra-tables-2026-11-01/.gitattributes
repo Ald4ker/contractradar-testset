@@ -1,0 +1,5 @@
+# Preserve the bytes of historical request, response and result evidence.
+TB-*/* -text whitespace=cr-at-eol
+# The raw HTTP bodies include OpenRouter's whitespace keepalive padding.
+TB-*/provider-response.json whitespace=-blank-at-eol,cr-at-eol
+TB-*/document.pdf binary

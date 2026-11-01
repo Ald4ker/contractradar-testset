@@ -1,0 +1,111 @@
+{
+  "case": "TB-001",
+  "status": "completed",
+  "repository": "https://github.com/Marxist-Leninist/contractradar-testset",
+  "source_commit": "9fc81b1dee25661e3ae2e6ef1e608d63ba9ab22f",
+  "gateway": "OpenRouter",
+  "base_url": "https://openrouter.ai/api/v1",
+  "requested_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "response_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "provider": "Nvidia",
+  "response_id": "gen-1793569835-v9rmpDCBGfwAFZ2oNQ9f",
+  "mode": "text, guided v2",
+  "prompt_rules_version": 2,
+  "temperature": 0,
+  "max_tokens": 4000,
+  "timeout_seconds": 180,
+  "maximum_attempts": 5,
+  "attempts_used": 1,
+  "retries": 0,
+  "started_at_utc": "2026-11-01T21:50:33.611637+00:00",
+  "finished_at_utc": "2026-11-01T21:52:09.692882+00:00",
+  "request_started_at_utc": "2026-11-01T21:50:35.161781+00:00",
+  "request_seconds": 94.466,
+  "extractor_seconds": 95.037,
+  "total_wall_seconds": 96.081,
+  "usage": {
+    "prompt_tokens": 1199,
+    "completion_tokens": 3277,
+    "total_tokens": 4476,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1576,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "python_version": "3.13.7",
+  "operating_system": "Windows 10, build 19045",
+  "poppler_version": "26.09.0",
+  "source_sha256": {
+    "tables/TB-001/document.pdf": "b283662a3a636a277d7c62e4de54d51b0311a2adc83a7d829047b1cbaf084421",
+    "tables/TB-001/expected.csv": "a3e81c5e35f1ae2b315be527752acc374dd639834a7b5e745cf7f6dd8bc13b18",
+    "tables/TB-001/spec.json": "dfaeefcfb20a5c0c736d2c1a69564a9b24e6e0c2adced5a7e2f70f3daee9934a"
+  },
+  "source_text_sha256_lf": {
+    "tables/TB-001/expected.csv": "6141235a4e00eba1a9bb35b22608ddf25eb449d568c5f7222609ea3a9a40b121",
+    "tables/TB-001/spec.json": "e00c4cfe155ce87f1e84e802dfa79a37f6610c42cd882f49e5d53be9cd07297f"
+  },
+  "protected_code_sha256": {
+    "crtest/score_tables.py": "05cb03976120cd7c25239cca3485086c0fd0e0fd8f1fed8c7a1b603c92c4ba1f",
+    "crtest/score.py": "25056277d85d792e9b64c43d1e4a94e7080cd75391a8cf2fc0be325eb40147f2",
+    "crtest/extract_tables_llm.py": "aa288884994c39c8718be0f4392caaa606635e8aa358136330932cdf012bf3e2",
+    "crtest/extract_llm.py": "043b51c903bf95ee83a7dd08fbace5a02318a309ac74d96b1a036d04d9b925f9",
+    "crtest/pa2023.py": "03ecba3f632a00b08c2b46d63493a2118c68924bedddbcb67d5a9d2a4ada8b7a"
+  },
+  "system_prompt_sha256": "de25f97aced82cb2701a0c3815ed484717df312a1d08eca40a6faa2401ae0ed1",
+  "score": {
+    "case_id": "TB-001",
+    "rows_expected": 11,
+    "rows_predicted": 11,
+    "rows_exact": 11,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cell_accuracy": 1.0,
+    "cell_recall": 1.0,
+    "table_exact": true,
+    "per_column": {
+      "date": 1.0,
+      "reference": 1.0,
+      "details": 1.0,
+      "debit_gbp": 1.0,
+      "credit_gbp": 1.0,
+      "balance_gbp": 1.0
+    },
+    "empty_columns": [],
+    "missing_rows": [],
+    "extra_rows": [],
+    "cell_errors": [],
+    "column_mapping": "rows"
+  },
+  "expected_cells": 66,
+  "statement": "Only source PDF text and generic column definitions were sent. Gold and diagnostic material were not included. Output rows were not corrected.",
+  "historical_capture_driver": "capture.py is the exact driver used; its original workspace layout is described in the README.",
+  "sha256": {
+    "TB-001/actual_output.csv": "48d3b2beffb6a1ac641f3107226ad64aec606db846d731938e111c81b30ee541",
+    "TB-001/actual_output.json": "f2b1c78474f8460b7416551dfe02845640dcf66b75cda50084ac9f4661ac0b99",
+    "TB-001/actual_reply.txt": "46c222798dbd6e9caac37a76bb89d7d3c1df11626d381a0095f39010d0ce93b8",
+    "TB-001/capture.py": "619ecf13cf92b3beeb910d59e1fdbce2ad58550a3c0d046fdf34dd6a25b9b028",
+    "TB-001/model-catalogue-entry.json": "659683f3bc3eed5ddc904726de5dc30d6a4cb9ba4e8902fa8e12db01c5d19291",
+    "TB-001/provider-response.json": "bd1c2a4a2715204e1e7bd9709b3094efebb87a897237a706baaada0981672496",
+    "TB-001/request.json": "3ade32de136a71504a39a022c53cf8aa915433916c4b149ed6cbe017f5d4e331",
+    "TB-001/score-all-tables.json": "bbf1c05cb2090129925149ceee29a7b079b2f596f5fed91ad6079a04a3d5dfea",
+    "TB-001/score.json": "b89e808c8e5c02cab0c08fbcb968087e2a6758d78eaa15fd7529d7c03285d239",
+    "TB-001/usage.json": "d4ae6c587973dd2bf24efaf26795381b7c212a25fdcf94a9c866a6766ac3d9ec",
+    "TB-001/document.pdf": "b283662a3a636a277d7c62e4de54d51b0311a2adc83a7d829047b1cbaf084421",
+    "TB-001/expected.csv": "a3e81c5e35f1ae2b315be527752acc374dd639834a7b5e745cf7f6dd8bc13b18"
+  }
+}

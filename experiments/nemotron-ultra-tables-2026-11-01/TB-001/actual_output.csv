@@ -1,0 +1,12 @@
+date,reference,details,debit_gbp,credit_gbp,balance_gbp
+2026-10-01,,Balance brought forward,,,12480.0
+2026-10-02,INV-40871,"Planned preventative maintenance, Civic Centre passenger lifts: quarterly service visit and LOLER thorough examination certificate",3240.0,,15720.0
+2026-10-06,PAY-77812,"BACS payment received, thank you",,12480.0,3240.0
+2026-10-09,INV-40902,"Reactive repair: replacement circulating pump on boiler 2, Market Walk depot",1186.5,,4426.5
+2026-10-12,CN-2207,Credit note against INV-40755 (duplicate out-of-hours call-out charge),,245.0,4181.5
+2026-10-15,INV-40933,"Car park lighting: replace 6 failed LED lanterns, columns 4 to 9",812.4,,4993.9
+2026-10-19,INV-40951,"Planned preventative maintenance, Riverside offices: fire alarm and emergency lighting tests",2460.0,,7453.9
+2026-10-21,ADJ-118,Service credit: KPI 3 (emergency response within 2 hours) missed in Q2,,1600.0,5853.9
+2026-10-23,PAY-78044,BACS payment received,,6000.0,-146.1
+2026-10-27,INV-40988,"Emergency drainage works, Riverside car park: out of hours, 2 operatives for 6 hours, jetting and CCTV survey",2915.25,,2769.15
+2026-10-30,INV-41002,Consumables and parts as per attached schedule,96.8,,2865.95

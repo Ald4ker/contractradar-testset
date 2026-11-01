@@ -1,0 +1,92 @@
+{
+  "rows": [
+    {
+      "date": "2026-10-01",
+      "reference": null,
+      "details": "Balance brought forward",
+      "debit_gbp": null,
+      "credit_gbp": null,
+      "balance_gbp": 12480.00
+    },
+    {
+      "date": "2026-10-02",
+      "reference": "INV-40871",
+      "details": "Planned preventative maintenance, Civic Centre passenger lifts: quarterly service visit and LOLER thorough examination certificate",
+      "debit_gbp": 3240.00,
+      "credit_gbp": null,
+      "balance_gbp": 15720.00
+    },
+    {
+      "date": "2026-10-06",
+      "reference": "PAY-77812",
+      "details": "BACS payment received, thank you",
+      "debit_gbp": null,
+      "credit_gbp": 12480.00,
+      "balance_gbp": 3240.00
+    },
+    {
+      "date": "2026-10-09",
+      "reference": "INV-40902",
+      "details": "Reactive repair: replacement circulating pump on boiler 2, Market Walk depot",
+      "debit_gbp": 1186.50,
+      "credit_gbp": null,
+      "balance_gbp": 4426.50
+    },
+    {
+      "date": "2026-10-12",
+      "reference": "CN-2207",
+      "details": "Credit note against INV-40755 (duplicate out-of-hours call-out charge)",
+      "debit_gbp": null,
+      "credit_gbp": 245.00,
+      "balance_gbp": 4181.50
+    },
+    {
+      "date": "2026-10-15",
+      "reference": "INV-40933",
+      "details": "Car park lighting: replace 6 failed LED lanterns, columns 4 to 9",
+      "debit_gbp": 812.40,
+      "credit_gbp": null,
+      "balance_gbp": 4993.90
+    },
+    {
+      "date": "2026-10-19",
+      "reference": "INV-40951",
+      "details": "Planned preventative maintenance, Riverside offices: fire alarm and emergency lighting tests",
+      "debit_gbp": 2460.00,
+      "credit_gbp": null,
+      "balance_gbp": 7453.90
+    },
+    {
+      "date": "2026-10-21",
+      "reference": "ADJ-118",
+      "details": "Service credit: KPI 3 (emergency response within 2 hours) missed in Q2",
+      "debit_gbp": null,
+      "credit_gbp": 1600.00,
+      "balance_gbp": 5853.90
+    },
+    {
+      "date": "2026-10-23",
+      "reference": "PAY-78044",
+      "details": "BACS payment received",
+      "debit_gbp": null,
+      "credit_gbp": 6000.00,
+      "balance_gbp": -146.10
+    },
+    {
+      "date": "2026-10-27",
+      "reference": "INV-40988",
+      "details": "Emergency drainage works, Riverside car park: out of hours, 2 operatives for 6 hours, jetting and CCTV survey",
+      "debit_gbp": 2915.25,
+      "credit_gbp": null,
+      "balance_gbp": 2769.15
+    },
+    {
+      "date": "2026-10-30",
+      "reference": "INV-41002",
+      "details": "Consumables and parts as per attached schedule",
+      "debit_gbp": 96.80,
+      "credit_gbp": null,
+      "balance_gbp": 2865.95
+    }
+  ]
+}

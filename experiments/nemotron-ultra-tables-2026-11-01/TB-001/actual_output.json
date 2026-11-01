@@ -1,0 +1,107 @@
+{
+  "extractor": "llm:nvidia/nemotron-3-ultra-550b-a55b:free:text, guided prompt",
+  "version": "0.1.0",
+  "track": "tables",
+  "prompt": "guided",
+  "rules_version": 2,
+  "run_at": "2026-11-01T21:50:34Z",
+  "description": "nvidia/nemotron-3-ultra-550b-a55b:free via https://openrouter.ai/api/v1 (text, guided prompt)",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "cases": {
+    "TB-001": {
+      "rows": [
+        {
+          "date": "2026-10-01",
+          "reference": null,
+          "details": "Balance brought forward",
+          "debit_gbp": null,
+          "credit_gbp": null,
+          "balance_gbp": 12480.0
+        },
+        {
+          "date": "2026-10-02",
+          "reference": "INV-40871",
+          "details": "Planned preventative maintenance, Civic Centre passenger lifts: quarterly service visit and LOLER thorough examination certificate",
+          "debit_gbp": 3240.0,
+          "credit_gbp": null,
+          "balance_gbp": 15720.0
+        },
+        {
+          "date": "2026-10-06",
+          "reference": "PAY-77812",
+          "details": "BACS payment received, thank you",
+          "debit_gbp": null,
+          "credit_gbp": 12480.0,
+          "balance_gbp": 3240.0
+        },
+        {
+          "date": "2026-10-09",
+          "reference": "INV-40902",
+          "details": "Reactive repair: replacement circulating pump on boiler 2, Market Walk depot",
+          "debit_gbp": 1186.5,
+          "credit_gbp": null,
+          "balance_gbp": 4426.5
+        },
+        {
+          "date": "2026-10-12",
+          "reference": "CN-2207",
+          "details": "Credit note against INV-40755 (duplicate out-of-hours call-out charge)",
+          "debit_gbp": null,
+          "credit_gbp": 245.0,
+          "balance_gbp": 4181.5
+        },
+        {
+          "date": "2026-10-15",
+          "reference": "INV-40933",
+          "details": "Car park lighting: replace 6 failed LED lanterns, columns 4 to 9",
+          "debit_gbp": 812.4,
+          "credit_gbp": null,
+          "balance_gbp": 4993.9
+        },
+        {
+          "date": "2026-10-19",
+          "reference": "INV-40951",
+          "details": "Planned preventative maintenance, Riverside offices: fire alarm and emergency lighting tests",
+          "debit_gbp": 2460.0,
+          "credit_gbp": null,
+          "balance_gbp": 7453.9
+        },
+        {
+          "date": "2026-10-21",
+          "reference": "ADJ-118",
+          "details": "Service credit: KPI 3 (emergency response within 2 hours) missed in Q2",
+          "debit_gbp": null,
+          "credit_gbp": 1600.0,
+          "balance_gbp": 5853.9
+        },
+        {
+          "date": "2026-10-23",
+          "reference": "PAY-78044",
+          "details": "BACS payment received",
+          "debit_gbp": null,
+          "credit_gbp": 6000.0,
+          "balance_gbp": -146.1
+        },
+        {
+          "date": "2026-10-27",
+          "reference": "INV-40988",
+          "details": "Emergency drainage works, Riverside car park: out of hours, 2 operatives for 6 hours, jetting and CCTV survey",
+          "debit_gbp": 2915.25,
+          "credit_gbp": null,
+          "balance_gbp": 2769.15
+        },
+        {
+          "date": "2026-10-30",
+          "reference": "INV-41002",
+          "details": "Consumables and parts as per attached schedule",
+          "debit_gbp": 96.8,
+          "credit_gbp": null,
+          "balance_gbp": 2865.95
+        }
+      ],
+      "seconds": 94.5,
+      "error": null,
+      "raw": "{\n  \"rows\": [\n    {\n      \"date\": \"2026-10-01\",\n      \"reference\": null,\n      \"details\": \"Balance brought forward\",\n      \"debit_gbp\": null,\n      \"credit_gbp\": null,\n      \"balance_gbp\": 12480.00\n    },\n    {\n      \"date\": \"2026-10-02\",\n      \"reference\": \"INV-40871\",\n      \"details\": \"Planned preventative maintenance, Civic Centre passenger lifts: quarterly service visit and LOLER thorough examination certificate\",\n      \"debit_gbp\": 3240.00,\n      \"credit_gbp\": null,\n      \"balance_gbp\": 15720.00\n    },\n    {\n      \"date\": \"2026-10-06\",\n      \"reference\": \"PAY-77812\",\n      \"details\": \"BACS payment received, thank you\",\n      \"debit_gbp\": null,\n      \"credit_gbp\": 12480.00,\n      \"balance_gbp\": 3240.00\n    },\n    {\n      \"date\": \"2026-10-09\",\n      \"reference\": \"INV-40902\",\n      \"details\": \"Reactive repair: replacement circulating pump on boiler 2, Market Walk depot\",\n      \"debit_gbp\": 1186.50,\n      \"credit_gbp\": null,\n      \"balance_gbp\": 4426.50\n    },\n    {\n      \"date\": \"2026-10-12\",\n      \"reference\": \"CN-2207\",\n      \"details\": \"Credit note against INV-40755 (duplicate out-of-hours call-out charge)\",\n      \"debit_gbp\": null,\n      \"credit_gbp\": 245.00,\n      \"balance_gbp\": 4181.50\n    },\n    {\n      \"date\": \"2026-10-15\",\n      \"reference\": \"INV-40933\",\n      \"details\": \"Car park lighting: replace 6 failed LED lanterns, columns 4 to 9\",\n      \"debit_gbp\": 812.40,\n      \"credit_gbp\": null,\n      \"balance_gbp\": 4993.90\n    },\n    {\n      \"date\": \"2026-10-19\",\n      \"reference\": \"INV-40951\",\n      \"details\": \"Planned preventative maintenance, Riverside offices: fire alarm and emergency lighting tests\",\n      \"debit_gbp\": 2460.00,\n      \"credit_gbp\": null,\n      \"balance_gbp\": 7453.90\n    },\n    {\n      \"date\": \"2026-10-21\",\n      \"reference\": \"ADJ-118\",\n      \"details\": \"Service credit: KPI 3 (emergency response within 2 hours) missed in Q2\",\n      \"debit_gbp\": null,\n      \"credit_gbp\": 1600.00,\n      \"balance_gbp\": 5853.90\n    },\n    {\n      \"date\": \"2026-10-23\",\n      \"reference\": \"PAY-78044\",\n      \"details\": \"BACS payment received\",\n      \"debit_gbp\": null,\n      \"credit_gbp\": 6000.00,\n      \"balance_gbp\": -146.10\n    },\n    {\n      \"date\": \"2026-10-27\",\n      \"reference\": \"INV-40988\",\n      \"details\": \"Emergency drainage works, Riverside car park: out of hours, 2 operatives for 6 hours, jetting and CCTV survey\",\n      \"debit_gbp\": 2915.25,\n      \"credit_gbp\": null,\n      \"balance_gbp\": 2769.15\n    },\n    {\n      \"date\": \"2026-10-30\",\n      \"reference\": \"INV-41002\",\n      \"details\": \"Consumables and parts as per attached schedule\",\n      \"debit_gbp\": 96.80,\n      \"credit_gbp\": null,\n      \"balance_gbp\": 2865.95\n    }\n  ]\n}"
+    }
+  }
+}

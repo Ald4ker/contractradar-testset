@@ -1,0 +1,23 @@
+{
+  "case_id": "TB-003",
+  "rows_expected": 12,
+  "rows_predicted": 12,
+  "rows_exact": 12,
+  "rows_missing": 0,
+  "rows_extra": 0,
+  "cell_accuracy": 1.0,
+  "cell_recall": 1.0,
+  "table_exact": true,
+  "per_column": {
+    "milestone_no": 1.0,
+    "milestone": 1.0,
+    "payment_trigger": 1.0,
+    "due_date": 1.0,
+    "amount_gbp": 1.0
+  },
+  "empty_columns": [],
+  "missing_rows": [],
+  "extra_rows": [],
+  "cell_errors": [],
+  "column_mapping": "rows"
+}

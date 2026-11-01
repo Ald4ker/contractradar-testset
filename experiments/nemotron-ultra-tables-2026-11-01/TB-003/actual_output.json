@@ -1,0 +1,103 @@
+{
+  "extractor": "llm:nvidia/nemotron-3-ultra-550b-a55b:free:text, guided prompt",
+  "version": "0.1.0",
+  "track": "tables",
+  "prompt": "guided",
+  "rules_version": 2,
+  "run_at": "2026-11-01T18:29:51Z",
+  "description": "nvidia/nemotron-3-ultra-550b-a55b:free via https://openrouter.ai/api/v1 (text, guided prompt)",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "cases": {
+    "TB-003": {
+      "rows": [
+        {
+          "milestone_no": 1,
+          "milestone": "Mobilisation and site set-up",
+          "payment_trigger": "Site compound established and welfare facilities accepted by the Contract Administrator",
+          "due_date": "2027-01-12",
+          "amount_gbp": 48500.0
+        },
+        {
+          "milestone_no": 2,
+          "milestone": "Enabling works",
+          "payment_trigger": "Asbestos removal certificate issued and demolition of the former salt barn complete",
+          "due_date": "2027-02-26",
+          "amount_gbp": 132750.0
+        },
+        {
+          "milestone_no": 3,
+          "milestone": "Substructure",
+          "payment_trigger": "Foundations and ground-bearing slab signed off by the Council's structural engineer",
+          "due_date": "2027-04-30",
+          "amount_gbp": 286400.0
+        },
+        {
+          "milestone_no": 4,
+          "milestone": "Frame",
+          "payment_trigger": "Steel frame erected, plumbed and bolted, with the frame inspection certificate issued",
+          "due_date": "2027-06-18",
+          "amount_gbp": 412900.0
+        },
+        {
+          "milestone_no": 5,
+          "milestone": "Envelope",
+          "payment_trigger": "Roof covering, wall cladding, glazing and the vehicle bay doors complete so that the building is weathertight, confirmed in writing by the Contract Administrator after a water test of every roof outlet and gutter and a visual inspection of all flashings, sealant joints and door seals",
+          "due_date": "2027-08-27",
+          "amount_gbp": 365200.0
+        },
+        {
+          "milestone_no": 6,
+          "milestone": "Mechanical and electrical first fix",
+          "payment_trigger": "Containment, cabling and pipework installed and pressure-tested",
+          "due_date": "2027-10-22",
+          "amount_gbp": 241300.0
+        },
+        {
+          "milestone_no": 7,
+          "milestone": "Vehicle wash bay and interceptor",
+          "payment_trigger": "Wash bay, oil interceptor and discharge consent in place",
+          "due_date": "2027-11-26",
+          "amount_gbp": 98650.0
+        },
+        {
+          "milestone_no": 8,
+          "milestone": "Internal finishes",
+          "payment_trigger": "Floors, partitions, ceilings and decorations complete in all rooms",
+          "due_date": "2028-01-21",
+          "amount_gbp": 154800.0
+        },
+        {
+          "milestone_no": 9,
+          "milestone": "External works and drainage",
+          "payment_trigger": "Yard surfacing, drainage connections and site lighting complete",
+          "due_date": "2028-03-03",
+          "amount_gbp": 176250.0
+        },
+        {
+          "milestone_no": 10,
+          "milestone": "Commissioning",
+          "payment_trigger": "All plant commissioned and the operation and maintenance manuals accepted",
+          "due_date": "2028-04-14",
+          "amount_gbp": 64900.0
+        },
+        {
+          "milestone_no": 11,
+          "milestone": "Practical completion",
+          "payment_trigger": "Certificate of practical completion issued",
+          "due_date": "2028-05-05",
+          "amount_gbp": 120000.0
+        },
+        {
+          "milestone_no": 12,
+          "milestone": "End of defects period",
+          "payment_trigger": "Certificate of making good defects issued, 12 months after practical completion",
+          "due_date": "2029-05-05",
+          "amount_gbp": 50000.0
+        }
+      ],
+      "seconds": 99.8,
+      "error": null,
+      "raw": "{\n  \"rows\": [\n    {\n      \"milestone_no\": 1,\n      \"milestone\": \"Mobilisation and site set-up\",\n      \"payment_trigger\": \"Site compound established and welfare facilities accepted by the Contract Administrator\",\n      \"due_date\": \"2027-01-12\",\n      \"amount_gbp\": 48500.00\n    },\n    {\n      \"milestone_no\": 2,\n      \"milestone\": \"Enabling works\",\n      \"payment_trigger\": \"Asbestos removal certificate issued and demolition of the former salt barn complete\",\n      \"due_date\": \"2027-02-26\",\n      \"amount_gbp\": 132750.00\n    },\n    {\n      \"milestone_no\": 3,\n      \"milestone\": \"Substructure\",\n      \"payment_trigger\": \"Foundations and ground-bearing slab signed off by the Council's structural engineer\",\n      \"due_date\": \"2027-04-30\",\n      \"amount_gbp\": 286400.00\n    },\n    {\n      \"milestone_no\": 4,\n      \"milestone\": \"Frame\",\n      \"payment_trigger\": \"Steel frame erected, plumbed and bolted, with the frame inspection certificate issued\",\n      \"due_date\": \"2027-06-18\",\n      \"amount_gbp\": 412900.00\n    },\n    {\n      \"milestone_no\": 5,\n      \"milestone\": \"Envelope\",\n      \"payment_trigger\": \"Roof covering, wall cladding, glazing and the vehicle bay doors complete so that the building is weathertight, confirmed in writing by the Contract Administrator after a water test of every roof outlet and gutter and a visual inspection of all flashings, sealant joints and door seals\",\n      \"due_date\": \"2027-08-27\",\n      \"amount_gbp\": 365200.00\n    },\n    {\n      \"milestone_no\": 6,\n      \"milestone\": \"Mechanical and electrical first fix\",\n      \"payment_trigger\": \"Containment, cabling and pipework installed and pressure-tested\",\n      \"due_date\": \"2027-10-22\",\n      \"amount_gbp\": 241300.00\n    },\n    {\n      \"milestone_no\": 7,\n      \"milestone\": \"Vehicle wash bay and interceptor\",\n      \"payment_trigger\": \"Wash bay, oil interceptor and discharge consent in place\",\n      \"due_date\": \"2027-11-26\",\n      \"amount_gbp\": 98650.00\n    },\n    {\n      \"milestone_no\": 8,\n      \"milestone\": \"Internal finishes\",\n      \"payment_trigger\": \"Floors, partitions, ceilings and decorations complete in all rooms\",\n      \"due_date\": \"2028-01-21\",\n      \"amount_gbp\": 154800.00\n    },\n    {\n      \"milestone_no\": 9,\n      \"milestone\": \"External works and drainage\",\n      \"payment_trigger\": \"Yard surfacing, drainage connections and site lighting complete\",\n      \"due_date\": \"2028-03-03\",\n      \"amount_gbp\": 176250.00\n    },\n    {\n      \"milestone_no\": 10,\n      \"milestone\": \"Commissioning\",\n      \"payment_trigger\": \"All plant commissioned and the operation and maintenance manuals accepted\",\n      \"due_date\": \"2028-04-14\",\n      \"amount_gbp\": 64900.00\n    },\n    {\n      \"milestone_no\": 11,\n      \"milestone\": \"Practical completion\",\n      \"payment_trigger\": \"Certificate of practical completion issued\",\n      \"due_date\": \"2028-05-05\",\n      \"amount_gbp\": 120000.00\n    },\n    {\n      \"milestone_no\": 12,\n      \"milestone\": \"End of defects period\",\n      \"payment_trigger\": \"Certificate of making good defects issued, 12 months after practical completion\",\n      \"due_date\": \"2029-05-05\",\n      \"amount_gbp\": 50000.00\n    }\n  ]\n}"
+    }
+  }
+}
